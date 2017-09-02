@@ -67,9 +67,9 @@ public class ModTerrain : MonoBehaviour
 
 		terrain.terrainData.SetHeights(0, 0, heightMap);
 
-		for(int x = 0; x <= 256; x++)
+		/*for(int x = 0; x <= 256; x++)
 			//for(int y = 0; y <= 256; y++)
-				Debug.Log("X" + x + " Y" + 0 + " Z" + tileHeights[x, 0]);
+				Debug.Log("X" + x + " Y" + 0 + " Z" + tileHeights[x, 0]);*/
 	}
 
 	//Update is called once per frame
