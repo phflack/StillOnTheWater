@@ -41,7 +41,7 @@ Material:
     m_Floats:
     - _Absorption: 5
     - _BumpScale: 35
-    - _BumpScale_: 175
+    - _BumpScale_: 105
     - _BumpSpeed: 0.2
     - _Cull: 0
     - _Cull_: 2
@@ -57,38 +57,38 @@ Material:
     - _FresPower: 1.5
     - _HQFoam: 0
     - _Height: 0.5
-    - _Height_: 2.5
+    - _Height_: 1.5
     - _Length: 4
     - _LightAbs: 0
     - _NormalOffset: 1
     - _Opacity: 0.7
     - _PointLights: 0
     - _RHeight: 0.25
-    - _RHeight_: 1.25
+    - _RHeight_: 0.75
     - _RSpeed: 1
-    - _RSpeed_: 5
+    - _RSpeed_: 3
     - _Reflection: 1.2
     - _Refraction: 2
     - _Scale: 1
-    - _Scale_: 5
+    - _Scale_: 3
     - _Shading: 0
     - _Shadow: 0.7
     - _ShoreDistance: 0.5
     - _ShoreIntensity: 1
     - _Specular: 70
     - _Speed: 0.5
-    - _Speed_: 2.5
+    - _Speed_: 1.5
     - _Steepness: 0.2
     - _Stretch: 10
-    - _TexSize_: 320
+    - _TexSize_: 192
     - _Time_: 0
-    - _TransformScale_: 5
+    - _TransformScale_: 3
     - _Waves: 2
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0, g: 0.14039412, b: 0.19655173, a: 1}
     - _DeepColor: {r: 0, g: 0.1, b: 0.2, a: 1}
-    - _Direction_: {r: -1, g: -0.00000008742278, b: -4, a: -0.0000003496911}
+    - _Direction_: {r: -1, g: -0.00000008742278, b: -2.4, a: -0.00000020981467}
     - _FresColor: {r: 0.305, g: 0.371, b: 0.395, a: 1}
     - _ShoreColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.13448276, g: 0.1293177, b: 0.083788686, a: 1}

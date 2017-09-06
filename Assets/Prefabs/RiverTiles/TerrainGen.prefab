@@ -85,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 1968022658493746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 32, y: 60, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 7, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 4531663279345320}
   m_RootOrder: 1
@@ -229,9 +229,9 @@ MonoBehaviour:
   treeDist: 3
   treeDistY: 1
   treeWeights: []
-  minTrees: 200
-  maxTrees: 300
-  maxTreeTries: 1000
+  minTrees: 50
+  maxTrees: 100
+  maxTreeTries: 500
   rockGen: {fileID: 1337843320016858, guid: 5a53a4b2410d3e94c93f6259ae84ebf5, type: 2}
   rockDist: 2
   minRocks: 25
@@ -277,11 +277,11 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialType: 0
+  m_MaterialType: 2
   m_LegacySpecular:
     serializedVersion: 2
     rgba: 4286545791
-  m_LegacyShininess: 0.078125
+  m_LegacyShininess: 0.03
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.0512

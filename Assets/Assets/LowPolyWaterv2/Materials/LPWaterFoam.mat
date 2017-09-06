@@ -8,13 +8,13 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: LPWaterFoam
   m_Shader: {fileID: 4800000, guid: 8165be4dd0b12774d80426d906df9c38, type: 3}
-  m_ShaderKeywords: LPW_HQFOAM LPW_SHADOWS WATER_REFLECTIVE WATER_REFRACTIVE _CULL_ON
-    _CUSTOM_SHAPE _DISTORT_ON _EDGEBLEND_ON _EMISSION _HQFOAM_ON _LIGHTABS_ON _POINTLIGHTS_ON
-    _SHADING_FLAT _WAVES_LOWQUALITY _ZWRITE_ON
+  m_ShaderKeywords: LPW_SHADOWS WATER_REFLECTIVE WATER_REFRACTIVE _CULL_ON _CUSTOM_SHAPE
+    _DISTORT_ON _EMISSION _HQFOAM_ON _LIGHTABS_ON _POINTLIGHTS_ON _SHADING_FLAT _WAVES_LOWQUALITY
+    _ZWRITE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2500
   stringTagMap:
     QUEUE: AlphaTest+50
   disabledShaderPasses: []
@@ -91,7 +91,7 @@ Material:
     - _Distort: 1
     - _Distortion: 1
     - _DstBlend: 0
-    - _EdgeBlend: 1
+    - _EdgeBlend: 0
     - _EnableShadows: 1
     - _FoamScale: 20
     - _FoamSpeed: 0.3
@@ -100,7 +100,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HQFoam: 1
+    - _HQFoam: 0
     - _Height: 0.4
     - _Height_: 0.4
     - _Length: 4
@@ -142,8 +142,8 @@ Material:
     - _DeepColor: {r: 0, g: 0, b: 0, a: 0}
     - _Direction_: {r: -0.00000004371139, g: 1, b: -0.000000007518359, a: 0.172}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresColor: {r: 0.119701564, g: 0.13182944, b: 0.13235295, a: 1}
+    - _FresColor: {r: 0.119701564, g: 0.13182944, b: 0.13235295, a: 0}
     - _ShoreColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecColor: {r: 0.7777518, g: 0.7794118, b: 0.7622189, a: 1}
+    - _SpecColor: {r: 0.7777518, g: 0.7794118, b: 0.7622189, a: 0}
     - _Sun: {r: 0.3213938, g: 0.76604444, b: -0.5566705, a: 0}
     - _SunColor: {r: 1, g: 1, b: 1, a: 0.7490196}
