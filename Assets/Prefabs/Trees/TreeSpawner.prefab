@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114572470214839508}
   m_Layer: 0
   m_Name: TreeSpawner
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,8 +48,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273392284069584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed1db9be346bb4b42b92e7d077d86cb3, type: 3}
+  m_Script: {fileID: 11500000, guid: a104c7396ae70204384f8ecb9156815b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trunks:
-  - {fileID: 1544305970893816, guid: 4032b1e932cb29544b8a5e13c2543fdd, type: 2}
+  objects:
+  - {fileID: 1034888915279070, guid: 66f7252676ea4c24daf18093d84ebb9a, type: 2}
+  - {fileID: 1116382642458068, guid: 0d48f309cb6e0c5418355a420ee46f0e, type: 2}
+  weights: 
