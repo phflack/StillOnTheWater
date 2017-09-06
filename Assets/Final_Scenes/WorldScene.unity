@@ -680,10 +680,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded1a3b23bdf8e14ba08ade201a320a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 5
+  turnSpeed: 20
   acc: 0
   baseAcc: 0
-  maxSpeed: 5
+  maxSpeed: 2
   riverStrength: 20
 --- !u!4 &437067210
 Transform:
