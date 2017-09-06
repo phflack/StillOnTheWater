@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrowTreeBranches : MonoBehaviour
 {
-	public GameObject[] branches;
+	public GameObject branch;
 	public GameObject[] trunkPath;
 	public float[] minRots;
 	public float[] maxRots;
@@ -14,9 +14,8 @@ public class GrowTreeBranches : MonoBehaviour
 	public int minBranches;
 	public int maxBranches;
 	public int maxTries;
-
-	//Use this for initialization
-	void Start()
+	
+	private void Start()
 	{
 		//distance of the trunkPath
 		float distance = 0;
@@ -51,8 +50,9 @@ public class GrowTreeBranches : MonoBehaviour
 						float area = weight - trunkWeights[j];
 						float b = weights[j]; //base is a keyword?
 
-						placement = (Mathf.Sqrt(2 * area * slope + b * b) + b) / slope; //http://www.wolframalpha.com/input/?i=solve+A%3DBH%2B0.5(H%5E2)S+for+H
+						placement = (Mathf.Sqrt(2 * area * slope + b * b) - b) / slope + trunkDists[j]; //http://www.wolframalpha.com/input/?i=solve+A%3DBH%2B0.5(H%5E2)S+for+H
 					}
+
 			float rotY = Random.Range(0, 360);
 			float rotY2 = Random.Range(0, 360);
 			float rotX = 0;
@@ -71,11 +71,11 @@ public class GrowTreeBranches : MonoBehaviour
 
 			if(good) //place the branch
 			{
-				GameObject branch = Instantiate(branches[Random.Range(0, branches.Length)], transform);
-				branch.transform.Translate(pos - transform.position);
-				branch.transform.Rotate(0, rotY, 0);
-				branch.transform.Rotate(rotX, rotY2, 0);
-				placedBranches[i] = branch;
+				GameObject b = Instantiate(branch, transform);
+				b.transform.Translate(pos - transform.position);
+				b.transform.Rotate(0, rotY, 0);
+				b.transform.Rotate(rotX, rotY2, 0);
+				placedBranches[i] = b;
 				rots[i] = rotY;
 			}
 			else //retry generation of this node
@@ -107,7 +107,4 @@ public class GrowTreeBranches : MonoBehaviour
 			used[i] = selection;
 		}*/
 	}
-	
-	// Update is called once per frame
-	void Update(){}
 }
