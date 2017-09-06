@@ -47,7 +47,7 @@ public class ModTerrain : MonoBehaviour
 		Terrain terrain = Terrain.activeTerrain;
 		int width = terrain.terrainData.heightmapWidth;
 		int height = terrain.terrainData.heightmapHeight;
-		Debug.Log("test " + width + " " + height);
+		//Debug.Log("test " + width + " " + height);
 
 		float[,] heightMap = terrain.terrainData.GetHeights(0, 0, width, height);
 

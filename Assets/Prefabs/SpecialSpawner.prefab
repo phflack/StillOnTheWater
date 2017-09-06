@@ -53,4 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 1056010515047224, guid: 8d209d95bb2b1eb4c8015d737ce6397b, type: 2}
+<<<<<<< HEAD
+=======
+  - {fileID: 1705717651239160, guid: 2803ca38cf659784c83db4f8827e483a, type: 2}
+>>>>>>> 61efbc412567960f61126f20890a82fc62d13c6f
   weights: 
