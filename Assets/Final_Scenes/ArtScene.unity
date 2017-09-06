@@ -173,6 +173,10 @@ Prefab:
       propertyPath: maxSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1900350466320254, guid: 858a9dda649904645b7147141a97e8df, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 858a9dda649904645b7147141a97e8df, type: 2}
   m_IsPrefabParent: 0
@@ -1543,7 +1547,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1601465905
+  randomSeed: -1673131277
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9298,7 +9302,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -575171918
+  randomSeed: -1070475296
   InitialModule:
     serializedVersion: 3
     enabled: 1

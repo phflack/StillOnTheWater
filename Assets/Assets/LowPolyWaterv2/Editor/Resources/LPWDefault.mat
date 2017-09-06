@@ -61,7 +61,7 @@ Material:
     - _Length: 4
     - _LightAbs: 0
     - _NormalOffset: 1
-    - _Opacity: 0.7
+    - _Opacity: 0
     - _PointLights: 0
     - _RHeight: 0.25
     - _RHeight_: 0.75
@@ -86,11 +86,11 @@ Material:
     - _Waves: 2
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.14039412, b: 0.19655173, a: 1}
+    - _Color: {r: 0, g: 0.14039412, b: 0.19655173, a: 0}
     - _DeepColor: {r: 0, g: 0.1, b: 0.2, a: 1}
     - _Direction_: {r: -1, g: -0.00000008742278, b: -2.4, a: -0.00000020981467}
-    - _FresColor: {r: 0.305, g: 0.371, b: 0.395, a: 1}
+    - _FresColor: {r: 0.305, g: 0.371, b: 0.395, a: 0}
     - _ShoreColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecColor: {r: 0.13448276, g: 0.1293177, b: 0.083788686, a: 1}
+    - _SpecColor: {r: 0.13448276, g: 0.1293177, b: 0.083788686, a: 0}
     - _Sun: {r: -0.5057393, g: 0.17364827, b: 0.8450291, a: 0}
     - _SunColor: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
