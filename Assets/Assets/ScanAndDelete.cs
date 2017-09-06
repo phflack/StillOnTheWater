@@ -11,7 +11,8 @@ public class ScanAndDelete : MonoBehaviour {
 
     public int check = 0;
 
-    void OnTriggerEnter(Collision other)
+    //void OnTriggerEnter(Collision other)
+	void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Scanner"))
         {

@@ -166,7 +166,7 @@ public class StraightRiver : MonoBehaviour
 			float x = Random.Range(0f, 64f);
 			float y = Random.Range(0f, 64f);
 			Vector3 pos = new Vector3(x, terrain.terrainData.GetInterpolatedHeight(x / 64, y / 64), y) + transform.position;
-			Vector3 normal = terrain.terrainData.GetInterpolatedNormal(x / 64, y / 32);
+			//Vector3 normal = terrain.terrainData.GetInterpolatedNormal(x / 64, y / 32);
 
 			if(pos.y < 60) //underwater or too close
 			{
@@ -178,8 +178,8 @@ public class StraightRiver : MonoBehaviour
 			bool good = true;
 			for(int j = 0; j < i && good; j++)
 				good = (pos - placedTrees[j].transform.position).magnitude > rockDist;
-			for(int j = 0; j < trees.Length && good; j++)
-				good = (pos - trees[j].transform.position).magnitude > rockDist;
+			for(int j = 0; j < specials.Length && good; j++)
+				good = (pos - specials[j].transform.position).magnitude > specialDist;
 
 			if(good)
 			{
@@ -214,7 +214,7 @@ public class StraightRiver : MonoBehaviour
 			float y = Random.Range(16f, 48f);
 			float height = terrain.terrainData.GetInterpolatedHeight(x / 64, y / 64);
 			Vector3 pos = new Vector3(x, 60, y) + transform.position;
-			Vector3 normal = terrain.terrainData.GetInterpolatedNormal(x / 64, y / 64);
+			//Vector3 normal = terrain.terrainData.GetInterpolatedNormal(x / 64, y / 64);
 
 			if(height > 59) //too close to surface
 			{
