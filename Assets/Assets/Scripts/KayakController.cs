@@ -21,7 +21,7 @@ public class KayakController : MonoBehaviour
 	//Update is called once per frame
 	private void Update()
 	{
-		Debug.Log("X" + Input.GetAxis("Horizontal") + " Y" + Input.GetAxis("Vertical"));
+		//Debug.Log("X" + Input.GetAxis("Horizontal") + " Y" + Input.GetAxis("Vertical"));
 
 		//do the rotation thing first
 		transform.Rotate(0, Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime, 0);

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrateMover : MonoBehaviour {
+public class CrateMover : MonoBehaviour
+{
 
     [Range(.5f, 5f)]
     public float floatSpeed = 1.6f;
@@ -25,3 +26,4 @@ public class CrateMover : MonoBehaviour {
 
         transform.Rotate(Vector3.right * Time.deltaTime * spinSpeed);
     }
+}
