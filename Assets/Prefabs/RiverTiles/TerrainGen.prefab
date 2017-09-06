@@ -231,20 +231,20 @@ MonoBehaviour:
   treeWeights: []
   minTrees: 50
   maxTrees: 100
-  maxTreeTries: 500
+  maxTreeTries: 200
   rockGen: {fileID: 1337843320016858, guid: 5a53a4b2410d3e94c93f6259ae84ebf5, type: 2}
   rockDist: 2
-  minRocks: 25
-  maxRocks: 50
-  maxRockTries: 100
+  minRocks: 20
+  maxRocks: 40
+  maxRockTries: 75
   specialGen: {fileID: 1889198975148008, guid: 18ecbdf0e7d47db4295279ac95c412a2, type: 2}
   specialDist: 100
   maxSpecialTries: 5
   debrisGen: {fileID: 1664684201702020, guid: 62307bca2c51ad246bb3777fbd4c99ab, type: 2}
   debrisDist: 25
-  minDebris: 3
-  maxDebris: 10
-  maxDebrisTries: 100
+  minDebris: 6
+  maxDebris: 15
+  maxDebrisTries: 20
 --- !u!154 &154582543545057174
 TerrainCollider:
   m_ObjectHideFlags: 1
