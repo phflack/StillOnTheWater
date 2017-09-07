@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33223482160703420}
   - component: {fileID: 23605656640483572}
   - component: {fileID: 95902599963421040}
+  - component: {fileID: 65753158577829984}
   m_Layer: 0
   m_Name: fallen
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786630520810866}
   m_Mesh: {fileID: 4300000, guid: 688b71e9eb088494286a91451cbc713b, type: 3}
+--- !u!65 &65753158577829984
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786630520810866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 351.2736, y: 486.07242, z: 285.20602}
+  m_Center: {x: 1.8292162, y: 0, z: -19.250006}
 --- !u!95 &95902599963421040
 Animator:
   serializedVersion: 3

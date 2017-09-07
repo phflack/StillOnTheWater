@@ -17,19 +17,37 @@ public class KayakController : MonoBehaviour
 	{
 		velocity = new Vector3();
 	}
-	
-	//Update is called once per frame
-	private void Update()
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Terrain"))
+        {
+
+            //back to main menu
+           UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+
+        }
+    }
+
+    //Update is called once per frame
+    private void Update()
 	{
 		//Debug.Log("X" + Input.GetAxis("Horizontal") + " Y" + Input.GetAxis("Vertical"));
 
 		//do the rotation thing first
 		transform.Rotate(0, Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime, 0);
+        float multiplier = 1;
 
-		//see how fast we'd be going if we just went with it
-		Vector3 target = transform.forward * (Input.GetAxis("Vertical") * acc + baseAcc) + getRiverFlow() + velocity;
+        if(Input.GetAxis("Vertical") > 0)
+        {
+            multiplier = 1.5f;
 
-		if (target.magnitude > maxSpeed)  //too fast? slow it down then
+        }
+        //see how fast we'd be going if we just went with it
+        Vector3 target = transform.forward * multiplier + getRiverFlow() + velocity;
+        //* (Input.GetAxis("Vertical") * acc + baseAcc)
+
+        if (target.magnitude > maxSpeed)  //too fast? slow it down then
 			target = target.normalized * maxSpeed;
 
 		velocity = target;

@@ -17,6 +17,6 @@ public class DuckMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        transform.position += Vector3.right * Time.deltaTime * duckSpeed;
+        transform.position += Vector3.left * Time.deltaTime * duckSpeed;
     }
 }

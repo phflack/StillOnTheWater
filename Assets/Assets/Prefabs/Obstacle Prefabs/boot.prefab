@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33940696965844138}
   - component: {fileID: 23530091865062094}
   - component: {fileID: 95530587187506228}
+  - component: {fileID: 65069682539847268}
   m_Layer: 0
   m_Name: boot
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023537994320524}
   m_Mesh: {fileID: 4300000, guid: b9ac24b0d1b9c1c4488d1589fbd9206e, type: 3}
+--- !u!65 &65069682539847268
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023537994320524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3109565, y: 3.0990732, z: 2.8082356}
+  m_Center: {x: -0.00049577595, y: 1.3597059, z: 0.2980074}
 --- !u!95 &95530587187506228
 Animator:
   serializedVersion: 3

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33180833419500378}
   - component: {fileID: 23569613393017072}
   - component: {fileID: 95893288266371580}
+  - component: {fileID: 136847334269930530}
   m_Layer: 0
   m_Name: RockObstacleA
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +99,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &136847334269930530
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808992174411760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0589886
+  m_Height: 2.6905742
+  m_Direction: 1
+  m_Center: {x: -0.08812347, y: 0.90736014, z: -0.014345348}
