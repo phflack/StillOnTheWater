@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4116085821148186}
   - component: {fileID: 65416107871219146}
   - component: {fileID: 114893734422444264}
+  - component: {fileID: 65608835690986390}
   m_Layer: 0
   m_Name: crate
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197289095189476}
   m_LocalRotation: {x: 0.093274266, y: -0.28900918, z: 0.22377473, w: 0.9261201}
-  m_LocalPosition: {x: 504.53143, y: 60.318, z: 23.54526}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.56504405, y: 0.56504405, z: 0.56504405}
   m_Children:
   - {fileID: 4521409392334586}
@@ -112,6 +113,18 @@ MeshFilter:
   m_GameObject: {fileID: 1623087501066056}
   m_Mesh: {fileID: 4300000, guid: be9f64ecd5cc66b43a183ad3b80c7db4, type: 3}
 --- !u!65 &65416107871219146
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197289095189476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65608835690986390
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

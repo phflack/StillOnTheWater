@@ -65,14 +65,14 @@ MonoBehaviour:
   treeDist: 3
   treeDistY: 1
   treeWeights: []
-  minTrees: 300
-  maxTrees: 300
-  maxTreeTries: 5000
+  minTrees: 55
+  maxTrees: 150
+  maxTreeTries: 355
   rockGen: {fileID: 1337843320016858, guid: 5a53a4b2410d3e94c93f6259ae84ebf5, type: 2}
-  rockDist: 1.5
+  rockDist: 5
   minRocks: 50
   maxRocks: 100
-  maxRockTries: 500
+  maxRockTries: 200
   specialGen: {fileID: 1889198975148008, guid: 18ecbdf0e7d47db4295279ac95c412a2, type: 2}
   specialDist: 100
   maxSpecialTries: 5
