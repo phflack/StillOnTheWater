@@ -160,7 +160,7 @@ public class StraightRiver : MonoBehaviour
 
 		//generate specials
 		GameObject[] specials = GameObject.FindGameObjectsWithTag("Special");
-		tries = 0;
+		//tries = 0;
 		for(int i = 0; i < maxSpecialTries; i++)
 		{
 			float x = Random.Range(0f, 64f);
@@ -170,8 +170,8 @@ public class StraightRiver : MonoBehaviour
 
 			if(pos.y < 60) //underwater or too close
 			{
-				i--;
-				tries--;
+				//i--;
+				//tries--;
 				continue;
 			}
 
