@@ -47,7 +47,7 @@ Material:
     - _BumpSpeed: 0.2
     - _Cull: 0
     - _Cull_: 2
-    - _Diffuse: 0.7
+    - _Diffuse: 0.94
     - _Direction: 52
     - _Distort: 1
     - _Distortion: 1
@@ -56,14 +56,14 @@ Material:
     - _FoamScale: 20
     - _FoamSpeed: 0.3
     - _FoamSpread: 1
-    - _FresPower: 1.5
+    - _FresPower: 1.774
     - _HQFoam: 0
     - _Height: 1
     - _Height_: 1
     - _Length: 5
     - _LightAbs: 1
     - _NormalOffset: 1
-    - _Opacity: 0.2
+    - _Opacity: 0.483
     - _PointLights: 1
     - _RHeight: 0.25
     - _RHeight_: 0.25
@@ -74,10 +74,10 @@ Material:
     - _Scale: 1
     - _Scale_: 1
     - _Shading: 1
-    - _Shadow: 0.5
+    - _Shadow: 0.343
     - _ShoreDistance: 0.5
     - _ShoreIntensity: 1
-    - _Specular: 44
+    - _Specular: 41
     - _Speed: 0.5
     - _Speed_: 0.5
     - _Steepness: 0.5
@@ -88,10 +88,10 @@ Material:
     - _Waves: 2
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.1415441, g: 0.875, b: 0.69290066, a: 1}
+    - _Color: {r: 0.09761662, g: 0.6034483, b: 0.47786254, a: 1}
     - _DeepColor: {r: 0.21020763, g: 0.26245078, b: 0.2647059, a: 1}
     - _Direction_: {r: 0.6156615, g: 0.7880107, b: 1.5391538, a: 1.9700267}
-    - _FresColor: {r: 0.4948097, g: 0.7647059, b: 0.7312015, a: 1}
+    - _FresColor: {r: 0.33691686, g: 0.52068967, b: 0.4978765, a: 1}
     - _ShoreColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.16057526, g: 0.24264705, b: 0.21887453, a: 1}
     - _Sun: {r: 0.32139415, g: 0.87727123, b: -0.3565125, a: 0}

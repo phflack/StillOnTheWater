@@ -167,7 +167,22 @@ Prefab:
     - target: {fileID: 108805490792804622, guid: 0853552906b30a34e93cf1e5c5b3e410,
         type: 2}
       propertyPath: m_Intensity
-      value: 0.5
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 108805490792804622, guid: 0853552906b30a34e93cf1e5c5b3e410,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108805490792804622, guid: 0853552906b30a34e93cf1e5c5b3e410,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108805490792804622, guid: 0853552906b30a34e93cf1e5c5b3e410,
+        type: 2}
+      propertyPath: m_BounceIntensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0853552906b30a34e93cf1e5c5b3e410, type: 2}
@@ -554,13 +569,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704692790}
-  m_LocalRotation: {x: -0, y: 0.6838135, z: -0, w: 0.7296569}
-  m_LocalPosition: {x: 0, y: 1, z: -11.23}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.12, y: 1, z: -9.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 86.285, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!45 &1704692796
 Skybox:
   m_ObjectHideFlags: 0
@@ -593,13 +608,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1806314317}
-  m_LocalRotation: {x: 0.4711531, y: -0.5272711, z: 0.5272711, w: 0.4711531}
-  m_LocalPosition: {x: 0.02429, y: -0.00351, z: -0.00869}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.024500009, y: 0.0022099994, z: 0.0057}
   m_LocalScale: {x: 0.0047970028, y: 0.0047970037, z: 0.004797041}
   m_Children: []
   m_Father: {fileID: 1364694389}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: -162.58601, z: -66.152}
+  m_LocalEulerAnglesHint: {x: 90, y: -180, z: -90}
 --- !u!23 &1806314319
 MeshRenderer:
   m_ObjectHideFlags: 0
