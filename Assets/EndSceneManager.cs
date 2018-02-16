@@ -5,10 +5,12 @@ using UnityEngine;
 public class EndSceneManager : MonoBehaviour
 {
 
+    public AudioSource music;
+
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -19,7 +21,8 @@ public class EndSceneManager : MonoBehaviour
         {
 
             //move to next scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+            StartCoroutine(fade(fadeTime));
 
         }
 
@@ -31,4 +34,15 @@ public class EndSceneManager : MonoBehaviour
         }
 
     }
+
+    IEnumerator fade(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+
+    }
+
+
+    
 }

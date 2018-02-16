@@ -16,7 +16,10 @@ public class NextScene : MonoBehaviour {
         {
 
             //move to next scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+
+            float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+
+            StartCoroutine(fade(fadeTime));
 
         }
 
@@ -28,4 +31,11 @@ public class NextScene : MonoBehaviour {
         }
 		
 	}
+    IEnumerator fade(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+
+    }
 }

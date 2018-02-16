@@ -20,12 +20,14 @@ public class KayakController : MonoBehaviour
 		velocity = new Vector3();
 	}
 
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Terrain"))
         {
 
             //back to main menu
+            float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+            yield return new WaitForSeconds(fadeTime);
            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
 
         }
