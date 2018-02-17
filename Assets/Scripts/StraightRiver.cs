@@ -38,9 +38,13 @@ public class StraightRiver : MonoBehaviour
 	public int minDebris;
 	public int maxDebris;
 	public int maxDebrisTries;
+
+	private Terrain terrain;
 	
 	private void Start()
 	{
+		terrain = GetComponent<Terrain>();
+		//terrain.terrainData = new TerrainData();
 		genTerrain();
 		genLand();
 		genWater();
@@ -48,7 +52,6 @@ public class StraightRiver : MonoBehaviour
 
 	private void genTerrain()
 	{
-		Terrain terrain = GetComponent<Terrain>();
 		int width = terrain.terrainData.heightmapWidth;
 		int height = terrain.terrainData.heightmapHeight;
 		float[,] tileHeights = new float[height, width];

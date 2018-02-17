@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4622676177516476}
   - component: {fileID: 114935826476718384}
   m_Layer: 0
-  m_Name: TerrainSpawner
+  m_Name: TerrainSpawnerA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
