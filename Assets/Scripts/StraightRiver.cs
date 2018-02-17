@@ -26,6 +26,12 @@ public class StraightRiver : MonoBehaviour
 	public float specialDist;
 	public int maxSpecialTries;
 
+	//tree wall variables
+	public float wallHeight;
+	public float treeWallDist;
+	public int wallTries;
+	public GameObject treeWall;
+
 	//water variables
 	public GameObject debrisGen;
 	public float debrisDist;
@@ -91,6 +97,7 @@ public class StraightRiver : MonoBehaviour
 		int numTrees = Random.Range(minTrees, maxTrees + 1);
 		int tries = 0;
 		GameObject[] placedTrees = new GameObject[numTrees];
+		List<GameObject> wallTrees = new List<GameObject>();
 
 		for(int i = 0; i < numTrees && tries++ < maxTreeTries; i++)
 		{
@@ -190,6 +197,35 @@ public class StraightRiver : MonoBehaviour
 			}
 			else //try to regen the tree
 				i--;
+		}
+
+		//generate tree wall
+		for(int i = 0; i < wallTries; i++)
+		{
+			float x = Random.Range(0f, 64f);
+			float y = Random.Range(0f, 64f);
+			Vector3 pos = new Vector3(x, terrain.terrainData.GetInterpolatedHeight(x / 64, y / 64), y) + transform.position;
+			Vector3 normal = terrain.terrainData.GetInterpolatedNormal (x / 64, y / 64);
+
+			if(pos.y < wallHeight)
+			{
+				i--;
+				continue;
+			}
+
+			bool good = true;
+			for(int j = 0; j < wallTrees.Count && good; j++)
+				good = (pos - wallTrees[j].transform.position).magnitude > treeWallDist;
+			for(int j = 0; j < placedTrees.Length && good; j++)
+				good = (pos - placedTrees[j].transform.position).magnitude > treeWallDist;
+
+			if(good)
+			{
+				GameObject tree = Instantiate(treeWall, transform);
+				tree.transform.position = pos;
+				//tree.transform.rotation = Quaternion.FromToRotation(Vector3.up, normal); //haha no fix this later, bottoms need to rotate, tops need to go straight up
+				wallTrees.Add(tree);
+			}
 		}
 	}
 
