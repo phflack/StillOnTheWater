@@ -1,6 +1,0 @@
-<sbspresets formatversion="1.0" count="1">
- <sbspreset pkgurl="pkg://LowPolyDirt/LowPolyDirt" description="Exported from Unity" label="unity">
- <presetinput identifier="$outputsize" uid="2015512482" type="8" value="10,10"/>
- <presetinput identifier="$randomseed" uid="793793008" type="4" value="0"/>
- </sbspreset>
-</sbspresets>
