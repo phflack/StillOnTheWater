@@ -8,6 +8,9 @@ TagManager:
   - Tree
   - Special
   - Debris
+  - Obstacle
+  - Scanner
+  - ObstacleKiller
   layers:
   - Default
   - TransparentFX
