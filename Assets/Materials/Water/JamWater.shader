@@ -1,0 +1,62 @@
+﻿Shader "Custom/JamWater" {
+	Properties {
+		_Color ("Color", Color) = (1,1,1,.5)
+		_HighlightColor ("Hightlight Color", Color) = (1,1,1,1)
+		_Noise ("Noise", 2D) = "white" {}
+		_BlendWidth ("Blend Width", float) = .1
+		_DepthRange ("Depth Range", float) = 1
+	}
+	SubShader {
+		Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+		ZWrite Off
+		LOD 100
+
+		CGPROGRAM
+		// Physically based Standard lighting model, and enable shadows on all light types
+		#pragma surface surf Standard alpha:fade
+
+		// Use shader model 3.0 target, to get nicer looking lighting
+		#pragma target 3.0
+
+		sampler2D _Noise;
+		sampler2D _CameraDepthTexture;
+
+		struct Input {
+			float2 uv_Noise;
+			float4 screenPos;
+		};
+
+		float _DepthRange;
+		fixed4 _Color;
+		fixed4 _HighlightColor;
+		float _BlendWidth;
+
+		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
+		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
+		// #pragma instancing_options assumeuniformscaling
+		UNITY_INSTANCING_BUFFER_START(Props)
+			// put more per-instance properties here
+		UNITY_INSTANCING_BUFFER_END(Props)
+
+		void surf (Input IN, inout SurfaceOutputStandard o) {
+			float4 depth = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, IN.screenPos));
+			half4 foamLine = 1- saturate(_BlendWidth * (depth - IN.screenPos.w));
+
+//			half4 depth;
+//			depth.r = depthValue;
+//			depth.g = depthValue;
+//			depth.b = depthValue;
+//			fixed4 noise = tex2D (_Noise, float2(saturate(depth.r ), .5));
+
+			
+//			o.Albedo = saturate(o.Albedo + _HighlightColor * depthValue * _BlendAmount);
+//			o.Albedo += _HighlightColor * depthValue * _BlendAmount;
+
+			o.Albedo = _Color;
+			o.Albedo += foamLine * _HighlightColor;
+			o.Alpha = _Color.a;
+		}
+		ENDCG
+	}
+	FallBack "Diffuse"
+}

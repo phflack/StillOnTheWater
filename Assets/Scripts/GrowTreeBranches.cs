@@ -77,6 +77,11 @@ public class GrowTreeBranches : MonoBehaviour
 				b.transform.Rotate(rotX, rotY2, 0);
 				placedBranches[i] = b;
 				rots[i] = rotY;
+
+				foreach (DrawObjectsInstanced d in b.GetComponentsInChildren<DrawObjectsInstanced>()) {
+					Debug.Log ("Recording Transformations (outer)");
+					d.RecordTransformation();
+				}
 			}
 			else //retry generation of this node
 				i--;

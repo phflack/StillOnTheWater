@@ -129,6 +129,11 @@ public class StraightRiver : MonoBehaviour
 				tree.transform.eulerAngles = normal;
 				tree.transform.Rotate(0, Random.Range(0, 360), 0);
 				placedTrees[i] = tree;
+
+				foreach (DrawObjectsInstanced d in tree.GetComponentsInChildren<DrawObjectsInstanced>()) {
+					Debug.Log ("Recording Transformations (outer)");
+					d.RecordTransformation();
+				}
 			}
 			else //try to regen the tree
 				i--;
@@ -163,6 +168,11 @@ public class StraightRiver : MonoBehaviour
 				rock.transform.position = pos;
 				rock.transform.eulerAngles = normal;
 				rock.transform.Rotate(0, Random.Range(0, 360), 0);
+				foreach (DrawObjectsInstanced d in rock.GetComponentsInChildren<DrawObjectsInstanced>()) {
+					Debug.Log ("Recording Transformations (outer)");
+
+					d.RecordTransformation();
+				}
 			}
 			else //try to regen the tree
 				i--;
@@ -195,6 +205,11 @@ public class StraightRiver : MonoBehaviour
 			{
 				GameObject special = Instantiate(specialGen, transform);
 				special.transform.position = pos;
+				foreach (DrawObjectsInstanced d in special.GetComponentsInChildren<DrawObjectsInstanced>()) {
+					Debug.Log ("Recording Transformations (outer)");
+
+					d.RecordTransformation();
+				}
 				//special.transform.eulerAngles = normal;
 				//special.transform.Rotate(0, Random.Range(0, 360), 0);
 			}
@@ -226,6 +241,11 @@ public class StraightRiver : MonoBehaviour
 			{
 				GameObject tree = Instantiate(treeWall, transform);
 				tree.transform.position = pos;
+				foreach (DrawObjectsInstanced d in tree.GetComponentsInChildren<DrawObjectsInstanced>()) {
+					Debug.Log ("Recording Transformations (outer)");
+
+					d.RecordTransformation();
+				}
 				//tree.transform.rotation = Quaternion.FromToRotation(Vector3.up, normal); //haha no fix this later, bottoms need to rotate, tops need to go straight up
 				wallTrees.Add(tree);
 			}
@@ -272,6 +292,11 @@ public class StraightRiver : MonoBehaviour
 			{
 				GameObject d = Instantiate(debrisGen, transform);
 				d.transform.position = pos;
+				foreach (DrawObjectsInstanced b in d.GetComponentsInChildren<DrawObjectsInstanced>()) {
+					Debug.Log ("Recording Transformations (outer)");
+
+					b.RecordTransformation();
+				}
 				//d.transform.eulerAngles = normal;
 				//d.transform.Rotate(0, Random.Range(0, 360), 0);
 				placedDebris[i] = d;

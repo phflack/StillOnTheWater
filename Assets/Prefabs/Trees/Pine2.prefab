@@ -34,8 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4857300971533564}
-  - component: {fileID: 33819201749473484}
-  - component: {fileID: 23496564303148824}
+  - component: {fileID: 114151544710183068}
   m_Layer: 0
   m_Name: Pine_2
   m_TagString: Untagged
@@ -51,7 +50,7 @@ Transform:
   m_GameObject: {fileID: 1124092139630048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4857300971533564}
   m_Father: {fileID: 0}
@@ -63,49 +62,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1160664362692416}
-  m_LocalRotation: {x: -0.039033864, y: -0, z: -0, w: 0.9992379}
-  m_LocalPosition: {x: -0.049987793, y: 1.9573555, z: -0.28728485}
+  m_LocalRotation: {x: -0.048592575, y: 0.0000066161147, z: 0.013051045, w: 0.9987334}
+  m_LocalPosition: {x: 1.38, y: 2.42, z: -2.62}
   m_LocalScale: {x: 0.3, y: 1, z: 0.3}
   m_Children: []
   m_Father: {fileID: 4849590772299860}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -4.474, y: 0, z: 0}
---- !u!23 &23496564303148824
-MeshRenderer:
+  m_LocalEulerAnglesHint: {x: -5.57, y: -0.072000004, z: 1.501}
+--- !u!114 &114151544710183068
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1160664362692416}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 85beab8ff21c2d44dbfad8977162306c, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &33819201749473484
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1160664362692416}
-  m_Mesh: {fileID: 4300004, guid: 75b2843851e0f2c448f52c2b9ce1247a, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ed34abd48864a189eff53daa137bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: pines
+  mesh: {fileID: 4300002, guid: 75b2843851e0f2c448f52c2b9ce1247a, type: 3}
+  mat: {fileID: 2100000, guid: 85beab8ff21c2d44dbfad8977162306c, type: 2}
+  RecordTransformationOnStart: 0
