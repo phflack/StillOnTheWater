@@ -2,7 +2,8 @@
 	Properties {
 		_Color ("Color", Color) = (1,1,1,.5)
 		_HighlightColor ("Hightlight Color", Color) = (1,1,1,1)
-		_Noise ("Noise", 2D) = "white" {}
+		_Noise1 ("Noise1", 2D) = "white" {}
+		_Noise2 ("Noise2", 2D) = "white" {}
 		_BlendWidth ("Blend Width", float) = .1
 		_DepthRange ("Depth Range", float) = 1
 	}
@@ -13,16 +14,17 @@
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard alpha:fade
+		#pragma surface surf Standard alpha:fade vertex:vert
 
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
 
-		sampler2D _Noise;
+		sampler2D _Noise1;
+		sampler2D _Noise2;
 		sampler2D _CameraDepthTexture;
 
 		struct Input {
-			float2 uv_Noise;
+			float2 uv_Noise1;
 			float4 screenPos;
 		};
 
@@ -38,22 +40,31 @@
 			// put more per-instance properties here
 		UNITY_INSTANCING_BUFFER_END(Props)
 
+		void vert (inout appdata_full v) {
+          v.vertex.y += .1 * sin((v.vertex.x + _Time.x * 2) * 8) * sin((v.vertex.z + _Time.x * 2) * 8);
+      	}
+
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			float4 depth = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, IN.screenPos));
 			half4 foamLine = 1- saturate(_BlendWidth * (depth - IN.screenPos.w));
 
-//			half4 depth;
-//			depth.r = depthValue;
-//			depth.g = depthValue;
-//			depth.b = depthValue;
-//			fixed4 noise = tex2D (_Noise, float2(saturate(depth.r ), .5));
+
+			float2 wavyFlux = float2(
+									 _Time.x,
+									 .02 * sin(IN.uv_Noise1.x * 20)
+									);
+
+			float noise1 = tex2D (_Noise1, IN.uv_Noise1 + wavyFlux).r;
+			float noise2 = tex2D (_Noise2, IN.uv_Noise1 + wavyFlux * half2(1.5,.5)).r;
+
+			float bubbleTrails = step(noise1, noise2);
 
 			
 //			o.Albedo = saturate(o.Albedo + _HighlightColor * depthValue * _BlendAmount);
 //			o.Albedo += _HighlightColor * depthValue * _BlendAmount;
 
 			o.Albedo = _Color;
-			o.Albedo += foamLine * _HighlightColor;
+			o.Albedo += foamLine * _HighlightColor + bubbleTrails * _HighlightColor;
 			o.Alpha = _Color.a;
 		}
 		ENDCG
