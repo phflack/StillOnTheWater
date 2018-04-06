@@ -41,7 +41,7 @@
 		UNITY_INSTANCING_BUFFER_END(Props)
 
 		void vert (inout appdata_full v) {
-          v.vertex.y += .1 * sin((v.vertex.x + _Time.x * 2) * 8) * sin((v.vertex.z + _Time.x * 2) * 8);
+          v.vertex.y += .1 * sin((v.vertex.x + _Time.x * 2) * 7) * sin((v.vertex.z + _Time.x * 2) * 7);
       	}
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
@@ -50,7 +50,7 @@
 
 
 			float2 wavyFlux = float2(
-									 _Time.x,
+									 _Time.x/2,
 									 .02 * sin(IN.uv_Noise1.x * 20)
 									);
 
