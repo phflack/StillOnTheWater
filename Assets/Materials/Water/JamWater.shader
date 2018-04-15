@@ -8,6 +8,11 @@
 		_DepthRange ("Depth Range", float) = 1
 	}
 	SubShader {
+		Stencil {
+			Ref 7
+			Comp NotEqual
+			Pass Replace
+		}
 		Tags { "RenderType"="Transparent" "Queue"="Transparent" }
 		ZWrite Off
 		LOD 100

@@ -16,7 +16,6 @@ public class DrawObjectsInstanced : MonoBehaviour {
 
 	public string identifier;
 	public Mesh mesh;
-	int count = 0;
 	public Material mat;
 
 	// when set to true, transform matrix is recorded in Start(). otherwise, it is caused by RecordTransformation();
@@ -59,7 +58,7 @@ public class DrawObjectsInstanced : MonoBehaviour {
 	public void RecordTransformation() {
 		Debug.Log ("Recording Transformations");
 		if (!RecordTransformationOnStart && false) {
-			transformationMatriceses [identifier].Add (Matrix4x4.TRS (transform.position, transform.rotation, transform.lossyScale));
+//			transformationMatriceses [identifier].Add (Matrix4x4.TRS (transform.position, transform.rotation, transform.lossyScale));
 		} else {
 			Debug.LogWarning ("Not Recording Object transformation because it was already recorded in Start()");
 		}
