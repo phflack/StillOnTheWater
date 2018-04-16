@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f43357512ce094999a092f2cb93f3ac7
+timeCreated: 1523809837
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - OutlineCameraOutput: {fileID: 8400000, guid: 4aecea4db9d34437aba5e06011ae6e0c,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
