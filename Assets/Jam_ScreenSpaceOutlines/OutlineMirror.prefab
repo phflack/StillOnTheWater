@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4985740625248708}
   - component: {fileID: 33051142729285900}
   - component: {fileID: 23342713469384426}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: OutlineMirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9f9838fb4681f4b6f81b5c0ba559c104, type: 2}
+  - {fileID: 2100000, guid: b691f87380ae447c28602d46337f07ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

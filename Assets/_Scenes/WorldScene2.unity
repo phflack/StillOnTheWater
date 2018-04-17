@@ -343,6 +343,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 437067210}
     m_Modifications:
+    - target: {fileID: 23152523347095112, guid: f58329994e3e15745978e3cb5193e607,
+        type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4013431770585684, guid: f58329994e3e15745978e3cb5193e607, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.261
@@ -384,6 +389,11 @@ Prefab:
       propertyPath: myAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: bd7a06475c4414638b26e1199fd1e9df, type: 3}
+    - target: {fileID: 23152523347095112, guid: f58329994e3e15745978e3cb5193e607,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f58329994e3e15745978e3cb5193e607, type: 2}
   m_IsPrefabParent: 0
@@ -2425,6 +2435,10 @@ Prefab:
     - target: {fileID: 4782359773892286, guid: e91ec7f635efdb547864362fbbf6c6f7, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199978621818424, guid: e91ec7f635efdb547864362fbbf6c6f7, type: 2}
+      propertyPath: m_Name
+      value: Missouri Waltz
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e91ec7f635efdb547864362fbbf6c6f7, type: 2}
