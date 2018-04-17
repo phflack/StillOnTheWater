@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 64862050328477388}
   - component: {fileID: 23901117997225032}
   - component: {fileID: 114148418039040130}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: WaterPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

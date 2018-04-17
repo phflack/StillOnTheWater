@@ -11,8 +11,8 @@ RenderTexture:
     Hash: 00000000000000000000000000000000
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
-  m_Width: 1145
-  m_Height: 644
+  m_Width: 1591
+  m_Height: 895
   m_AntiAliasing: 1
   m_DepthFormat: 0
   m_ColorFormat: 0
