@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OutlineMirrorObject : MonoBehaviour {
+	public static bool AllOutlinesShouldChill = false;
+
 	public GameObject[] OutlineMeshes;
 	public GameObject MirrorObjectPrefab;
 	List<GameObject> MirrorObjects;
@@ -26,7 +28,7 @@ public class OutlineMirrorObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		foreach (GameObject g in MirrorObjects) {
-			g.SetActive (activeOutlines);
+			g.SetActive (activeOutlines && !AllOutlinesShouldChill);
 		}
 	}
 }
