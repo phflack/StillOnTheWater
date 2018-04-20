@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class NextScene : MonoBehaviour {
 
+    public Fading f;
+
+    public float fadeTime = 0.8f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,14 +16,17 @@ public class NextScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(Input.GetKey("joystick button 0") || Input.GetKey(KeyCode.A))
+        if(Input.GetButton("A") || Input.GetKey(KeyCode.A))
         {
 
             //move to next scene
 
-            float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+            //float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
 
+
+            f.fadeStarted = true;
             StartCoroutine(fade(fadeTime));
+
 
         }
 
@@ -33,6 +40,7 @@ public class NextScene : MonoBehaviour {
 	}
     IEnumerator fade(float time)
     {
+
         yield return new WaitForSeconds(time);
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);

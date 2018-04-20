@@ -21,8 +21,8 @@ public class EndSceneManager : MonoBehaviour
         {
 
             //move to next scene
-            float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
-            StartCoroutine(fade(fadeTime));
+          //  float fadeTime = GameObject.Find("FadeManager").GetComponent<Fading>().BeginFade(1);
+            //StartCoroutine(fade(fadeTime));
 
         }
 
