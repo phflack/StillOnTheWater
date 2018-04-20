@@ -12,6 +12,8 @@ public class ObjectViewerCamera : MonoBehaviour {
 	public KeyCode confirmKey;
 	public KeyCode cancelKey;
 
+	bool activeItemView = false;
+
 	void Start() {
 		instance = this;
 		ButtonHintCanvas.SetActive (false);
@@ -29,23 +31,28 @@ public class ObjectViewerCamera : MonoBehaviour {
 		currentObject.transform.rotation = rotat;
 		originalObject = go;
 		ButtonHintCanvas.SetActive (true);
+		activeItemView = true;
 	}
 
 	void Update() {
-		if (Input.GetKeyUp (confirmKey)) {
-			OutlineMirrorObject.AllOutlinesShouldChill = false;
-			if (originalObject.GetComponent<CassetteAudio> () != null) {
-				originalObject.GetComponent<CassetteAudio> ().PlayAudio ();
-				Destroy (currentObject);
-				Debug.Log("Playing audio");
-				ButtonHintCanvas.SetActive (false);
+		if (activeItemView) {
+			if (Input.GetKeyUp (confirmKey)) {
+				OutlineMirrorObject.AllOutlinesShouldChill = false;
+				if (originalObject.GetComponent<CassetteAudio> () != null) {
+					originalObject.GetComponent<CassetteAudio> ().PlayAudio ();
+					Destroy (currentObject);
+					Debug.Log ("Playing audio");
+					ButtonHintCanvas.SetActive (false);
+					activeItemView = false;
+				}
 			}
-		}
-		if (Input.GetKeyUp (cancelKey)) {
-			OutlineMirrorObject.AllOutlinesShouldChill = false;
-			if (currentObject != null) {
-				Destroy (currentObject);
-				ButtonHintCanvas.SetActive (false);
+			if (Input.GetKeyUp (cancelKey)) {
+				OutlineMirrorObject.AllOutlinesShouldChill = false;
+				if (currentObject != null) {
+					Destroy (currentObject);
+					ButtonHintCanvas.SetActive (false);
+					activeItemView = false;
+				}
 			}
 		}
 	}
