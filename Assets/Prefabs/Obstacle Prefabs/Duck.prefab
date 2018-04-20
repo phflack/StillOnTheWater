@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 1527355544090392}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.4, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.35, y: 0.5, z: 0.4}
   m_Children:
   - {fileID: 4591594660005368}
   m_Father: {fileID: 0}
@@ -85,17 +85,18 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: cee9f2799c4200840849b128ae3fc897, type: 2}
-  - {fileID: 2100000, guid: 432b378661b517440bedd090049328d4, type: 2}
-  - {fileID: 2100000, guid: aff7ccdd725c0444db3a6e12e1c394df, type: 2}
-  - {fileID: 2100000, guid: 7558cc27fd51d564f82d089371f20a5e, type: 2}
-  - {fileID: 2100000, guid: 36093575f1b130b4a9007763f6193e52, type: 2}
-  - {fileID: 2100000, guid: 36273ba9c2f020548b7ab7f298f61dae, type: 2}
-  - {fileID: 2100000, guid: 19957a393432db74f89d857c2afb9437, type: 2}
+  - {fileID: 2100000, guid: 383be6a92e36ffd4c94429280279d016, type: 2}
+  - {fileID: 2100000, guid: 9755f136234134548a5bbd504c1fb805, type: 2}
+  - {fileID: 2100000, guid: 25777b7d88f2c404db2a51b561bea132, type: 2}
+  - {fileID: 2100000, guid: 2371d95465f74ac45bb2b9d8b544ab66, type: 2}
+  - {fileID: 2100000, guid: b81069f0369712f409a8dc8a2c0c3836, type: 2}
+  - {fileID: 2100000, guid: 8c75efcb0dc53af46ac144c0652579ec, type: 2}
+  - {fileID: 2100000, guid: 608c3df2b7357b64496a5b1d04e287f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,6 +107,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -190,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713275d1509cc024396a90fef50aaafa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckSpeed: 2.5
+  duckSpeed: 1.5
 --- !u!136 &136720141713111250
 CapsuleCollider:
   m_ObjectHideFlags: 1
