@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23530091865062094}
   - component: {fileID: 95530587187506228}
   - component: {fileID: 65069682539847268}
+  - component: {fileID: 54978355360269044}
   m_Layer: 0
   m_Name: boot
   m_TagString: Obstacle
@@ -84,6 +85,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023537994320524}
   m_Mesh: {fileID: 4300000, guid: b9ac24b0d1b9c1c4488d1589fbd9206e, type: 3}
+--- !u!54 &54978355360269044
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023537994320524}
+  serializedVersion: 2
+  m_Mass: 3
+  m_Drag: 0
+  m_AngularDrag: 10
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 36
+  m_CollisionDetection: 0
 --- !u!65 &65069682539847268
 BoxCollider:
   m_ObjectHideFlags: 1
