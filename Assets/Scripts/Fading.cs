@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fading : MonoBehaviour {
-
-    public Texture2D fadeGraphic;
-    public float fadeTime = 0.8f;
     
+    public float fadeTime = 0.8f;
 
-    private int drawDepth = -1000;
+    public bool fadeStarted = false;
 
-    private float alpha = 1.0f;
-    private float vol = 0f;
+    public Light fadeLight;
+    public Light fadeLight2;
+    public Material m;
 
     private int fadeDir = -1; //direction to fade -1 = fade in, +1 = fade out
 
-    private void OnGUI()
+    private void Start()
     {
-        alpha += fadeDir * fadeTime * Time.deltaTime;
-        alpha = Mathf.Clamp01(alpha);
+        fadeStarted = false;
+        m.color = new Color(m.color.r, m.color.g, m.color.b, 0f);
+    }
 
+    void Update()
+    {
+        if(fadeStarted)
+        {
+            if (m.color.a < 1)
+            {
+                m.color = new Color(m.color.r, m.color.g, m.color.b, m.color.a + ((1 / fadeTime) * Time.deltaTime));
+            }
 
-        GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, alpha);
+        }
+        
 
-        GUI.depth = drawDepth;
-        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), fadeGraphic);
-       
     }
 
     public float BeginFade(int direction)
