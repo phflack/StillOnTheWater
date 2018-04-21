@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 611478347}
   - component: {fileID: 611478352}
   - component: {fileID: 611478353}
+  - component: {fileID: 611478354}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -637,6 +638,20 @@ MonoBehaviour:
     m_Bits: 256
   InteractableLabel: {fileID: 1511183777}
   interactKey: 330
+--- !u!114 &611478354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611478346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c76bb2a1d85c4d379af92949a48af12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 3
+  flipX: 0
+  flipY: 0
 --- !u!1 &631720518
 GameObject:
   m_ObjectHideFlags: 0
