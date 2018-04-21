@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547833111145482}
   - component: {fileID: 114697743034748440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GrassGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
