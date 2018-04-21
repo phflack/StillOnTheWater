@@ -7,6 +7,8 @@ public class RotateCameraWithXboxControls : MonoBehaviour {
 	public float rotationSpeed = 60f;
 	public bool flipX = false;
 	public bool flipY = false;
+	float totalx = 0f;
+	float totaly = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -20,9 +22,11 @@ public class RotateCameraWithXboxControls : MonoBehaviour {
 		Debug.Log (xInput + "," + yInput);
 		if (flipX) { xInput *= -1; }
 		if (flipY) { yInput *= -1; }
+		totalx += yInput * rotationSpeed;
+		totaly += xInput * rotationSpeed;
 
 		Quaternion prevRotation = mainCam.transform.rotation;
-		prevRotation *= Quaternion.Euler (new Vector3 (yInput * rotationSpeed, xInput * rotationSpeed, 0f));
+		prevRotation = Quaternion.Euler (new Vector3 (totalx, totaly, 0f));
 		mainCam.transform.rotation = prevRotation;
 	}
 }
