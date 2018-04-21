@@ -111,4 +111,4 @@ MonoBehaviour:
   GrassOffSet: 0.5
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294965967

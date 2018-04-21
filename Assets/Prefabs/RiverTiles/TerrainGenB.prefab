@@ -443,7 +443,7 @@ MonoBehaviour:
   GrassOffSet: 0.5
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294965487
 --- !u!114 &114440360905297246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,7 +464,7 @@ MonoBehaviour:
   GrassOffSet: 0.5
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294965487
 --- !u!114 &114502192039350706
 MonoBehaviour:
   m_ObjectHideFlags: 1
