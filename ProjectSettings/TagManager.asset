@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Terrain
-  - Tree
-  - Special
-  - Debris
-  - Obstacle
-  - Scanner
-  - ObstacleKiller
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - InteractibleCollider
-  - Grass
-  - Kayak
+  - 
+  - 
+  - 
   - 
   - 
   - 
