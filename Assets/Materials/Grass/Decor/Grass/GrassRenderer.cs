@@ -24,7 +24,7 @@ public class GrassRenderer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(grassMaterial.enableInstancing);
+//        Debug.Log(grassMaterial.enableInstancing);
         Random.InitState(seed);
         List<Matrix4x4> matrices = new List<Matrix4x4>(numGrasses);
         for(int i = 0; i < numGrasses; i++)

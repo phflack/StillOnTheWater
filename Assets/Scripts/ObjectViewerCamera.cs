@@ -54,6 +54,14 @@ public class ObjectViewerCamera : MonoBehaviour {
 					activeItemView = false;
 				}
 			}
+			if (originalObject.GetComponent<CassetteAudio> () != null) {
+				originalObject.GetComponent<CassetteAudio> ().PlayAudio ();
+				Destroy (currentObject);
+				Debug.Log ("Playing audio");
+				ButtonHintCanvas.SetActive (false);
+				activeItemView = false;
+			}
 		}
+
 	}
 }
