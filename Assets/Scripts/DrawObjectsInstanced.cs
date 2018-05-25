@@ -27,14 +27,14 @@ public class DrawObjectsInstanced : MonoBehaviour {
     {
         if (meshes == null || transformationMatriceses == null || materials == null)
         {
-            Debug.Log("Initializing GPU Instance matrices...");
+//            Debug.Log("Initializing GPU Instance matrices...");
             meshes = new Dictionary<string, Mesh>();
             transformationMatriceses = new Dictionary<string, List<Matrix4x4>>();
             materials = new Dictionary<string, Material>();
         }
         if (!meshes.ContainsKey(identifier))
         {
-            Debug.Log("Adding GPU Instance group key: " + identifier + " - from object: " + gameObject.name);
+//            Debug.Log("Adding GPU Instance group key: " + identifier + " - from object: " + gameObject.name);
             meshes[identifier] = mesh;
             transformationMatriceses[identifier] = new List<Matrix4x4>();
             materials[identifier] = mat;
@@ -56,11 +56,11 @@ public class DrawObjectsInstanced : MonoBehaviour {
     }
 
 	public void RecordTransformation() {
-		Debug.Log ("Recording Transformations");
+//		Debug.Log ("Recording Transformations");
 		if (!RecordTransformationOnStart && false) {
 //			transformationMatriceses [identifier].Add (Matrix4x4.TRS (transform.position, transform.rotation, transform.lossyScale));
 		} else {
-			Debug.LogWarning ("Not Recording Object transformation because it was already recorded in Start()");
+//			Debug.LogWarning ("Not Recording Object transformation because it was already recorded in Start()");
 		}
 	}
 }

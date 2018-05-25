@@ -9,7 +9,7 @@ public class DrawObjectsInstancedManager : MonoBehaviour {
 			return;
 		}
 		foreach (string meshGroupIdentifier in DrawObjectsInstanced.meshes.Keys) {
-			Debug.Log ("GPUInstance drawing Object Group \"" + meshGroupIdentifier + "\". (" + DrawObjectsInstanced.transformationMatriceses[meshGroupIdentifier].Count + " instances)");
+//			Debug.Log ("GPUInstance drawing Object Group \"" + meshGroupIdentifier + "\". (" + DrawObjectsInstanced.transformationMatriceses[meshGroupIdentifier].Count + " instances)");
 			Graphics.DrawMeshInstanced(DrawObjectsInstanced.meshes[meshGroupIdentifier],
 										0,
 										DrawObjectsInstanced.materials[meshGroupIdentifier],
