@@ -23,10 +23,10 @@ TagManager:
   - 
   - Paddle
   - Controllers
-  - 
-  - 
-  - 
-  - 
+  - PaddleHandle
+  - PaddleWater
+  - WaterTerrain
+  - Kayak
   - 
   - 
   - 

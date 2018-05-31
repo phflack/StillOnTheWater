@@ -21,7 +21,7 @@ public class PositionSplashParticlesAtWaterContactPoints : MonoBehaviour {
 			foreach (ParticleSystem p in particleSystems) {
 				Debug.Log ("Emitting water particles from " + p.gameObject.name);
 				p.transform.rotation = Quaternion.Euler (Vector3.zero);
-				p.Emit (100);
+				p.Emit (20);
 			}
 		}
 	}

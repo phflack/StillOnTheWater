@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 114275163821125514}
   - component: {fileID: 114942364768490632}
   m_Layer: 8
-  m_Name: Syd3
+  m_Name: SYd3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
