@@ -16,13 +16,13 @@ public class PositionSplashParticlesAtWaterContactPoints : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c) {
-		Debug.Log ("colliding with " + c.gameObject.name);
-		if (c.gameObject.CompareTag ("Water")) {
-			foreach (ParticleSystem p in particleSystems) {
-				Debug.Log ("Emitting water particles from " + p.gameObject.name);
-				p.transform.rotation = Quaternion.Euler (Vector3.zero);
-				p.Emit (100);
-			}
-		}
+//		Debug.Log ("colliding with " + c.gameObject.name);
+//		if (c.gameObject.CompareTag ("Water")) {
+//			foreach (ParticleSystem p in particleSystems) {
+//				Debug.Log ("Emitting water particles from " + p.gameObject.name);
+//				p.transform.rotation = Quaternion.Euler (Vector3.zero);
+//				p.Emit (100);
+//			}
+//		}
 	}
 }
