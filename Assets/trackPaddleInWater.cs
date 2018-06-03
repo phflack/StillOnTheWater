@@ -46,7 +46,7 @@ public class trackPaddleInWater : MonoBehaviour {
 		}
 	}
 
-	void OnDrawGizmosSelected() {
+	void OnDrawGizmos() {
 		if (points != null && points.Count > 0) {
 			Gizmos.color = Color.cyan;
 			for (int i = points.Count - (Mathf.Min (averagingBufferLength, points.Count) - 1); i < points.Count - 1; i++) {

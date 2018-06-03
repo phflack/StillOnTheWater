@@ -10,9 +10,9 @@ public class AlignPaddle : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		Vector3 handlesSeparation = rightHandle.position - leftHandle.position;
-//		transform.position = leftHandle.position + handlesSeparation / 2;
-//		transform.LookAt (leftHandle.position);
-		GetComponent<Rigidbody> ().MovePosition (leftHandle.position + (handlesSeparation/2f));
-		GetComponent<Rigidbody> ().MoveRotation(Quaternion.LookRotation(-handlesSeparation));
+		transform.position = leftHandle.position + handlesSeparation / 2f;
+		transform.LookAt (leftHandle.position);
+		//GetComponent<Rigidbody> ().MovePosition (leftHandle.position + (handlesSeparation/2f));
+		//GetComponent<Rigidbody> ().MoveRotation(Quaternion.LookRotation(-handlesSeparation));
 	}
 }
