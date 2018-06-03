@@ -5,7 +5,8 @@ using UnityEngine;
 public class trackPaddleInWater : MonoBehaviour {
 	public Transform lastCollisionTransform;
 	public Transform referenceTransform;
-	List<Vector3> points = new List<Vector3> ();
+    public Vector3 lastEntryPoint;
+    List<Vector3> points = new List<Vector3> ();
 	public int averagingBufferLength = 40;
 
 	// Use this for initialization
@@ -14,8 +15,11 @@ public class trackPaddleInWater : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (points != null && points.Count > 0)
+        {
+            lastEntryPoint = referenceTransform.position + points[points.Count - (Mathf.Min(averagingBufferLength, points.Count) - 1)];
+        }
+    }
 
 	void OnTriggerEnter(Collider c){
 		if (c.transform == lastCollisionTransform) {
@@ -53,7 +57,7 @@ public class trackPaddleInWater : MonoBehaviour {
 				Gizmos.DrawLine (points [i - 1], points [i]);
 			}
 			Gizmos.color = Color.red;
-			Gizmos.DrawRay (referenceTransform.position + points[points.Count - (Mathf.Min (averagingBufferLength, points.Count) - 1)], totalMotion);
+            Gizmos.DrawRay(lastEntryPoint, totalMotion);
 		}
 	}
 }

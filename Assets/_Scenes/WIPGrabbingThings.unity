@@ -1093,6 +1093,7 @@ MonoBehaviour:
   - {fileID: 1733000159}
   - {fileID: 1518278020}
   resultantForceMultiplier: 0.05
+  resultantRotationForceCoefficient: 0.3
 --- !u!1 &450438337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +2785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastCollisionTransform: {fileID: 0}
   referenceTransform: {fileID: 437067210}
+  lastEntryPoint: {x: 0, y: 0, z: 0}
   averagingBufferLength: 20
   totalMotion: {x: 0, y: 0, z: 0}
 --- !u!1 &1538679217
@@ -3564,6 +3566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastCollisionTransform: {fileID: 0}
   referenceTransform: {fileID: 437067210}
+  lastEntryPoint: {x: 0, y: 0, z: 0}
   averagingBufferLength: 20
   totalMotion: {x: 0, y: 0, z: 0}
 --- !u!1 &1779932176
