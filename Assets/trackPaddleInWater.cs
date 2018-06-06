@@ -6,7 +6,7 @@ public class trackPaddleInWater : MonoBehaviour {
 	public Transform lastCollisionTransform;
 	public Transform referenceTransform;
     public Vector3 lastEntryPoint;
-    List<Vector3> points = new List<Vector3> ();
+    public List<Vector3> points = new List<Vector3> ();
 	public int averagingBufferLength = 40;
 
 	// Use this for initialization
@@ -14,10 +14,11 @@ public class trackPaddleInWater : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (points != null && points.Count > 0)
         {
-            lastEntryPoint = referenceTransform.position + points[points.Count - (Mathf.Min(averagingBufferLength, points.Count) - 1)];
+            lastEntryPoint = points[points.Count - (Mathf.Min(averagingBufferLength, points.Count) - 1)];
         }
     }
 
@@ -33,7 +34,9 @@ public class trackPaddleInWater : MonoBehaviour {
 	void OnTriggerExit(Collider c) {
 		if (c.transform == lastCollisionTransform) {
 			lastCollisionTransform = null;
+            lastEntryPoint = Vector3.zero;
 			totalMotion = Vector3.zero;
+            points.Clear();
 		}
 	}
 
