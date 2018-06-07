@@ -28,6 +28,7 @@ public class trackPaddleInWater : MonoBehaviour {
 			lastCollisionTransform = c.gameObject.transform;
 		}
 		points.Clear ();
+        StartCoroutine(AutoClear());
 		points.Add(transform.position - referenceTransform.position);
 	}
 
@@ -63,4 +64,11 @@ public class trackPaddleInWater : MonoBehaviour {
             Gizmos.DrawRay(lastEntryPoint, totalMotion);
 		}
 	}
+
+    private IEnumerator AutoClear()
+    {
+        yield return new WaitForSeconds(1.5f);
+        points.Clear();
+        lastEntryPoint = Vector3.zero;
+    }
 }

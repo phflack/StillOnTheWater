@@ -98,7 +98,10 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
         // this is backward because Paul was using x as forward when I got here
         Vector3 nuDelta = (-cool_velocity.x * transform.right + -cool_velocity.z* transform.forward) * Time.deltaTime;
         transform.position = transform.position + nuDelta;
-        //Debug.Log(-cool_rotation * Time.deltaTime);
+        if (!float.IsNaN(-cool_rotation * Time.deltaTime))
+        {
+            Debug.Log(-cool_rotation * Time.deltaTime);
+        }
         transform.Rotate(0f, -cool_rotation * Time.deltaTime, 0f);
     }
 

@@ -12,6 +12,7 @@ TagManager:
   - Water
   - ObstacleKiller
   - Scanner
+  - Casette
   layers:
   - Default
   - TransparentFX
@@ -27,8 +28,8 @@ TagManager:
   - PaddleWater
   - WaterTerrain
   - Kayak
-  - 
-  - 
+  - Casette
+  - DropZone
   - 
   - 
   - 

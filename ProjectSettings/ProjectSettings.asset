@@ -304,6 +304,7 @@ PlayerSettings:
     m_Devices:
     - None
     - OpenVR
+    - Oculus
   - m_BuildTarget: Tizen
     m_Enabled: 0
     m_Devices: []
@@ -718,6 +719,7 @@ PlayerSettings:
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
+  XboxOneXTitleMemory: 8
   xboxOneScriptCompiler: 0
   vrEditorSettings:
     daydream:
