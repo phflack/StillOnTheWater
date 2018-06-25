@@ -68,7 +68,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BlendAmount: 0.4
-    - _BlendWidth: 0.62
+    - _BlendWidth: 0.13
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DepthRange: 3.35
@@ -86,6 +86,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WaveAmount: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.08639706, g: 0.51599914, b: 0.6911765, a: 0.772}
