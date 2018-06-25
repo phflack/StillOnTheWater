@@ -100,7 +100,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
         transform.position = transform.position + nuDelta;
         if (!float.IsNaN(-cool_rotation * Time.deltaTime))
         {
-            Debug.Log(-cool_rotation * Time.deltaTime);
+//            Debug.Log(-cool_rotation * Time.deltaTime);
         }
         transform.Rotate(0f, -cool_rotation * Time.deltaTime, 0f);
     }
