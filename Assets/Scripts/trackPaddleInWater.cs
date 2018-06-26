@@ -18,7 +18,7 @@ public class trackPaddleInWater : MonoBehaviour {
     {
         if (points != null && points.Count > 0)
         {
-			lastEntryPoint = points[points.Count - (Mathf.Min(averagingBufferLength, points.Count) - 1)] + referenceTransform.position;
+			lastEntryPoint = points[points.Count - (Mathf.Min(averagingBufferLength, points.Count) - 1)];
         }
     }
 
@@ -64,7 +64,7 @@ public class trackPaddleInWater : MonoBehaviour {
 				Gizmos.DrawLine (points [i - 1], points [i]);
 			}
 			Gizmos.color = Color.red;
-            Gizmos.DrawRay(lastEntryPoint, totalMotion);
+            Gizmos.DrawRay(lastEntryPoint + referenceTransform.position, totalMotion);
 		}
 	}
 

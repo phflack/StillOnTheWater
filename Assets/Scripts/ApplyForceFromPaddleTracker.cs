@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ApplyForceFromPaddleTracker : MonoBehaviour {
     public Text debugBox;
 	Vector3 cool_velocity;
-    float cool_rotation;
+    float cool_rotation = 0f;
     // a drag coefficient that should probably be split into x and z drag.
 	public float drag;
     public float angularDrag;
@@ -50,20 +50,29 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
             //    |     				             [-1 to apply backward paddling as forward motion]
             //    |     				                |         |               |                    [coefficient reducing power of paddle input on kayak. I guess this approximates mass?]
             //    |     				                |       nmu  |               |                       |
-			totalForce += (-p.totalMotion) * resultantForceMultiplier;
+			totalForce += (transform.InverseTransformDirection(-p.totalMotion)) * resultantForceMultiplier;
 
 			// Get position in local space coordinates, so we can choose to ignore strokes very close to the center of the kayak
-			Vector3 relativePosition = transform.InverseTransformPoint(p.lastEntryPoint);
-			if (Mathf.Abs (relativePosition.x) > .01) {
-				rotationForce += Mathf.Sign (relativePosition.x) * Mathf.Abs ((transform.TransformDirection(-p.totalMotion) + riverVelocityWorld).magnitude) * resultantRotationForceCoefficient / Vector3.Magnitude (cool_velocity);
-				if (Mathf.Sign (rotationForce) != Mathf.Sign (cool_rotation)) {
-					cool_rotation = 0f;
-				}
-//				Debug.Log (rotationForce);
-			} else {
-				Debug.Log ("last Entry Point too close: " + transform.InverseTransformPoint(p.lastEntryPoint));
-			}
+			Vector3 relativePosition = (p.lastEntryPoint);
+            /*Mathf.Abs (relativePosition.x*/
+            //if (Mathf.Sign (rotationForce) != Mathf.Sign (cool_rotation)) {
+            //cool_rotation = 0f;
+            //}
+            //				Debug.Log (rotationForce);
+            //} else {
+            //Debug.Log ("last Entry Point too close: " + transform.InverseTransformPoint(p.lastEntryPoint));
+
+            float rotationIncrease = Mathf.Sign (relativePosition.x) *(-p.totalMotion).z* resultantRotationForceCoefficient / Vector3.Magnitude (cool_velocity);
+            if (cool_velocity.magnitude > 1f)
+            {
+                rotationIncrease /= cool_velocity.magnitude;
+            }
+            if (!float.IsNaN(rotationIncrease))
+            {
+                rotationForce += rotationIncrease;
+            }
         }
+        Debug.Log(rotationForce);
         // i think that friction should probs be applied before the river velocity? or somehow excepting river velocity? or be applied to the component
         // exceeding river velocity? 
         // I'm not certain, but with river velocity always applied, I think it'll work out that the kayak has a reasonable minimum speed when not moving.
@@ -77,7 +86,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
         cool_velocity -= drag * Vector3.SqrMagnitude(cool_velocity) * cool_velocity.normalized;
 		float prev_cool_rotation = cool_rotation;
         cool_rotation -= angularDrag * cool_rotation * cool_rotation  * Mathf.Sign(cool_rotation);
-//		Debug.Log ("previous angle: " + prev_cool_rotation + " | after deceleration: " + cool_rotation);
+		Debug.Log ("previous angle: " + prev_cool_rotation + " | after deceleration: " + cool_rotation);
         VRTK.VRTK_ControllerReference left = VRTK.VRTK_ControllerReference.GetControllerReference(VRTK.VRTK_DeviceFinder.GetControllerLeftHand());
         VRTK.VRTK_ControllerReference right = VRTK.VRTK_ControllerReference.GetControllerReference(VRTK.VRTK_DeviceFinder.GetControllerRightHand());
         VRTK.VRTK_ControllerHaptics.CancelHapticPulse(left);
@@ -108,8 +117,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
 		}
 
 		// calculate vector to add to position for this frame. Remove the 1 velocity of the vector. I think this is redundant, tbh.
-        Vector3 nuDelta = (-cool_velocity.x * transform.right + cool_velocity.z* transform.forward) * Time.deltaTime;
-		nuDelta.z *= -1;
+        Vector3 nuDelta = (cool_velocity.x * transform.right + cool_velocity.z* transform.forward) * Time.deltaTime;
         transform.position = transform.position + nuDelta;
 
     }
@@ -117,8 +125,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
 	void OnDrawGizmos() {
 		Gizmos.color = Color.red;
         // draw the velocity vector at the front of the boat.
-		Vector3 nuDelta = (-cool_velocity.x * transform.right + cool_velocity.z* transform.forward);
-		nuDelta.z *= -1;
+		Vector3 nuDelta = (cool_velocity.x * transform.right + cool_velocity.z* transform.forward);
 		Gizmos.DrawRay (noseRefTransform.position, nuDelta);
         // draw a vector to visualize the rotation of the boat
         Gizmos.DrawRay(noseRefTransform.position, new Vector3(0f, 0f, cool_rotation));
