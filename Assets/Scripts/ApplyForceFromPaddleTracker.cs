@@ -49,8 +49,8 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
             //    |     				                          |             [motion vector of river flow]
             //    |     				             [-1 to apply backward paddling as forward motion]
             //    |     				                |         |               |                    [coefficient reducing power of paddle input on kayak. I guess this approximates mass?]
-            //    |     				                |         |               |                       |
-			totalForce += (transform.TransformDirection(-p.totalMotion) + riverVelocityWorld) * resultantForceMultiplier;
+            //    |     				                |       nmu  |               |                       |
+			totalForce += (-p.totalMotion) * resultantForceMultiplier;
 
 			// Get position in local space coordinates, so we can choose to ignore strokes very close to the center of the kayak
 			Vector3 relativePosition = transform.InverseTransformPoint(p.lastEntryPoint);
@@ -108,7 +108,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
 		}
 
 		// calculate vector to add to position for this frame. Remove the 1 velocity of the vector. I think this is redundant, tbh.
-        Vector3 nuDelta = (-cool_velocity.x * transform.right + -cool_velocity.z* transform.forward) * Time.deltaTime;
+        Vector3 nuDelta = (-cool_velocity.x * transform.right + cool_velocity.z* transform.forward) * Time.deltaTime;
 		nuDelta.z *= -1;
         transform.position = transform.position + nuDelta;
 
@@ -117,7 +117,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
 	void OnDrawGizmos() {
 		Gizmos.color = Color.red;
         // draw the velocity vector at the front of the boat.
-		Vector3 nuDelta = (-cool_velocity.x * transform.right + -cool_velocity.z* transform.forward);
+		Vector3 nuDelta = (-cool_velocity.x * transform.right + cool_velocity.z* transform.forward);
 		nuDelta.z *= -1;
 		Gizmos.DrawRay (noseRefTransform.position, nuDelta);
         // draw a vector to visualize the rotation of the boat

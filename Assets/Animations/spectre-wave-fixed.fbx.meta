@@ -109,8 +109,56 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: joint1/joint2
+        weight: 0
+      - path: joint1/joint2/joint7
+        weight: 0
+      - path: joint1/joint2/joint7/joint8
+        weight: 0
+      - path: joint1/joint2/joint7/joint8/joint9
+        weight: 0
+      - path: joint1/joint3
+        weight: 0
+      - path: joint1/joint3/joint4
+        weight: 0
+      - path: joint1/joint3/joint4/joint5
+        weight: 0
+      - path: joint1/joint3/joint4/joint5/joint6
+        weight: 0
+      - path: joint1/joint10
+        weight: 1
+      - path: joint1/joint10/joint11
+        weight: 1
+      - path: joint1/joint10/joint11/joint12
+        weight: 1
+      - path: joint1/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: joint1/joint10/joint11/joint12/joint13/joint14
+        weight: 1
+      - path: joint1/joint10/joint11/joint12/joint13/joint14/joint15
+        weight: 1
+      - path: joint1/joint10/joint11/joint16
+        weight: 1
+      - path: joint1/joint10/joint11/joint16/joint17
+        weight: 1
+      - path: joint1/joint10/joint11/joint16/joint17/joint18
+        weight: 1
+      - path: joint1/joint10/joint11/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: joint1/joint10/joint11/joint20
+        weight: 1
+      - path: joint1/joint10/joint11/joint20/joint21
+        weight: 1
+      - path: joint1/joint10/joint11/joint20/joint21/joint22
+        weight: 1
+      - path: spectre
+        weight: 1
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     isReadable: 1
