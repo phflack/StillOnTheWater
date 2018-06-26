@@ -73,5 +73,5 @@ Material:
     - _WindStrength: 0.781
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.64705884, g: 0.7225152, b: 1, a: 1}
+    - _Color: {r: 0.10054444, g: 0.50735295, b: 0.06714966, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

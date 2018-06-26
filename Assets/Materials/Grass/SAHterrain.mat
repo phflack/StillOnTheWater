@@ -82,6 +82,6 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DirtTint: {r: 1, g: 0, b: 0, a: 1}
+    - _DirtTint: {r: 0.9705882, g: 0.7422145, b: 0.7422145, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GrassTint: {r: 0.052443776, g: 0.35777506, b: 0.71323526, a: 1}
+    - _GrassTint: {r: 0.83823526, g: 0.56891173, b: 0.22804932, a: 1}
