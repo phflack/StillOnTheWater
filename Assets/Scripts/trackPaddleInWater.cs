@@ -18,7 +18,7 @@ public class trackPaddleInWater : MonoBehaviour {
     {
         if (points != null && points.Count > 0)
         {
-            lastEntryPoint = points[points.Count - (Mathf.Min(averagingBufferLength, points.Count) - 1)];
+			lastEntryPoint = points[points.Count - (Mathf.Min(averagingBufferLength, points.Count) - 1)] + referenceTransform.position;
         }
     }
 
@@ -47,6 +47,9 @@ public class trackPaddleInWater : MonoBehaviour {
 //		Debug.Log ("currently colliding with " + c.gameObject.name);
 		totalMotion = Vector3.zero;
 		points.Add(transform.position - referenceTransform.position);
+		if (points.Count > averagingBufferLength * 5) {
+			points = points.GetRange (points.Count - averagingBufferLength - 1, averagingBufferLength);
+		}
 		if (points != null && points.Count > 0) {
 			for (int i = points.Count - (Mathf.Min (averagingBufferLength, points.Count) - 1); i < points.Count - 1; i++) {
 				totalMotion += points [i] - points [i - 1];
