@@ -53,7 +53,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
 			totalForce += (transform.InverseTransformDirection(-p.totalMotion)) * resultantForceMultiplier;
 
 			// Get position in local space coordinates, so we can choose to ignore strokes very close to the center of the kayak
-			Vector3 relativePosition = (p.lastEntryPoint);
+			Vector3 relativePosition = transform.InverseTransformDirection(p.lastEntryPoint);
             /*Mathf.Abs (relativePosition.x*/
             //if (Mathf.Sign (rotationForce) != Mathf.Sign (cool_rotation)) {
             //cool_rotation = 0f;
@@ -62,11 +62,8 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
             //} else {
             //Debug.Log ("last Entry Point too close: " + transform.InverseTransformPoint(p.lastEntryPoint));
 
-            float rotationIncrease = Mathf.Sign (relativePosition.x) *(-p.totalMotion).z* resultantRotationForceCoefficient / Vector3.Magnitude (cool_velocity);
-            if (cool_velocity.magnitude > 1f)
-            {
-                rotationIncrease /= cool_velocity.magnitude;
-            }
+            float rotationIncrease = Mathf.Sign (relativePosition.x) * transform.InverseTransformDirection(p.totalMotion).z* resultantRotationForceCoefficient * Mathf.Min(1f, 1f/Vector3.Magnitude (cool_velocity));
+            
             if (!float.IsNaN(rotationIncrease))
             {
                 rotationForce += rotationIncrease;
@@ -100,8 +97,8 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
         //          Debug.Log("hitting neglible velocity");
         //	cool_velocity = Vector3.zero;
         //}
-        debugBox.text = "L(" + tracking[0].points.Count + "): " + tracking[0].lastEntryPoint.ToString() + "\n" +
-                                   "R(" + tracking[1].points.Count + "): " + tracking[1].lastEntryPoint.ToString() + "\n" +
+        debugBox.text = "L(" + tracking[0].totalMotion.z + "): " + transform.InverseTransformDirection(tracking[0].lastEntryPoint).ToString() + "\n" +
+                                   "R(" + tracking[1].totalMotion.z + "): " + transform.InverseTransformDirection(tracking[1].lastEntryPoint).ToString() + "\n" +
                                    "Rotation: " + cool_rotation + "\n" +
                                    "Velocity: " + cool_velocity.magnitude +  cool_velocity;
     }

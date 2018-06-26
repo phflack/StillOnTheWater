@@ -51,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise1:
-        m_Texture: {fileID: 2800000, guid: 61ec1342e90bf4e668fc73318ddd7854, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise2:
@@ -91,4 +91,4 @@ Material:
     m_Colors:
     - _Color: {r: 0.08639706, g: 0.51599914, b: 0.6911765, a: 0.772}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HighlightColor: {r: 0.4165225, g: 0.66420174, b: 0.78676474, a: 1}
+    - _HighlightColor: {r: 0.41652247, g: 0.69484246, b: 0.7867647, a: 1}
