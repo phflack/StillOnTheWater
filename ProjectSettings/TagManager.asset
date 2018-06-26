@@ -5,12 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Terrain
-  - Tree
   - Special
+  - Tree
   - Debris
   - Obstacle
-  - Scanner
+  - Water
   - ObstacleKiller
+  - Scanner
+  - Casette
   layers:
   - Default
   - TransparentFX
@@ -20,15 +22,15 @@ TagManager:
   - UI
   - 
   - 
-  - InteractibleCollider
-  - Grass
+  - Paddle
+  - Controllers
+  - PaddleHandle
+  - PaddleWater
+  - WaterTerrain
   - Kayak
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Casette
+  - DropZone
+  - DirtTerrain
   - 
   - 
   - 

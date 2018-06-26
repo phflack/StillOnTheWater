@@ -6,6 +6,7 @@
 		_Noise2 ("Noise2", 2D) = "white" {}
 		_BlendWidth ("Blend Width", float) = .1
 		_DepthRange ("Depth Range", float) = 1
+		_WaveAmount ("Wave Amount", float) = .05
 	}
 	SubShader {
 		Stencil {
@@ -31,12 +32,14 @@
 		struct Input {
 			float2 uv_Noise1;
 			float4 screenPos;
+			float3 worldPos;
 		};
 
 		float _DepthRange;
 		fixed4 _Color;
 		fixed4 _HighlightColor;
 		float _BlendWidth;
+		fixed _WaveAmount;
 
 		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
 		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -46,7 +49,7 @@
 		UNITY_INSTANCING_BUFFER_END(Props)
 
 		void vert (inout appdata_full v) {
-          v.vertex.y += .1 * sin((v.vertex.x + _Time.x * 2) * 7) * sin((v.vertex.z + _Time.x * 2) * 7);
+          v.vertex.y += _WaveAmount * sin((mul (unity_ObjectToWorld, v.vertex).x + _Time.x * 2) * 7) * sin((mul(unity_ObjectToWorld, v.vertex).z + _Time.x * 2) * 7);
       	}
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
