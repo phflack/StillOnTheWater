@@ -7,25 +7,41 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LPWaterCustom
-  m_Shader: {fileID: 4800000, guid: 8165be4dd0b12774d80426d906df9c38, type: 3}
+  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: LPW_FOAM _CUSTOM_SHAPE _DISTORT_ON _EDGEBLEND_ON _EMISSION _LIGHTABS_ON
     _SHADING_FLAT _WAVES_OFF _ZWRITE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2501
+  m_CustomRenderQueue: -1
   stringTagMap:
     QUEUE: AlphaTest+50
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FresnelTex:
         m_Texture: {fileID: 2800000, guid: bbe71c065be7eca47b24d1e03bf041b3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 0f5b7b94fe6be4345b6c4eeff4fe075b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise2:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
@@ -41,17 +57,21 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - PixelSnap: 0
     - _Absorption: 5
+    - _BlendWidth: 0.1
     - _BumpScale: 35
     - _BumpScale_: 35
     - _BumpSpeed: 0.2
     - _Cull: 0
     - _Cull_: 2
+    - _DepthRange: 1
     - _Diffuse: 0.5
     - _Direction: 46
     - _Distort: 1
     - _Distortion: 1
     - _EdgeBlend: 1
+    - _EnableExternalAlpha: 0
     - _EnableShadows: 0
     - _FoamScale: 20
     - _FoamSpeed: 0.3
@@ -60,6 +80,7 @@ Material:
     - _HQFoam: 0
     - _Height: 0.5
     - _Height_: 0.5
+    - _InvFade: 1
     - _Length: 3
     - _LightAbs: 1
     - _NormalOffset: 1
@@ -91,8 +112,12 @@ Material:
     - _Color: {r: 1, g: 0.697, b: 0, a: 1}
     - _DeepColor: {r: 1, g: 0.016, b: 0, a: 1}
     - _Direction_: {r: 0.6946584, g: 0.7193398, b: 0.22298536, a: 0.23090808}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _FresColor: {r: 1, g: 0.403, b: 0, a: 1}
+    - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShoreColor: {r: 1, g: 0.7517241, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 0.84126896, b: 0.17799997, a: 1}
     - _Sun: {r: -0.757438, g: 0.3015378, b: -0.579105, a: 0}
     - _SunColor: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
