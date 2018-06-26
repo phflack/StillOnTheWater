@@ -13,6 +13,8 @@ TagManager:
   - ObstacleKiller
   - Scanner
   - Casette
+  - PlayerGiftToSpectre
+  - SpectreGiftToPlayer
   layers:
   - Default
   - TransparentFX

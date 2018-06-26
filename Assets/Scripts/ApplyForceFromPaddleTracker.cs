@@ -69,7 +69,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
                 rotationForce += rotationIncrease;
             }
         }
-        Debug.Log(rotationForce);
+       // Debug.Log(rotationForce);
         // i think that friction should probs be applied before the river velocity? or somehow excepting river velocity? or be applied to the component
         // exceeding river velocity? 
         // I'm not certain, but with river velocity always applied, I think it'll work out that the kayak has a reasonable minimum speed when not moving.
@@ -83,7 +83,7 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
         cool_velocity -= drag * Vector3.SqrMagnitude(cool_velocity) * cool_velocity.normalized;
 		float prev_cool_rotation = cool_rotation;
         cool_rotation -= angularDrag * cool_rotation * cool_rotation  * Mathf.Sign(cool_rotation);
-		Debug.Log ("previous angle: " + prev_cool_rotation + " | after deceleration: " + cool_rotation);
+		//Debug.Log ("previous angle: " + prev_cool_rotation + " | after deceleration: " + cool_rotation);
         VRTK.VRTK_ControllerReference left = VRTK.VRTK_ControllerReference.GetControllerReference(VRTK.VRTK_DeviceFinder.GetControllerLeftHand());
         VRTK.VRTK_ControllerReference right = VRTK.VRTK_ControllerReference.GetControllerReference(VRTK.VRTK_DeviceFinder.GetControllerRightHand());
         VRTK.VRTK_ControllerHaptics.CancelHapticPulse(left);
