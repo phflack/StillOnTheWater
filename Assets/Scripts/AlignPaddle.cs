@@ -12,6 +12,7 @@ public class AlignPaddle : MonoBehaviour {
 		Vector3 handlesSeparation = rightHandle.position - leftHandle.position;
 		transform.position = leftHandle.position + handlesSeparation / 2f;
 		transform.LookAt (leftHandle.position);
+        // TODO: get paddle to hit things , such as the kayak. 
 		//GetComponent<Rigidbody> ().MovePosition (leftHandle.position + (handlesSeparation/2f));
 		//GetComponent<Rigidbody> ().MoveRotation(Quaternion.LookRotation(-handlesSeparation));
 	}
