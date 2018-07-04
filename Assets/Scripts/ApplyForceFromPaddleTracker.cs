@@ -94,7 +94,6 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
         // this may not happen while the river is moving, but if we have nearly neglible velocity, stop the boat.
         if (local_velocity.magnitude <= .0001)
         {
-            Debug.Log("hitting neglible velocity");
             local_velocity = Vector3.zero;
         }
 
