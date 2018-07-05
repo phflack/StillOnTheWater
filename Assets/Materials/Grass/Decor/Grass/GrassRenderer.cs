@@ -47,7 +47,7 @@ public class GrassRenderer : MonoBehaviour {
             }
         }
 		yield return new WaitForSeconds (2f);
-//		StartCoroutine(GrassUpdate());
+		StartCoroutine(GrassUpdate());
 	}
 
 	void Update() {
