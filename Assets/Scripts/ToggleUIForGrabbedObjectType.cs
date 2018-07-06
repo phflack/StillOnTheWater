@@ -14,21 +14,22 @@ public class ToggleUIForGrabbedObjectType : MonoBehaviour {
 
 	public void OnGrabInteractableObject(object obj, VRTK.ObjectInteractEventArgs args){
 		// When an object is picked up, check if it's a decorative object and activate the aimed selector
-		if (obj != null && obj.GetType () == typeof(GameObject) && ((GameObject)obj).CompareTag (decorativeObjectTag)) {
+		if (((VRTK.VRTK_InteractGrab) obj).GetGrabbedObject().CompareTag (decorativeObjectTag)) {
 			objPlacementAimSelector.gameObject.SetActive (true);
 		}
+        Debug.Log("Grab Object even Fired. " + ((VRTK.VRTK_InteractGrab)obj).GetGrabbedObject().name + ", " + ((VRTK.VRTK_InteractGrab)obj).GetGrabbedObject().tag);
 	}
 
 	// TODO: this doesn't match the title of this script but it's the most convenient place to trigger the event
 	//     for moving the held object to the selector.
 	public void OnUnGrabInteractableObject(object obj, VRTK.ObjectInteractEventArgs args){
 		// When an object is picked up, check if it's a decorative object and activate the aimed selector
-		if (obj != null && obj.GetType () == typeof(GameObject) && ((GameObject)obj).CompareTag (decorativeObjectTag)) {
+		if (((VRTK.VRTK_InteractGrab) obj).GetGrabbedObject().CompareTag (decorativeObjectTag)) {
 			if (otherController.GetGrabbedObject () != null && !otherController.GetGrabbedObject ().CompareTag (decorativeObjectTag)) {
 				objPlacementAimSelector.gameObject.SetActive (false);
 			}
 			if (objPlacementAimSelector.selectedPlacementPoint != null) {
-				((GameObject)obj).GetComponent<MoveTowardPlacementPointBehavior> ().BeginMoveTowardPlacementPoint (objPlacementAimSelector.selectedPlacementPoint);
+                ((VRTK.VRTK_InteractGrab)obj).GetGrabbedObject().GetComponent<MoveTowardPlacementPointBehavior> ().BeginMoveTowardPlacementPoint (objPlacementAimSelector.selectedPlacementPoint);
 			}
 		}
 	}

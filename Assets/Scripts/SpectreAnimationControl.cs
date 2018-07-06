@@ -103,11 +103,10 @@ public class SpectreAnimationControl : MonoBehaviour {
         //   there of) of the VRTK drop zone on the spectre's hand.
         if (Current_animation_state == SPECTRE_ANIM_STATE.HOLDINGOUTHAND_OFFERING) {
             newestSnappedObject = handDropZone.GetCurrentSnappedObject();
-            Debug.Log(currentSnappedObjectInHand);
+//            Debug.Log(currentSnappedObjectInHand);
             // if the snapped object of this frame is  null but it was not last frame, then the player took the object
             if (currentSnappedObjectInHand != null && newestSnappedObject == null)
             {
-                Debug.Log("GIFT ACCEPTED");
                 animator.enabled = false;
                 foreach (GameObject go in visualparts)
                 {

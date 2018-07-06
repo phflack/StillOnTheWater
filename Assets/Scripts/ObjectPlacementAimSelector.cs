@@ -65,6 +65,7 @@ public class ObjectPlacementAimSelector : MonoBehaviour {
 		_lineRenderer.enabled = true;
 		// enable the droppableObjectsUI tag in the camera's culling mask.
 		activeVRCam.cullingMask |= 1 << LayerMask.NameToLayer("DroppableObjectsUI");
+        Debug.Log("attmepting to enable UI");
 	}
 
 	private void DisablePlacementPointIndicatorsAndSelector (){
