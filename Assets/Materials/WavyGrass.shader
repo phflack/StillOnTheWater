@@ -5,6 +5,7 @@
 		_FlowMap ("Flowmap", 2D) = "white" {}
 		_Amount ("Wave Amount", float) = .1
 		_BaseY ("_BaseY", float) = 0
+		_Smoothness ("Smoothness", float) = 0
 	}
 	SubShader {
 		Tags { "RenderType"="Transparent" }
@@ -27,6 +28,7 @@
 		};
 
 		fixed4 _Color;
+		float _Smoothness;
 
 		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
 		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -47,6 +49,7 @@
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c.rgb;
 			// Metallic and smoothness come from slider variables
+			o.Smoothness = _Smoothness;
 			o.Alpha = c.a;
 			clip(c.a - 0.5);
 		}
