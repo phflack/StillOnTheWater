@@ -10,6 +10,7 @@ public class PlacementPointIndicator : MonoBehaviour {
 	public float lerpSpeed = .3f;
 	public float currentLerpValue;
 	public Transform objectPositionTransform;
+	public GameObject attachedBody;
 
 	void Start() {
 		isSelected = false;
