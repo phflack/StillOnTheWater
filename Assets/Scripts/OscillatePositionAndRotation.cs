@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OscillatePositionAndRotation : MonoBehaviour {
+    public Transform target;
 	public bool randomizePosition = true;
 	public Vector3 position;
 	public bool randomizeRotation = true;
 	public Vector3 rotation;
+    public float sinOffset = 0f;
 
 	private Vector3 initialPosition;
 	private Vector3 initialRotation;
-
+    private float startTime;
 
 	public float timeFactor = 6f;
 	public float randomPositionMagnitude = .04f;
@@ -18,8 +20,12 @@ public class OscillatePositionAndRotation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		initialPosition = transform.localPosition;
-		initialRotation = transform.localRotation.eulerAngles;
+        if (target == null)
+        {
+            target = transform;
+        }
+		initialPosition = target.position;
+		initialRotation = target.rotation.eulerAngles;
 		if (randomizePosition) {
 			position.x = (Random.value * 2f - 1f) * randomPositionMagnitude;
 			position.y = (Random.value * 2f - 1f) * randomPositionMagnitude;
@@ -30,13 +36,15 @@ public class OscillatePositionAndRotation : MonoBehaviour {
 			rotation.y = (Random.value * 2f - 1f) * randomRotationMagnitude;
 			rotation.z = (Random.value * 2f - 1f) * randomRotationMagnitude;
 		}
-	}
+        startTime = Time.realtimeSinceStartup;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		transform.localPosition = initialPosition + Mathf.Sin (Time.realtimeSinceStartup * timeFactor) * position;
+		target.position = initialPosition + Mathf.Sin ((Time.realtimeSinceStartup - startTime) * timeFactor + sinOffset) * position;
 		if (!rotation.Equals (Vector3.zero)) {
-			transform.localRotation = Quaternion.Euler (initialRotation + Mathf.Sin (Time.realtimeSinceStartup * timeFactor) * rotation);
+			target.rotation = Quaternion.Euler (initialRotation + Mathf.Sin ((Time.realtimeSinceStartup - startTime) * timeFactor + sinOffset) * rotation);
 		}
 	}
 }
