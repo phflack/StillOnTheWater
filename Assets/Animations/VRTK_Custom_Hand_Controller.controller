@@ -10,7 +10,7 @@ AnimatorController:
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
+    m_Name: Hand_Idle
     m_StateMachine: {fileID: 1107557577676237124}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -22,7 +22,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: ThumbDown
+    m_Name: Hand_Thumb
     m_StateMachine: {fileID: 1107247030520482800}
     m_Mask: {fileID: 31900000, guid: dc734cbf6ecff4eb7a8b5a871b8ca981, type: 2}
     m_Motions: []
@@ -34,7 +34,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: IndexDown
+    m_Name: Hand_Index
     m_StateMachine: {fileID: 1107197134022822094}
     m_Mask: {fileID: 31900000, guid: 0434e8034486444a7819d7844e672ba3, type: 2}
     m_Motions: []
@@ -46,7 +46,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: MiddleDown
+    m_Name: Hand_Middle
     m_StateMachine: {fileID: 1107762784048315964}
     m_Mask: {fileID: 31900000, guid: 6ca3f5aac5fe041eda745c5c3766fdbf, type: 2}
     m_Motions: []
@@ -58,7 +58,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: RingDown
+    m_Name: Hand_Ring
     m_StateMachine: {fileID: 1107713290318407276}
     m_Mask: {fileID: 31900000, guid: 66e52f393b68f4682a4d08cbb0e850e4, type: 2}
     m_Motions: []
@@ -70,7 +70,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: PinkieDown
+    m_Name: Hand_Pinky
     m_StateMachine: {fileID: 1107373232735055244}
     m_Mask: {fileID: 31900000, guid: 64a138345275347d98a15c8666038cc4, type: 2}
     m_Motions: []
@@ -237,7 +237,7 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: IndexDown
+  m_Name: Hand_Index
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102621326751540828}
@@ -258,11 +258,11 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ThumbDown
+  m_Name: Hand_Thumb
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102536235774327922}
-    m_Position: {x: 330.78827, y: 54.228558, z: 0}
+    m_Position: {x: 336, y: 60, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -279,7 +279,7 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: PinkieDown
+  m_Name: Hand_Pinky
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102105362828290674}
@@ -300,7 +300,7 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: Hand_Idle
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102585628190157378}
@@ -321,11 +321,11 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: RingDown
+  m_Name: Hand_Ring
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102006027641672558}
-    m_Position: {x: 330.78827, y: 70.55995, z: 0}
+    m_Position: {x: 336, y: 72, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -342,11 +342,11 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MiddleDown
+  m_Name: Hand_Middle
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102788542854575166}
-    m_Position: {x: 369.16705, y: 87.7079, z: 0}
+    m_Position: {x: 372, y: 84, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

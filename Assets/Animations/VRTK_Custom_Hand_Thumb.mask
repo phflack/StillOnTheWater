@@ -19,7 +19,7 @@ AvatarMask:
   - m_Path: Hand
     m_Weight: 0
   - m_Path: HandRig
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: HandRig/L_TargetMiddle
     m_Weight: 0
   - m_Path: HandRig/L_TargetMiddle/L_TargetMiddle_end
@@ -41,9 +41,9 @@ AvatarMask:
   - m_Path: HandRig/L_TargetThumb/L_TargetThumb_end
     m_Weight: 0
   - m_Path: HandRig/L_Wrist
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: HandRig/L_Wrist/L_Palm
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: HandRig/L_Wrist/L_Palm/L_Middle
     m_Weight: 0
   - m_Path: HandRig/L_Wrist/L_Palm/L_Middle/L_Middle.002
