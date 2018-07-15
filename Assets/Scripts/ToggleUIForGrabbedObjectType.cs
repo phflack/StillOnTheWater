@@ -15,7 +15,8 @@ public class ToggleUIForGrabbedObjectType : MonoBehaviour {
 	public void OnGrabInteractableObject(object obj, VRTK.ObjectInteractEventArgs args){
 		// When an object is picked up, check if it's a decorative object and activate the aimed selector
 		if (((VRTK.VRTK_InteractGrab) obj).GetGrabbedObject().CompareTag (decorativeObjectTag)) {
-			objPlacementAimSelector.gameObject.SetActive (true);
+            objPlacementAimSelector.EnablePlacementPointIndicatorsAndSelector();
+            Debug.Log("Setting ObjPlacementAim to true");
 		}
         Debug.Log("Grab Object even Fired. " + ((VRTK.VRTK_InteractGrab)obj).GetGrabbedObject().name + ", " + ((VRTK.VRTK_InteractGrab)obj).GetGrabbedObject().tag);
 	}
@@ -25,9 +26,9 @@ public class ToggleUIForGrabbedObjectType : MonoBehaviour {
 	public void OnUnGrabInteractableObject(object obj, VRTK.ObjectInteractEventArgs args){
 		// When an object is picked up, check if it's a decorative object and activate the aimed selector
 		if (((VRTK.VRTK_InteractGrab) obj).GetGrabbedObject().CompareTag (decorativeObjectTag)) {
-			if (otherController.GetGrabbedObject () != null && !otherController.GetGrabbedObject ().CompareTag (decorativeObjectTag)) {
-				objPlacementAimSelector.gameObject.SetActive (false);
-			}
+			if (otherController.GetGrabbedObject () == null || !otherController.GetGrabbedObject ().CompareTag (decorativeObjectTag)) {
+                objPlacementAimSelector.DisablePlacementPointIndicatorsAndSelector();
+            }
 			if (objPlacementAimSelector.selectedPlacementPoint != null) {
                 ((VRTK.VRTK_InteractGrab)obj).GetGrabbedObject().GetComponent<MoveTowardPlacementPointBehavior> ().BeginMoveTowardPlacementPoint (objPlacementAimSelector.selectedPlacementPoint);
 			}

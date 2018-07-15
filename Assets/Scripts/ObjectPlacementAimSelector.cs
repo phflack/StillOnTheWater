@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
+[RequireComponent(typeof(LineRenderer))]
 public class ObjectPlacementAimSelector : MonoBehaviour {
 	public float sphereCastRadius = 1f;
 	public float maxSphereCastDistance = 5f;
@@ -11,23 +12,11 @@ public class ObjectPlacementAimSelector : MonoBehaviour {
 
 	RaycastHit hit;
 	PlacementPointIndicator placementPoint;
-	LineRenderer _lineRenderer;
+	public LineRenderer _lineRenderer;
 
 	void Start() {
 		_lineRenderer.enabled = false;
-	}
-
-	void OnEnable() {
-		_lineRenderer = GetComponent<LineRenderer> ();
-		_lineRenderer.SetPosition (0, transform.position);
-		EnablePlacementPointIndicatorsAndSelector ();
-	}
-
-	void OnDisable() {
-		_lineRenderer = GetComponent<LineRenderer> ();
-		_lineRenderer.SetPosition (0, transform.position);
-		DisablePlacementPointIndicatorsAndSelector ();
-	}
+    }
 
 	// Constantly update the 'selected' placement indicator public reference while 
 	void Update () {
@@ -60,18 +49,23 @@ public class ObjectPlacementAimSelector : MonoBehaviour {
 
 	// only cchanging the culling mask of the active camera because i don't expect the main camera to change during run time. Not like
 	// people switch to Vive during a play session..
-	private void EnablePlacementPointIndicatorsAndSelector (){
-		Camera activeVRCam = VRCameraReferences.instance.ActiveVRCamera;
+	public void EnablePlacementPointIndicatorsAndSelector ()
+    {
+        _lineRenderer.SetPosition(0, transform.position);
+        Camera activeVRCam = VRCameraReferences.instance.ActiveVRCamera;
 		_lineRenderer.enabled = true;
 		// enable the droppableObjectsUI tag in the camera's culling mask.
 		activeVRCam.cullingMask |= 1 << LayerMask.NameToLayer("DroppableObjectsUI");
         Debug.Log("attmepting to enable UI");
 	}
 
-	private void DisablePlacementPointIndicatorsAndSelector (){
-		Camera activeVRCam = VRCameraReferences.instance.ActiveVRCamera;
+	public void DisablePlacementPointIndicatorsAndSelector ()
+    {
+        _lineRenderer.SetPosition(0, transform.position);
+        Camera activeVRCam = VRCameraReferences.instance.ActiveVRCamera;
 		_lineRenderer.enabled = false;
 		// Disable the droppableObjectsUI tag in the camera's culling mask.
 		activeVRCam.cullingMask &= ~(1 << LayerMask.NameToLayer("DroppableObjectsUI"));
-	}
+        Debug.Log("attmepting to disable UI");
+    }
 }

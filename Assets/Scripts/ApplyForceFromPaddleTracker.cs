@@ -111,9 +111,10 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
 			transform.localRotation = transform.localRotation * Quaternion.AngleAxis(-local_Yrotation_rate * Time.deltaTime, Vector3.up);
 		}
 
-		// calculate vector to add to position for this frame. Remove theY1 velocity of the vector. There shouldn't be any Y, but it couldn't hurt to be careful.
-        Vector3 positionDelta = (local_velocity.x * transform.right + local_velocity.z* transform.forward) * Time.deltaTime;
-        transform.position = transform.position + positionDelta;
+        // calculate vector to add to position for this frame. Remove theY1 velocity of the vector. There shouldn't be any Y, but it couldn't hurt to be careful.
+        Vector3 positionDelta = (local_velocity.x * transform.right + local_velocity.z * transform.forward); // * Time.deltaTime;
+        //transform.position = transform.position + positionDelta;
+        GetComponent<Rigidbody>().velocity = positionDelta;
     }
 
 	void OnDrawGizmos() {

@@ -25,7 +25,7 @@ public class MoveTowardPlacementPointBehavior : MonoBehaviour {
 	}
 
 	private IEnumerator MoveTowardPlacementPoint(PlacementPointIndicator p){
-		yield return new WaitForSeconds (2f);
+		//yield return new WaitForSeconds (2f);
 		Vector3 originalDirection = p.objectPositionTransform.position - transform.position;
 		// TODO: consider have a constant lerp time instead of a speed;
 		while (Vector3.Distance(transform.position, p.objectPositionTransform.position) > .01f){
