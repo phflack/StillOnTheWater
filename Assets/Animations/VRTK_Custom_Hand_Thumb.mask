@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: VRTK_Custom_Hand_Thumb
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Back
+    m_Weight: 0
+  - m_Path: Camera
+    m_Weight: 0
+  - m_Path: Front
+    m_Weight: 0
+  - m_Path: Hand
+    m_Weight: 0
+  - m_Path: HandRig
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetMiddle
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetMiddle/L_TargetMiddle_end
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetPinkie
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetPinkie/L_TargetPinkie_end
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetPointer
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetPointer/L_TargetPointer_end
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetRing
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetRing/L_TargetRing_end
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetThumb
+    m_Weight: 0
+  - m_Path: HandRig/L_TargetThumb/L_TargetThumb_end
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Middle
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Middle/L_Middle.002
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Middle/L_Middle.002/L_Middle.003
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Middle/L_Middle.002/L_Middle.003/L_Middle.003_end
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pinkie
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pinkie/L_Pinkie.002
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pinkie/L_Pinkie.002/L_Pinkie.003
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pinkie/L_Pinkie.002/L_Pinkie.003/L_Pinkie.003_end
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pointer
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pointer/L_Pointer.002
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pointer/L_Pointer.002/L_Pointer.003
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Pointer/L_Pointer.002/L_Pointer.003/L_Pointer.003_end
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Ring
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Ring/L_Ring.002
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Ring/L_Ring.002/L_Ring.003
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Ring/L_Ring.002/L_Ring.003/L_Ring.003_end
+    m_Weight: 0
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Thumb
+    m_Weight: 1
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Thumb/L_Thumb.002
+    m_Weight: 1
+  - m_Path: HandRig/L_Wrist/L_Palm/L_Thumb/L_Thumb.002/L_Thumb.002_end
+    m_Weight: 1
