@@ -1361,7 +1361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1508746920314702
 GameObject:
   m_ObjectHideFlags: 1
@@ -1671,7 +1671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1657171890770556
 GameObject:
   m_ObjectHideFlags: 1
@@ -3007,7 +3007,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1031884793743030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1349, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4556648533567620}
@@ -3207,7 +3207,7 @@ Transform:
   m_GameObject: {fileID: 1690316768088940}
   m_LocalRotation: {x: 0.24184473, y: 0.24184473, z: -0.66446304, w: 0.66446304}
   m_LocalPosition: {x: 0, y: 0, z: -0.104003906}
-  m_LocalScale: {x: 0.70959616, y: 0.709597, z: 0.709597}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4796436033307938}
   - {fileID: 4760512758105760}
@@ -3607,7 +3607,7 @@ Transform:
   m_GameObject: {fileID: 1317111514670394}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0.024}
-  m_LocalScale: {x: -0.7095962, y: 0.7095962, z: 0.7095962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4625663044967374}
   - {fileID: 4785793575966178}
@@ -3774,7 +3774,7 @@ Transform:
   m_GameObject: {fileID: 1391495208232714}
   m_LocalRotation: {x: 0.24184473, y: -0.24184473, z: 0.66446304, w: 0.66446304}
   m_LocalPosition: {x: 0, y: 0, z: -0.104}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4480345267114004}
   - {fileID: 4683284990239358}
@@ -3844,13 +3844,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1644776939915514}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0000000037252907, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
+  m_LocalPosition: {x: 0, y: -0.06, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4253107334018986}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
 --- !u!4 &4558677956686560
 Transform:
   m_ObjectHideFlags: 1
@@ -3940,13 +3940,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1499269430939234}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0000000037252907, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
+  m_LocalPosition: {x: 0, y: -0.06, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4878774170773548}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
 --- !u!4 &4630076946710334
 Transform:
   m_ObjectHideFlags: 1
@@ -4165,7 +4165,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061650659247100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalPosition: {x: 0, y: -0.03, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4338846292987954}
@@ -4775,7 +4775,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386626643956608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalPosition: {x: -0, y: -0.03, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4526859761428706}
@@ -4935,7 +4935,7 @@ MonoBehaviour:
   grabPrecognition: 0
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
-  controllerAttachPoint: {fileID: 0}
+  controllerAttachPoint: {fileID: 54302090202049286}
   controllerEvents: {fileID: 0}
   interactTouch: {fileID: 0}
 --- !u!114 &114081496964959040
@@ -5125,7 +5125,7 @@ MonoBehaviour:
   grabPrecognition: 0
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
-  controllerAttachPoint: {fileID: 0}
+  controllerAttachPoint: {fileID: 54684247696152406}
   controllerEvents: {fileID: 0}
   interactTouch: {fileID: 0}
 --- !u!114 &114286807659061330
@@ -5659,11 +5659,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereCastRadius: 0.1
-  maxSphereCastDistance: 2.5
+  maxSphereCastDistance: 5
   ObjectPlacementPointLayers:
     serializedVersion: 2
     m_Bits: 131072
   selectedPlacementPoint: {fileID: 0}
+  _lineRenderer: {fileID: 120809402610233946}
 --- !u!114 &114618843459433428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5913,11 +5914,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereCastRadius: 0.1
-  maxSphereCastDistance: 2.5
+  maxSphereCastDistance: 5
   ObjectPlacementPointLayers:
     serializedVersion: 2
     m_Bits: 131072
   selectedPlacementPoint: {fileID: 0}
+  _lineRenderer: {fileID: 120328458784444470}
 --- !u!114 &114811777153221792
 MonoBehaviour:
   m_ObjectHideFlags: 1

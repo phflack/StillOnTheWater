@@ -87,6 +87,8 @@ public class SpectreAnimationControl : MonoBehaviour {
             // if the snapped object of this frame is not null but it was last frame, we have a new casette in the player!
             if (currentSnappedObjectInHand == null && newestSnappedObject != null && newestSnappedObject.CompareTag("PlayerGiftToSpectre"))
             {
+                newestSnappedObject.GetComponent<Rigidbody>().isKinematic = true;
+                newestSnappedObject.GetComponent<Rigidbody>().useGravity = false;
                 SetInspecting();
             }
             currentSnappedObjectInHand = newestSnappedObject;
@@ -107,6 +109,8 @@ public class SpectreAnimationControl : MonoBehaviour {
             // if the snapped object of this frame is  null but it was not last frame, then the player took the object
             if (currentSnappedObjectInHand != null && newestSnappedObject == null)
             {
+                GiftCasette.GetComponent<Rigidbody>().isKinematic = false;
+                GiftCasette.GetComponent<Rigidbody>().useGravity = true;
                 animator.enabled = false;
                 foreach (GameObject go in visualparts)
                 {
