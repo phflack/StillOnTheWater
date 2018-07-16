@@ -21583,7 +21583,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 1114112
-  disableDelay: 2
+  disableDelay: 1
 --- !u!114 &1034825572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27640,7 +27640,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 1114112
-  disableDelay: 2
+  disableDelay: 1
 --- !u!114 &1389267163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32392,7 +32392,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 1114112
-  disableDelay: 1.5
+  disableDelay: 1
 --- !u!114 &1670850208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39857,7 +39857,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 1114112
-  disableDelay: 2
+  disableDelay: 1
 --- !u!114 &2141167262
 MonoBehaviour:
   m_ObjectHideFlags: 0
