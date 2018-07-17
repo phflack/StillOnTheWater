@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18142463, g: 0.22705211, b: 0.30738685, a: 1}
+  m_IndirectSpecularColor: {r: 0.18142478, g: 0.22705236, b: 0.3073874, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -17187,6 +17187,14 @@ Prefab:
       propertyPath: maxSphereCastDistance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1825997211167912, guid: 196bb38e228634c37912ffd4abcb3b5f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570107128801438, guid: 196bb38e228634c37912ffd4abcb3b5f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 196bb38e228634c37912ffd4abcb3b5f, type: 2}
   m_IsPrefabParent: 0
@@ -17877,7 +17885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &768384983
 Transform:
   m_ObjectHideFlags: 0
@@ -21357,7 +21365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1034825563
 Transform:
   m_ObjectHideFlags: 0
@@ -38332,7 +38340,7 @@ SphereCollider:
   m_GameObject: {fileID: 2056310214}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
