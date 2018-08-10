@@ -156,7 +156,7 @@ public class SSR_Edited : MonoBehaviour
 		FilterMode filterMode = FilterMode.Trilinear;
 		
 		RenderTexture rtSSR;
-		if( _camera.hdr)
+		if( _camera.allowHDR)
 		{
 			rtSSR = RenderTexture.GetTemporary( dsSSRWidth, dsSSRHeight, 0, RenderTextureFormat.DefaultHDR);
 		}
@@ -180,7 +180,7 @@ public class SSR_Edited : MonoBehaviour
 			int dsBlurHeight = source.height / downsampleBlur;
 			
 			RenderTexture rtBlurX = null;
-			if( _camera.hdr)
+			if( _camera.allowHDR)
 			{
 				rtBlurX = RenderTexture.GetTemporary( dsBlurWidth, dsBlurHeight, 0, RenderTextureFormat.DefaultHDR);
 			}
@@ -195,7 +195,7 @@ public class SSR_Edited : MonoBehaviour
 			Graphics.Blit( rtSSR, rtBlurX, _blurMaterial);
 			
 			RenderTexture rtBlurY;
-			if( _camera.hdr)
+			if( _camera.allowHDR)
 			{
 				rtBlurY = RenderTexture.GetTemporary( dsBlurWidth, dsBlurHeight, 0, RenderTextureFormat.DefaultHDR);
 			}
