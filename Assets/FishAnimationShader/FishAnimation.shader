@@ -6,6 +6,7 @@ Shader "FishAnimation"
 	{
 		[HideInInspector] __dirty( "", Int ) = 1
 		[NoScaleOffset]_MainTex("MainTex", 2D) = "white" {}
+		[NoScaleOffset]_NormalTex("NormalTex", 2D) = "bump" {}
 		_Speed("Speed", Range( 0 , 10)) = 0
 		_Scale("Scale", Range( 0 , 1)) = 0.33
 		_Yaw("Yaw", Float) = 0.5
@@ -25,9 +26,11 @@ Shader "FishAnimation"
 		struct Input
 		{
 			float2 uv_texcoord;
+			float2 uv_NormalTex;
 		};
 
 		uniform sampler2D _MainTex;
+		uniform sampler2D _NormalTex;
 		uniform float _Speed;
 		uniform float _Yaw;
 		uniform float _Roll;
@@ -37,13 +40,14 @@ Shader "FishAnimation"
 		{
 			UNITY_INITIALIZE_OUTPUT( Input, o );
 			float3 ase_vertex3Pos = v.vertex.xyz;
-			v.vertex.xyz += ( ( sin( ( ( _Time.w * _Speed ) + ( ase_vertex3Pos.y * _Yaw ) + ( ase_vertex3Pos.z * _Roll ) ) ) * _Scale ) * float3(1,0,0) );
+			v.vertex.xyz += ( ( sin( ( ( _Time.w * _Speed *-1 ) + ( ase_vertex3Pos.x * _Yaw ) + ( ase_vertex3Pos.x * _Roll ) ) ) * _Scale  ) * float3(0,1,0) );
 		}
 
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
 			float2 uv_MainTex = i.uv_texcoord;
 			o.Albedo = tex2D( _MainTex, uv_MainTex ).rgb;
+			o.Normal = UnpackNormal (tex2D (_NormalTex, i.uv_NormalTex));
 			o.Alpha = 1;
 		}
 
