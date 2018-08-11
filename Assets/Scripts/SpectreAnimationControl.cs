@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 // Note that the order of this enum list matters.
 // e.g. inspecting and offering should occur later than requesting, and later in this script I compare 
 // current state > HOLDINGOUTHAND_REQUESTING and so on, to determine of requesting has happened yet.
@@ -11,7 +11,8 @@ public enum SPECTRE_ANIM_STATE
     WAVING,
     HOLDINGOUTHAND_REQUESTING,
     INSPECTING,
-    HOLDINGOUTHAND_OFFERING
+    HOLDINGOUTHAND_OFFERING,
+    GONE
 }
 
 [RequireComponent(typeof(Animator))]
@@ -28,13 +29,15 @@ public class SpectreAnimationControl : MonoBehaviour {
     GameObject currentSnappedObjectInHand;
 
     public GameObject[] visualparts;
+    public Text text;
+    Color clearWhite;
 
     // cached reference to animator controller
     Animator animator;
 
     // Current_animation_state is a property so we can automatically update the animator whenever this variable
     // changes, instead of having update the animator immediately after changing this variable, and probably forgetting to do so at least once.
-    private SPECTRE_ANIM_STATE current_animation_state;
+    public SPECTRE_ANIM_STATE current_animation_state;
     public SPECTRE_ANIM_STATE Current_animation_state
     {
         get { return current_animation_state; }
@@ -53,7 +56,10 @@ public class SpectreAnimationControl : MonoBehaviour {
         //    state for changes.
         currentSnappedObjectInHand = handDropZone.GetCurrentSnappedObject();
         SetIdle();
-	}
+        clearWhite = Color.white;
+        clearWhite.a = 0f;
+        text.color = clearWhite;
+    }
 
     // Update is called once per frame
     // allocated-once variables
@@ -105,17 +111,19 @@ public class SpectreAnimationControl : MonoBehaviour {
         //   there of) of the VRTK drop zone on the spectre's hand.
         if (Current_animation_state == SPECTRE_ANIM_STATE.HOLDINGOUTHAND_OFFERING) {
             newestSnappedObject = handDropZone.GetCurrentSnappedObject();
-//            Debug.Log(currentSnappedObjectInHand);
+            Debug.Log(currentSnappedObjectInHand);
             // if the snapped object of this frame is  null but it was not last frame, then the player took the object
-            if (currentSnappedObjectInHand != null && newestSnappedObject == null)
+            if ( newestSnappedObject == null)
             {
 //                GiftCasette.GetComponent<Rigidbody>().isKinematic = false;
 //                GiftCasette.GetComponent<Rigidbody>().useGravity = true;
-                animator.enabled = false;
+               // animator.enabled = false;
+                StartCoroutine(FadeOut());
                 foreach (GameObject go in visualparts)
                 {
                     go.SetActive(false);
                 }
+                Current_animation_state = SPECTRE_ANIM_STATE.GONE;
             }
         }
 
@@ -139,6 +147,8 @@ public class SpectreAnimationControl : MonoBehaviour {
     // anything that should happen when the spectre holds his hand out, expecting the journal
     private void SetHandHeldOut_Requesting()
     {
+        StartCoroutine(FadeIn());
+        text.text = "TRADE?";
         Current_animation_state = SPECTRE_ANIM_STATE.HOLDINGOUTHAND_REQUESTING;
     }
     // anything that should happen when the spectre brings the journal to his face, inspecting it
@@ -146,6 +156,7 @@ public class SpectreAnimationControl : MonoBehaviour {
     {
         Current_animation_state = SPECTRE_ANIM_STATE.INSPECTING;
         StartCoroutine(EndInspectingStateAfterSeconds(inspectionTime));
+        StartCoroutine(FadeOut());
     }
 
     // scheduled transition from inspecting the player's gift to offering the third tape
@@ -162,6 +173,8 @@ public class SpectreAnimationControl : MonoBehaviour {
     // anything that should happen when the spectre holds his hand out, offering the third tape
     private void SetHandHeldOut_Offering()
     {
+        StartCoroutine(FadeIn());
+        text.text = "TAKE?";
         // activate the gift casette and snap into the handsnapzone.
         GiftCasette.SetActive(true);
         handDropZone.ForceSnap(GiftCasette);
@@ -177,5 +190,28 @@ public class SpectreAnimationControl : MonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, beginWavingDistance);
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(transform.position, holdOutHandDistance);
+    }
+
+
+    private IEnumerator FadeIn()
+    {
+        float _time = 0f;
+        while (_time < 1f)
+        {
+            _time += Time.deltaTime;
+            text.color = Color.Lerp(clearWhite, Color.white, Mathf.InverseLerp(0f, 1f, _time));
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private IEnumerator FadeOut()
+    {
+        float _time = 0f;
+        while (_time < 1f)
+        {
+            _time += Time.deltaTime;
+            text.color = Color.Lerp( Color.white, clearWhite, Mathf.InverseLerp(0f, 1f, _time));
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
