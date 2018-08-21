@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: JamWater
   m_Shader: {fileID: 4800000, guid: 3cae23c023ae84ffb8de0c523bb41a89, type: 3}
@@ -68,7 +68,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BlendAmount: 0.4
-    - _BlendWidth: 0.13
+    - _BlendWidth: 0.16
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DepthRange: 3.35
@@ -86,9 +86,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveAmount: 0
+    - _WaveAmount: 0.2
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.08639706, g: 0.51599914, b: 0.6911765, a: 0.772}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HighlightColor: {r: 0.41652247, g: 0.69484246, b: 0.7867647, a: 1}
+    - _HighlightColor: {r: 0.41568628, g: 0.7882353, b: 0.4452531, a: 1}

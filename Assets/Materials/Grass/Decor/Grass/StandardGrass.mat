@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: StandardGrass
   m_Shader: {fileID: 4800000, guid: 73441900886bc50429b85f2d2d1992a0, type: 3}
@@ -70,7 +70,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WindStrength: 0.781
+    - _WindStrength: 0.3
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.19025736, g: 0.50735295, b: 0.4942317, a: 1}
