@@ -32,7 +32,7 @@ namespace LPWAsset {
 
         public static void Scale(LowPolyWaterScript _target) {
             // don't scale prefabs 
-            if (PrefabUtility.GetPrefabParent(_target) == null && PrefabUtility.GetPrefabObject(_target) != null) return;
+            if (PrefabUtility.GetCorrespondingObjectFromSource(_target) == null && PrefabUtility.GetPrefabObject(_target) != null) return;
             if (_target.material == null || !_target.material.HasProperty("_TransformScale_")) return;
 
             // scale everything when scaling transform's localscale

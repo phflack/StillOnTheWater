@@ -15,6 +15,8 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
     // a hard limit for the force you can apply to the boat, as VERy simple way of compensating
     // for the fact that players can swing the oar as fast as the like.
     public Vector3 maxInputForceMagnitudeLocal;
+    public float maxSpeed;
+    public float maxTorque;
 
     // this will later be determined externally by zones in the river IN WORLD SPACE.
     public Vector3 riverVelocityWorld;
@@ -50,13 +52,13 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
             //    |     				                                                                         [motion vector of paddles]
             //    |     				                                                                             |                     [motion vector of river flow]
             //    |     				                                                            [-1 to apply backward paddling as forward motion]
-            //    |     				                                                                  |         |                        |                                                                                                     [coefficient reducing power of paddle input on kayak. This approximates mass, or the strength of the paddler, maybe]
-            //    |     				                                                                  |         |                        |                                                                                                         |
+            //    |     				                                                                  |         |                        |                                                                                                       [coefficient reducing power of paddle input on kayak. This approximates mass, or the strength of the paddler, maybe]
+            //    |     				                                                                  |         |                        |                                                                                                           |
 			totalForce += (transform.InverseTransformDirection(-paddle.totalMotion) + transform.InverseTransformDirection(riverVelocityWorld)) * resultantForceMultiplier;
 
 			// Get position in local space coordinates, so we can see which side the paddling occured on
 			Vector3 relativePosition = transform.InverseTransformDirection(paddle.lastEntryPoint);
-            float rotationIncrease = Mathf.Sign (relativePosition.x) * transform.InverseTransformDirection(paddle.totalMotion).z* resultantRotationForceCoefficient * Mathf.Min(1f, 1f/Vector3.Magnitude (local_velocity));
+            float rotationIncrease = Mathf.Sign (relativePosition.x) * transform.InverseTransformDirection(paddle.totalMotion).z* resultantRotationForceCoefficient;
 
             // i was occasionally getting NaN from something above, which would permanently invalidate the torque value. TODO: figure out why 
             //  for now, just canceling any NaN input is good enough.
@@ -74,13 +76,14 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
 
         // now we apply the force to velocity and torque to rotation
         local_velocity += totalForce;
+        local_velocity = local_velocity.normalized * Mathf.Min(local_velocity.magnitude, maxSpeed);
         local_Yrotation_rate += torque;
 
         // and apply drag to it: (drag coefficient * velocity squared)
         // real drag is velocity = initialVelocity - drag * time * velocity^2. skipping time var because we're in fixed update.
         // TODO: different drag coefficients for lateral or forward motion. Because the boat is aerodynamic in one directioN!
-        local_velocity -= drag * Vector3.SqrMagnitude(local_velocity) * local_velocity.normalized;
-        local_Yrotation_rate -= angularDrag * local_Yrotation_rate * local_Yrotation_rate  * Mathf.Sign(local_Yrotation_rate);
+        local_velocity -= drag * local_velocity;
+        local_Yrotation_rate -= Mathf.Min(angularDrag * local_Yrotation_rate * local_Yrotation_rate, maxTorque)  * Mathf.Sign(local_Yrotation_rate);
 
         // Controller Haptics Time
         VRTK.VRTK_ControllerReference left = VRTK.VRTK_ControllerReference.GetControllerReference(VRTK.VRTK_DeviceFinder.GetControllerLeftHand());
@@ -88,8 +91,8 @@ public class ApplyForceFromPaddleTracker : MonoBehaviour {
         VRTK.VRTK_ControllerHaptics.CancelHapticPulse(left);
         VRTK.VRTK_ControllerHaptics.CancelHapticPulse(right);
         // multiply by 10f because totalForce is usually very small
-        VRTK.VRTK_ControllerHaptics.TriggerHapticPulse(left, Mathf.Min(totalForce.magnitude * 10f, 1f),1f,.04f);
-        VRTK.VRTK_ControllerHaptics.TriggerHapticPulse(right, Mathf.Min(totalForce.magnitude * 10f, 1f), 1f, .04f);
+        VRTK.VRTK_ControllerHaptics.TriggerHapticPulse(left, Mathf.Min(totalForce.magnitude * 20f, 1f),1f,.04f);
+        VRTK.VRTK_ControllerHaptics.TriggerHapticPulse(right, Mathf.Min(totalForce.magnitude * 20f, 1f), 1f, .04f);
 
         // this may not happen while the river is moving, but if we have nearly neglible velocity, stop the boat.
         if (local_velocity.magnitude <= .0001)

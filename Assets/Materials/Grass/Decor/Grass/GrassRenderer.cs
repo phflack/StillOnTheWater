@@ -42,7 +42,7 @@ public class GrassRenderer : MonoBehaviour {
             if(Physics.Raycast(ray, out hit,1000f,mask))
             {
 				if (Vector3.Dot (hit.normal, Vector3.up) > hitNormalThreshold) {
-					matrices.Add (Matrix4x4.TRS ((hit.point + (Vector3.up * GrassOffSet)), Quaternion.identity, Vector3.one));
+					matrices.Add (Matrix4x4.TRS ((hit.point + (Vector3.up * GrassOffSet)), Quaternion.AngleAxis(Random.Range(0f, 360f), Vector3.up), Vector3.one));
 				}
             }
         }
@@ -53,4 +53,10 @@ public class GrassRenderer : MonoBehaviour {
 	void Update() {
 		Graphics.DrawMeshInstanced(grassMesh,0, grassMaterial, matrices, null, UnityEngine.Rendering.ShadowCastingMode.Off);
 	}
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green * new Vector4(1f,1f,1f,.5f);
+        Gizmos.DrawCube(transform.position + (-startHeight / 2f) * Vector3.up, new Vector3 (size.x, startHeight, size.y));
+    }
 }
