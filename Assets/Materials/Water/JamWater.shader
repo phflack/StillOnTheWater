@@ -14,8 +14,8 @@
 			Comp NotEqual
 			Pass Replace
 		}
-		Tags { "RenderType"="Transparent" "Queue"="Transparent" }
-		ZWrite Off
+		Tags { "RenderType"="Opaque" "Queue"="Transparent" }
+		ZWrite On
 		LOD 100
 
 		CGPROGRAM
@@ -74,6 +74,8 @@
 			o.Albedo = _Color;
 			o.Albedo += foamLine * _HighlightColor + bubbleTrails * _HighlightColor;
 			o.Alpha = _Color.a;
+			o.Metallic = 1;
+			o.Smoothness = 1;
 		}
 		ENDCG
 	}

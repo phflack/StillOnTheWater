@@ -1,59 +1,46 @@
-﻿Shader "Custom/SparkleShader" {
-	Properties {
-		//_Color ("Color", Color) = (1,1,1,1)
-		_NoiseTex ("Noise Texture", 2D) = "white" {}
-		_Scale ("Scale", Float) = 1
-		_Intensity ("Intensity", Float) = 50
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "FX/MirrorReflection"
+{
+	Properties
+	{
+		_MainTex ("Base (RGB)", 2D) = "white" {}
+		[HideInInspector] _ReflectionTex ("", 2D) = "white" {}
 	}
-	SubShader {
+	SubShader
+	{
 		Tags { "RenderType"="Opaque" }
-		LOD 200
-
-		CGPROGRAM
-		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard fullforwardshadows 
-
-		// Use shader model 3.0 target, to get nicer looking lighting
-		#pragma target 3.0
-
-		sampler2D _MainTex;
-
-		struct Input {
-			float2 uv_NoiseTex;
-			
-		};
-
-		half _Scale;
-		half _Intensity;
-		fixed4 _Color;
-
-		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-		// #pragma instancing_options assumeuniformscaling
-		UNITY_INSTANCING_BUFFER_START(Props)
-			// put more per-instance properties here
-		UNITY_INSTANCING_BUFFER_END(Props)
-
-		void surf (Input IN, inout SurfaceOutputStandard o) {
-			 fixed4 col = tex2D(_SparkleTex, i.uv);
+		LOD 100
  
-                half3 viewDirection = normalize(i.wPos - _WorldSpaceCameraPos); //get the view direction
- 
-                //sparkle effect
-                fixed3 sparklemap = tex2D(_SparkleTex, i.uv*_Scale); //sample the noise texture
-                sparklemap -= half3(0.5,0.5,0.5); //change the noise texture into a random direction
-                sparklemap = normalize(sparklemap);
-                half sparkle = pow(saturate((dot(-viewDirection, normalize(sparklemap + i.wNormal)))),_Intensity); //get a value based on how close you are to looking at the normal offset by a random direction
-                col += _SparkleColor*sparkle; //change the color based on this value
- 
-                //rim lighting
-                half rim = pow(1.0 - saturate(dot(-viewDirection, i.wNormal)), _RimPower); //same concept, but the value is based on how far you are from looking at the normal
-                col += _RimColor * rim;
- 
-                return col;
-			//o.Alpha = c.a;
-		}
-		ENDCG
+		Pass {
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			#include "UnityCG.cginc"
+			struct v2f
+			{
+				float2 uv : TEXCOORD0;
+				float4 refl : TEXCOORD1;
+				float4 pos : SV_POSITION;
+			};
+			float4 _MainTex_ST;
+			v2f vert(float4 pos : POSITION, float2 uv : TEXCOORD0)
+			{
+				v2f o;
+				o.pos = UnityObjectToClipPos (pos);
+				o.uv = TRANSFORM_TEX(uv, _MainTex);
+				o.refl = ComputeScreenPos (o.pos);
+				return o;
+			}
+			sampler2D _MainTex;
+			sampler2D _ReflectionTex;
+			fixed4 frag(v2f i) : SV_Target
+			{
+				fixed4 tex = tex2D(_MainTex, i.uv);
+				fixed4 refl = tex2Dproj(_ReflectionTex, UNITY_PROJ_COORD(i.refl));
+				return tex * refl;
+			}
+			ENDCG
+	    }
 	}
-	FallBack "Diffuse"
 }
