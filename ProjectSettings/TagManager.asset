@@ -16,6 +16,8 @@ TagManager:
   - PlayerGiftToSpectre
   - SpectreGiftToPlayer
   - DecorativeObject
+  - Paddle
+  - PaddleHandle
   layers:
   - Default
   - TransparentFX
@@ -42,8 +44,8 @@ TagManager:
   - MiscellaneousKayakCargo
   - FinishZone
   - Fish
-  - 
-  - 
+  - PaddleArea
+  - KayakWorld
   - 
   - 
   - 
