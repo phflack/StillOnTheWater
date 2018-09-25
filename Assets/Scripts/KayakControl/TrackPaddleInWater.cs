@@ -38,12 +38,19 @@ public class TrackPaddleInWater : MonoBehaviour {
 	Coroutine trackPaddleRoutine;
 	private void OnTriggerEnter(Collider other)
 	{
+		Debug.Log("trigger enter: " + other.gameObject.tag);
 		if (other.tag.Equals("Paddle")) {
 			// if (trackPaddleRoutine == null) {
 				presentPaddle = other.transform;
 				trackPaddleRoutine = StartCoroutine(TrackPaddle());
+				Debug.Log("Entering Paddle");
 			// }
 		}
+	}
+
+	private void OnCollisionEnter(Collision other)
+	{
+		Debug.Log("entering collision " + other.gameObject.tag);
 	}
 
 	private void OnTriggerExit(Collider other)

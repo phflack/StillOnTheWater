@@ -18,6 +18,7 @@ TagManager:
   - DecorativeObject
   - Paddle
   - PaddleHandle
+  - PaddleArea
   layers:
   - Default
   - TransparentFX
