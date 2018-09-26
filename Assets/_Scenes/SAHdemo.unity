@@ -13764,12 +13764,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 10
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 10
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 2
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &389142288
 GameObject:
   m_ObjectHideFlags: 0
@@ -23594,6 +23594,11 @@ Prefab:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1511821750}
+    - target: {fileID: 114530151823147490, guid: e2ce051238b16dd41a0e4eae53340f66,
+        type: 2}
+      propertyPath: m_ClipPlaneOffset
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2ce051238b16dd41a0e4eae53340f66, type: 2}
   m_IsPrefabAsset: 0
