@@ -23,7 +23,7 @@ SubShader {
         Name "GrabOffset"
         Cull Back
         ZWrite Off
-        Blend One OneMinusSrcAlpha
+        Blend SrcAlpha OneMinusSrcAlpha
        
         CGPROGRAM
         #pragma vertex vert

@@ -12,11 +12,14 @@ public class PaddleGripManager : MonoBehaviour {
 	public float returnTime = 1.5f;
 	public float returnDelay = 2f;
 	public float paddleReturnDistanceThreshold = 8f;
+	public bool looseGripMode = true;
+
 
 	Vector3 RhInitialAnchorPos, LhInitialAnchorPos, InitialPaddlePos;
 	Quaternion InitialPaddleRotation;
 
 	public delegate void PaddleGrabAction();
+	
 	public PaddleGrabAction RightHandGrabbed, RightHandUngrabbed, LeftHandGrabbed, LeftHandUngrabbed, PaddleFullyGrabbed,PaddleFullyUngrabbed;
 
 

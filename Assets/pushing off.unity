@@ -45201,6 +45201,8 @@ GameObject:
   - component: {fileID: 1596612281}
   - component: {fileID: 1596612280}
   - component: {fileID: 1596612279}
+  - component: {fileID: 1596612278}
+  - component: {fileID: 1596612282}
   m_Layer: 26
   m_Name: Kayak2.0
   m_TagString: Untagged
@@ -45242,6 +45244,20 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 84
   m_CollisionDetection: 2
+--- !u!114 &1596612278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596612275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0712e6bec6dc1c54ab5a58f43036f847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTransform: {fileID: 355926709}
+  meshForHilight: {fileID: 797345399}
+  controllerEvents: {fileID: 355926707}
 --- !u!114 &1596612279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45282,6 +45298,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 0.8
   body: {fileID: 1596612277}
+--- !u!114 &1596612282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596612275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0712e6bec6dc1c54ab5a58f43036f847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTransform: {fileID: 1319937637}
+  meshForHilight: {fileID: 1601450062}
+  controllerEvents: {fileID: 1319937635}
 --- !u!1 &1598338807
 GameObject:
   m_ObjectHideFlags: 0
