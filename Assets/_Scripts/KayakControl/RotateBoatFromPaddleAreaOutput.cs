@@ -52,16 +52,18 @@ public class RotateBoatFromPaddleAreaOutput : MonoBehaviour {
 		}
 	}
 
-	private void LeftAreaStroke() {
+	private void LeftAreaStroke(Vector3 position, Vector3 velocity) {
 		// LeftRotationPrimed = true;
 		// RightRotationPrimed = false;
 		leftAdditiveTurnStrength += .3f;
+		leftAdditiveTurnStrength = Mathf.Clamp01(leftAdditiveTurnStrength);
 		rightAdditiveTurnStrength = .3f;
 	}
-	private void RightAreaStroke() {
+	private void RightAreaStroke(Vector3 position, Vector3 velocity) {
 		// RightRotationPrimed = true;
 		// LeftRotationPrimed = false;
 		leftAdditiveTurnStrength = .3f;
 		rightAdditiveTurnStrength += .3f;
+		rightAdditiveTurnStrength = Mathf.Clamp01(rightAdditiveTurnStrength);
 	}
 }

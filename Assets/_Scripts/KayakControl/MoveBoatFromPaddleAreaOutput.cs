@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveBoatFromPaddleAreaOutput : MonoBehaviour {
 	public TrackPaddleInWater leftPaddleArea, rightPaddleArea;
-	public float PushForceMultiplier = .1f;
+	public Vector3 PushForceScale = new Vector3(3f, 0f, 13f);
 	public Rigidbody rigidBody;
 	// Use this for initialization
 	void Start () {
@@ -14,20 +14,25 @@ public class MoveBoatFromPaddleAreaOutput : MonoBehaviour {
 	void Update () {
 		if (leftPaddleArea.smoothedMotionVector.magnitude > rightPaddleArea.smoothedMotionVector.magnitude) {
 			// use left is left is stronger
-
+			
 			// naively focus on the z comoponent
-			float z = leftPaddleArea.smoothedMotionVector.z;
-			// Debug.Log(z);
+			// float z = leftPaddleArea.smoothedMotionVector.z;
+			// float x = leftPaddleArea.smoothedMotionVector.x;
+			// Debug.Log(x);
 			// positive z is backward paddling, negative z is forward paddling.
-			rigidBody.AddRelativeForce(new Vector3(0f, 0f, -z * PushForceMultiplier), ForceMode.Force);
+			// rigidBody.AddRelativeForce(new Vector3(-x * PushForceScale.x, 0f, -z * PushForceScale.z), ForceMode.Force);
+			rigidBody.AddRelativeForce(Vector3.Scale(-leftPaddleArea.smoothedMotionVector, PushForceScale), ForceMode.Force);
 		} else {
 			// user right
 
 			// naively focus on the z comoponent
-			float z = rightPaddleArea.smoothedMotionVector.z;
+			// float z = rightPaddleArea.smoothedMotionVector.z;
+			// float x = rightPaddleArea.smoothedMotionVector.x;
+			
 			// Debug.Log(z);
 			// positive z is backward paddling, negative z is forward paddling.
-			rigidBody.AddRelativeForce(new Vector3(0f, 0f, -z * PushForceMultiplier), ForceMode.Force);
+			// rigidBody.AddRelativeForce(new Vector3(-x * PushForceScale.x, 0f, -z * PushForceScale.z), ForceMode.Force);
+			rigidBody.AddRelativeForce(Vector3.Scale(-rightPaddleArea.smoothedMotionVector, PushForceScale), ForceMode.Force);
 		}
 	}
 }

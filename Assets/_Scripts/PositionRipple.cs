@@ -37,7 +37,7 @@ public class PositionRipple : MonoBehaviour {
 		}
 	}
 
-	void OnDrawGizmos() {
+	void OnDrawGizmosSelected() {
 		Gizmos.color = color;
 		Gizmos.DrawLine(target.position, target.position + target.TransformDirection(axis.normalized) * maxDistance);
 		RaycastHit hit;
