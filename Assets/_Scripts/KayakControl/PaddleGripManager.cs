@@ -190,9 +190,9 @@ public class PaddleGripManager : MonoBehaviour {
 		returnRoutine = null;
 	}
 
-	private void OnDrawGizmos()
-	{
-		Gizmos.color = Color.green;
-		Gizmos.DrawWireSphere(transform.TransformPoint(InitialPaddlePos), paddleReturnDistanceThreshold);
-	}
+	// private void OnDrawGizmos()
+	// {
+	// 	Gizmos.color = Color.green;
+	// 	Gizmos.DrawWireSphere(transform.TransformPoint(InitialPaddlePos), paddleReturnDistanceThreshold);
+	// }
 }

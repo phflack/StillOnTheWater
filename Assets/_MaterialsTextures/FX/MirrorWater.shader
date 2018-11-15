@@ -62,7 +62,7 @@
             fixed brightness = .21 * refl.r + .71 * refl.g + .8 * refl.b;
             fixed viewDot = 1.0 - saturate(dot (normalize(IN.viewDir), o.Normal) - .3);
 			// o.Albedo = float3(brightness, brightness, brightness);
-            o.Alpha = 1 -foamLine * .8;
+            o.Alpha = 1;// -foamLine * .8;
 		}
 		ENDCG
 	}

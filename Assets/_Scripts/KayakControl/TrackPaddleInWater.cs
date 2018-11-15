@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TrackPaddleInWater : MonoBehaviour {
 	public Vector3 smoothedMotionVector = Vector3.zero;
@@ -8,11 +9,13 @@ public class TrackPaddleInWater : MonoBehaviour {
 	public float MotionVectorTime = .8f;
 	private int pointsPerMotionVectorCalculation;
 	public Transform relativeTo;
+	public Rigidbody addMomentumFrom;
+	public float MomentumFactor = 1f;
 	public List<Vector3> points;
 	List<float> pointIntervals;
-	public delegate void StrokeAction();
-	public event StrokeAction OnBeginStroke;
-	public event StrokeAction OnEndStroke;
+	public delegate void StrokeAction(Vector3 position, Vector3 velocity);
+	public StrokeAction OnBeginStroke;
+	public StrokeAction OnEndStroke;
 	public OVRInput.Controller controllerToVibrate;
 
 	private void Start()
@@ -38,13 +41,12 @@ public class TrackPaddleInWater : MonoBehaviour {
 	Coroutine trackPaddleRoutine;
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("trigger enter: " + other.gameObject.tag);
 		if (other.tag.Equals("Paddle")) {
-			// if (trackPaddleRoutine == null) {
-				presentPaddle = other.transform;
-				trackPaddleRoutine = StartCoroutine(TrackPaddle());
-				Debug.Log("Entering Paddle");
-			// }
+			presentPaddle = other.transform;
+			trackPaddleRoutine = StartCoroutine(TrackPaddle());
+			if (OnBeginStroke != null) {
+				OnBeginStroke(other.transform.position, other.GetComponent<TrackVelocityFromTransformPosition>().currentVelocity);
+			}
 		}
 	}
 
@@ -64,9 +66,6 @@ public class TrackPaddleInWater : MonoBehaviour {
 	}
 	
 	private IEnumerator TrackPaddle() {
-		if (OnBeginStroke != null) {
-			OnBeginStroke();
-		}
 		float lastTime = Time.time;
 		while (presentPaddle != null) {
 			SetNextPoint(relativeTo.InverseTransformPoint(presentPaddle.position));
@@ -74,9 +73,9 @@ public class TrackPaddleInWater : MonoBehaviour {
 			lastTime = Time.time;
 			yield return new WaitForSeconds(PaddleTrackingTimeStep);
 		}
+		if (OnEndStroke != null){OnEndStroke(points[points.Count-1], Vector3.zero);}
 		points = new List<Vector3>();
 		pointIntervals = new List<float>();
-		if (OnEndStroke != null){OnEndStroke();}
 	}
 
 	private void SetNextPoint(Vector3 point){
@@ -103,7 +102,7 @@ public class TrackPaddleInWater : MonoBehaviour {
 		foreach(float interval in pointIntervals){
 			fullTime += interval;
 		}
-		smoothedMotionVector = (rawVector / fullTime).XZVector();
+		smoothedMotionVector = (rawVector / fullTime).XZVector() + ((addMomentumFrom != null) ? relativeTo.InverseTransformDirection(addMomentumFrom.velocity.XZVector() * MomentumFactor) : Vector3.zero);
 		// the above line can sometimes produce NaN or Infinity vector components when fullTime is 0f. In this cases we'd best just ignore the motion entirely:
 		if (float.IsNaN(smoothedMotionVector.x) || float.IsNaN(smoothedMotionVector.y) || float.IsNaN(smoothedMotionVector.z) ||
 		float.IsInfinity(smoothedMotionVector.x) || float.IsInfinity(smoothedMotionVector.y) || float.IsInfinity(smoothedMotionVector.z)) {
@@ -117,8 +116,10 @@ public class TrackPaddleInWater : MonoBehaviour {
 
 	private void OnDrawGizmos()
 	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawLine(transform.position + Vector3.up, transform.position + Vector3.up + relativeTo.TransformDirection(smoothedMotionVector));
+		Gizmos.color = Color.cyan;
+		Gizmos.DrawLine(transform.position + Vector3.up, transform.position + Vector3.up + relativeTo.TransformDirection(smoothedMotionVector) * .2f);
+		Gizmos.color = new Vector4(.3f, .3f, 1f, 0f);
+		Gizmos.DrawLine(addMomentumFrom.transform.position, addMomentumFrom.transform.position + addMomentumFrom.velocity * MomentumFactor * .2f);
 		// Gizmos.color = Color.Lerp(Color.red, Color.clear, .4f);
 		// Gizmos.DrawCube(transform.position, transform.localScale);
 		// Gizmos.color = Color.red;

@@ -19,6 +19,7 @@ TagManager:
   - Paddle
   - PaddleHandle
   - PaddleArea
+  - Kayak_World
   layers:
   - Default
   - TransparentFX
@@ -47,7 +48,7 @@ TagManager:
   - Fish
   - PaddleArea
   - KayakWorld
-  - 
+  - ParkingZone
   - 
   - 
   - 
