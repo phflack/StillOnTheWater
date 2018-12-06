@@ -97,7 +97,7 @@ Material:
     m_Floats:
     - _Alpha: 1
     - _BlendAmount: 0.4
-    - _BlendWidth: 0.14
+    - _BlendWidth: 0.04
     - _BumpScale: 1
     - _ColorVarianceAmount: 0.15
     - _Cutoff: 0.5
@@ -133,9 +133,9 @@ Material:
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 0.8679245, g: 0.6320789, b: 0.48718405, a: 1}
+    - _Color: {r: 0.7169812, g: 0.51067996, b: 0.71370655, a: 0.40392157}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HighlightColor: {r: 0.36601102, g: 0.41020253, b: 0.4433962, a: 1}
+    - _HighlightColor: {r: 0.65237963, g: 0.09344961, b: 0.7924528, a: 1}
     - _RimColor: {r: 0, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TintColor: {r: 0, g: 0.5, b: 1, a: 1}

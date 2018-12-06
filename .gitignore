@@ -33,6 +33,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/FbxExporters*
+Assets/ProCore*
 Assets/ProjectSettings/QualitySettings.asset
 Assets/ProjectSettings/ProjectVersion.txt
 Assets/ProjectSettings/ProjectSettings.asset
