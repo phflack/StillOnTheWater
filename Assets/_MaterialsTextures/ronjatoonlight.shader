@@ -17,7 +17,7 @@
     SubShader {
         //the material is completely non-transparent and is rendered at the same time as the other opaque geometry
         Tags{ "RenderType"="Opaque" "Queue"="Geometry"}
-        Cull Off
+        Cull Back
         CGPROGRAM
 
         //the shader is a surface shader, meaning that it will be extended by unity in the background to have fancy lighting and other features

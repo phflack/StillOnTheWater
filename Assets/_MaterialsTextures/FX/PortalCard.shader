@@ -1,9 +1,14 @@
-﻿Shader "FX/PortalCard" {
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+Shader "FX/PortalCard" {
 Properties
 {
 	_Color ("_Color", Color) = (0.5,0.5,0.5,0.5)
+	_Mask ("Mask", 2D) = "white" {}
 	_Depth ("Depth Fade Distance", Range(0.01,100.0)) = 1.0
 	_FadeLength("Fade Length", Float) = 1.0
+	_MinimumWorldHeight("Minimum World Height", Float) = 0
+	_HeightFade ("HeightFade", Float) = 3
 }
  
 SubShader
@@ -40,11 +45,13 @@ SubShader
 			float4 projPos : TEXCOORD2;
 			UNITY_FOG_COORDS(1)
 			float4 vertex : SV_POSITION;
+			float4 worldPos : TEXCOORD4;
 		};
 		 
 		v2f vert (appdata i){
 			v2f o;
 			o.vertex = UnityObjectToClipPos(i.vertex);
+			o.worldPos = mul(unity_ObjectToWorld, i.vertex);
 			o.uv = i.texcoord;
 			UNITY_TRANSFER_FOG(o,o.vertex);
 			o.dist = UnityObjectToViewPos(i.vertex);
@@ -54,15 +61,19 @@ SubShader
 			 
 			return o;
 		}
-		 
+		float _MinimumWorldHeight;
+		float _HeightFade;
+		sampler2D _Mask; 
 		fixed4 frag(v2f i) : SV_TARGET
 		{
+			fixed mask = tex2D(_Mask, i.uv).r;
+			mask *= saturate(i.worldPos.y / _HeightFade);
+			clip (mask - .01);
 			fixed4 col = _Color;
-			 
 			float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
 			float partZ = i.projPos.z + length(i.dist);
 			float fade = saturate((sceneZ-partZ) / _Depth);
-			col.a = saturate((fade * length(i.dist)) / _FadeLength);
+			col.a = saturate((fade * length(i.dist)) / _FadeLength) * mask;
 			UNITY_APPLY_FOG(i.fogCoord, col);
 			return col;
 		}
