@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 136312230832220826}
   - component: {fileID: 54291447692082192}
   m_Layer: 0
-  m_Name: WalkingStick
+  m_Name: walkingStick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
