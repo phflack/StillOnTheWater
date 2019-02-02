@@ -4,16 +4,16 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LPWaterHighQuality
   m_Shader: {fileID: 4800000, guid: 8165be4dd0b12774d80426d906df9c38, type: 3}
-  m_ShaderKeywords: LPW_SHADOWS WATER_REFRACTIVE _CUSTOM_SHAPE _DISTORT_ON _EMISSION
-    _LIGHTABS_ON _SHADING_VERTEXLIT _WAVES_HIGHQUALITY _ZWRITE_ON
+  m_ShaderKeywords: _CUSTOM_SHAPE _DISTORT_ON _EMISSION _LIGHTABS_ON _SHADING_VERTEXLIT
+    _WAVES_HIGHQUALITY _ZWRITE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2500
+  m_CustomRenderQueue: 2501
   stringTagMap:
     QUEUE: AlphaTest+50
   disabledShaderPasses: []
@@ -94,5 +94,5 @@ Material:
     - _FresColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShoreColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.16057526, g: 0.24264705, b: 0.21887453, a: 1}
-    - _Sun: {r: -0.7371386, g: 0.3670568, b: -0.56735885, a: 0}
-    - _SunColor: {r: 0.8392157, g: 0.96673423, b: 1, a: 1}
+    - _Sun: {r: -0.93182343, g: -0.16377662, b: -0.32385543, a: 0}
+    - _SunColor: {r: 0.916, g: 0.96673423, b: 1, a: 1}
