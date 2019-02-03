@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Cave
   m_Shader: {fileID: 4800000, guid: 0b6af878520d93d49a07cc3f4b10995a, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: USE_VERTEX_PAINTED_MOSS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -91,15 +91,18 @@ Material:
     - _SpecularSize: 0
     - _Speed: 0
     - _SrcBlend: 1
-    - _StepAmount: 4
+    - _StepAmount: 14
     - _StepWidth: 0.198
+    - _USE_VERTEX_PAINTED_MOSS: 1
     - _UVSec: 0
+    - _UseTexture: 1
     - _Yaw: 0.5
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 0.5990566, b: 0.7255186, a: 1}
-    - _Emission: {r: 0, g: 0, b: 0, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MossColor: {r: 0.5115753, g: 0.990566, b: 0.4438857, a: 1}
     - _ShadowTint: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 1}

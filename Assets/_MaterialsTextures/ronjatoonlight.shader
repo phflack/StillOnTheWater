@@ -13,6 +13,8 @@
         _StepWidth ("Step Size", Range(0, 1)) = 0.25
         _SpecularSize ("Specular Size", Range(0, 1)) = 0.1
         _SpecularFalloff ("Specular Falloff", Range(0, 2)) = 1
+        _MossColor ("MossColor", Color) = (0,1,0,1)
+        [Toggle(USE_VERTEX_PAINTED_MOSS)] _USE_VERTEX_PAINTED_MOSS("USE_VERTEX_PAINTED_MOSS", Float) = 0
     }
     SubShader {
         //the material is completely non-transparent and is rendered at the same time as the other opaque geometry
@@ -36,6 +38,7 @@
         float _StepAmount;
         float _SpecularSize;
         float _SpecularFalloff;
+        fixed4 _MossColor;
 
         struct ToonSurfaceOutput{
             fixed3 Albedo;
@@ -107,19 +110,26 @@
         struct Input {
             float2 uv_MainTex;
 			float3 normal;
+            float4 color : COLOR;
         };
-
+        half _USE_VERTEX_PAINTED_MOSS;
         //the surface shader function which sets parameters the lighting function then uses
         void surf (Input i, inout ToonSurfaceOutput o) {
             //sample and tint albedo texture
             fixed4 col = tex2D(_MainTex, i.uv_MainTex);
             col *= _Color;
-            o.Albedo = col.rgb;
+            if (_USE_VERTEX_PAINTED_MOSS > 0) {
+                o.Albedo = lerp(_MossColor, col.rgb, pow(1-i.color.g, 2));
+            } else {
+                o.Albedo = col.rgb;
+            }
+            // o.Albedo = i.color;
 
-            o.Specular = _Specular;
-
-            float3 shadowColor = col.rgb * _ShadowTint;
-            //o.Emission = _Emission + shadowColor;
+            // o.Specular = _Specular;
+            
+            // float3 shadowColor = col.rgb * _ShadowTint;
+            // o.Emission = _Emission + shadowColor;
+            // o.Emission = i.color;
         }
         ENDCG
     }
