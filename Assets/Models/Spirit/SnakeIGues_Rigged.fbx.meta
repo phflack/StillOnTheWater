@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 3e0c1d27c21bf3448ba5735c68966885
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone.001
+    100004: Bone.002
+    100006: Bone.003
+    100008: Bone.004
+    100010: Bone.005
+    100012: Bone.006
+    100014: Bone.007
+    100016: Bone.008
+    100018: Bone.010
+    100020: Bone.011
+    100022: Bone.012
+    100024: Bone.013
+    100026: Bone.014
+    100028: Bone.015
+    100030: Bone.016
+    100032: Bone.017
+    100034: Bone.019
+    100036: Bone.020
+    100038: Bone.021
+    100040: Bone.022
+    100042: Bone.023
+    100044: Bone.024
+    100046: Bone.025
+    100048: Bone.026
+    100050: Bone.028
+    100052: Bone.029
+    100054: Bone.030
+    100056: Bone.031
+    100058: Bone.032
+    100060: Bone.033
+    100062: Bone.034
+    100064: Bone.035
+    100066: Bone.035_end
+    100068: fifthEye
+    100070: IK Target
+    100072: IK Target_end
+    100074: lefteyeb
+    100076: lefteyef
+    100078: LifeSnekArmature
+    100080: lowerjaw
+    100082: MidBackBone
+    100084: MidBone
+    100086: MidFrontBone
+    100088: righteyeb
+    100090: righteyef
+    100092: //RootNode
+    100094: thehead
+    100096: theneeck
+    400000: Bone
+    400002: Bone.001
+    400004: Bone.002
+    400006: Bone.003
+    400008: Bone.004
+    400010: Bone.005
+    400012: Bone.006
+    400014: Bone.007
+    400016: Bone.008
+    400018: Bone.010
+    400020: Bone.011
+    400022: Bone.012
+    400024: Bone.013
+    400026: Bone.014
+    400028: Bone.015
+    400030: Bone.016
+    400032: Bone.017
+    400034: Bone.019
+    400036: Bone.020
+    400038: Bone.021
+    400040: Bone.022
+    400042: Bone.023
+    400044: Bone.024
+    400046: Bone.025
+    400048: Bone.026
+    400050: Bone.028
+    400052: Bone.029
+    400054: Bone.030
+    400056: Bone.031
+    400058: Bone.032
+    400060: Bone.033
+    400062: Bone.034
+    400064: Bone.035
+    400066: Bone.035_end
+    400068: fifthEye
+    400070: IK Target
+    400072: IK Target_end
+    400074: lefteyeb
+    400076: lefteyef
+    400078: LifeSnekArmature
+    400080: lowerjaw
+    400082: MidBackBone
+    400084: MidBone
+    400086: MidFrontBone
+    400088: righteyeb
+    400090: righteyef
+    400092: //RootNode
+    400094: thehead
+    400096: theneeck
+    2100000: No Name
+    2300000: fifthEye
+    2300002: lefteyeb
+    2300004: lefteyef
+    2300006: lowerjaw
+    2300008: righteyeb
+    2300010: righteyef
+    2300012: thehead
+    3300000: fifthEye
+    3300002: lefteyeb
+    3300004: lefteyef
+    3300006: lowerjaw
+    3300008: righteyeb
+    3300010: righteyef
+    3300012: thehead
+    4300000: theneeck
+    4300002: thehead
+    4300004: lowerjaw
+    4300006: fifthEye
+    4300008: righteyef
+    4300010: righteyeb
+    4300012: lefteyeb
+    4300014: lefteyef
+    9500000: //RootNode
+    13700000: theneeck
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Bone
+    rootMotionBoneRotation: {x: -0.76387864, y: -0.00000007693288, z: 0.00000009106141,
+      w: 0.6453599}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
