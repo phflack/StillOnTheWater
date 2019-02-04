@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23945924356844908}
   - component: {fileID: 65886055177247318}
   - component: {fileID: 54802451202365852}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: diploma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
