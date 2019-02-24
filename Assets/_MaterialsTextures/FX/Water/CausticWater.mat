@@ -88,4 +88,4 @@ Material:
     m_Colors:
     - _Color: {r: 0.030704875, g: 0.40566343, b: 0.4339623, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FadeHeightWidth: {r: 0.26, g: 0.04, b: 1, a: 1}
+    - _FadeHeightWidth: {r: 0.02, g: 0.24, b: 0, a: 1}

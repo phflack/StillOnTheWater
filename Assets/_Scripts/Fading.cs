@@ -7,9 +7,7 @@ public class Fading : MonoBehaviour {
     public float fadeTime = 0.8f;
 
     public bool fadeStarted = false;
-
-    public Light fadeLight;
-    public Light fadeLight2;
+    
     public Material m;
 
     private int fadeDir = -1; //direction to fade -1 = fade in, +1 = fade out
