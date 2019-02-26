@@ -41,4 +41,24 @@ public class MyShortcuts : MonoBehaviour {
 		}
 		Selection.activeObject = newGo;
 	}
+
+	[MenuItem("GameObject/RecursivelyUnparentChildren %U")]
+	static void RecursivelyUnparentChildren() {
+		Transform first = Selection.gameObjects[0].transform;
+		Transform finalParent = first.parent;
+		UnparentChildren(first, finalParent);
+	}
+
+	static void UnparentChildren(Transform current, Transform parent) {
+		if (current.childCount == 0 ) return;
+		List<Transform> children = new List<Transform>();
+		for (int i = 0; i < current.childCount; i++) {
+			children.Add(current.GetChild(i));
+		}
+		foreach (Transform child in children) {
+			child.SetParent(parent);
+			UnparentChildren(child, parent);
+		}
+	}
+	
 }
