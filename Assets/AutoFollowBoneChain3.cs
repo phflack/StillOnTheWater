@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoFollowBoneChain2 : MonoBehaviour {
+public class AutoFollowBoneChain3 : MonoBehaviour {
 	public List<Transform> bones;
 	public List<Vector3> pathPoints;
 	public float boneInterval = 10f;
@@ -15,34 +15,10 @@ public class AutoFollowBoneChain2 : MonoBehaviour {
 		lastHeadPosition = bones[0].position;
 	}
 	
-	public bool keyboardHeadMotion = true;
+	// public bool keyboardHeadMotion = true;
 	// Update is called once per frame
 	Vector3 lastHeadPosition;
 	void Update () {
-		if (keyboardHeadMotion) {
-			if (Input.GetKey(KeyCode.DownArrow)) {
-				bones[0].rotation = Quaternion.AngleAxis(-60f * Time.deltaTime, bones[0].right) * bones[0].rotation;
-			}
-			if (Input.GetKey(KeyCode.UpArrow)) {
-				bones[0].rotation = Quaternion.AngleAxis(60f * Time.deltaTime, bones[0].right) * bones[0].rotation;
-			}
-			if (Input.GetKey(KeyCode.LeftArrow)) {
-				bones[0].rotation = Quaternion.AngleAxis(-60f * Time.deltaTime, bones[0].forward) * bones[0].rotation;
-			}
-			if (Input.GetKey(KeyCode.RightArrow)) {
-				bones[0].rotation = Quaternion.AngleAxis(60f * Time.deltaTime, bones[0].forward) * bones[0].rotation;
-			}
-			if (Input.GetKey(KeyCode.W)) {
-				bones[0].position = bones[0].position + -bones[0].up * 10f * Time.deltaTime;
-			}
-			if (Input.GetKey(KeyCode.A)) {
-				bones[0].rotation = Quaternion.AngleAxis(60f * Time.deltaTime, -bones[0].up) * bones[0].rotation;
-			}
-			if (Input.GetKey(KeyCode.D)) {
-				bones[0].rotation = Quaternion.AngleAxis(-60f * Time.deltaTime, -bones[0].up) * bones[0].rotation;
-			}
-		}
-
 		float headSpeed = (bones[0].position - lastHeadPosition).magnitude;
 		if (Vector3.Distance(pathPoints[0], bones[0].position) > boneInterval) {
 			// first catch up all the bones
@@ -67,8 +43,8 @@ public class AutoFollowBoneChain2 : MonoBehaviour {
 				// bones[i].position = pathPoints[i] + additionalMovement * (pathPoints[i-1] -pathPoints[i]); 
 				// bones [i].gameObject.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			}
-			// bones [i].LookAt( (i+1 >= bones.Count) ? (bones[i-1].position) : (bones[i].position-((bones [i + 1].position)-bones[i].position)), Vector3.up);
-			// bones[i].rotation = Quaternion.AngleAxis(-90f, bones[i].right) * bones[i].rotation;
+			bones [i].LookAt( (i+1 >= bones.Count) ? (bones[i-1].position) : (bones[i].position-((bones [i + 1].position)-bones[i].position)), Vector3.up);
+			bones[i].rotation = Quaternion.AngleAxis(-90f, bones[i].right) * bones[i].rotation;
 		}
 		lastHeadPosition = bones[0].position;
 	}
