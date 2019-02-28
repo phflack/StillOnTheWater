@@ -8,9 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/WIPGrabbingThings.unity
     guid: 0a196a128ccd1449a8dfc13e2df350ee
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/MenuTest.unity
     guid: 459c94e1a7822448484a474b17a550f1
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/SAHdemo.unity
     guid: 48abf566f0bf84942bc2024b11b5687c
+  - enabled: 1
+    path: Assets/_Scenes/level1_2_02.unity
+    guid: 4e0ee9d648a3f9c44a8bf05549c2b16d
+  m_configObjects: {}

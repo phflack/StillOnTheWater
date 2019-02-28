@@ -100,7 +100,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.5990566, b: 0.7255186, a: 1}
+    - _Color: {r: 0.7075472, g: 0.5306604, b: 0.54517215, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MossColor: {r: 0, g: 1, b: 0, a: 1}
