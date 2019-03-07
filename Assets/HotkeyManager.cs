@@ -69,7 +69,7 @@ public class HotkeyManager : MonoBehaviour {
 
             yield return new WaitForSeconds(kayakFader.fadeTime + fadePadding);
 
-            kayakGroup.transform.position = hotkeyLocations[hotkeyLocation].position;
+            kayakGroup.transform.position = new Vector3(hotkeyLocations[hotkeyLocation].position.x, kayakGroup.transform.position.y, hotkeyLocations[hotkeyLocation].position.z);
             //move it in the dark
 
             yield return new WaitForSeconds(fadePadding);
