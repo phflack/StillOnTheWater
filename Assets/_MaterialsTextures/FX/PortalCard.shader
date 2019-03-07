@@ -67,7 +67,7 @@ SubShader
 		fixed4 frag(v2f i) : SV_TARGET
 		{
 			fixed mask = tex2D(_Mask, i.uv).r;
-			mask *= saturate(i.worldPos.y / _HeightFade);
+			mask *= saturate((i.worldPos.y-_MinimumWorldHeight) / _HeightFade);
 			clip (mask - .01);
 			fixed4 col = _Color;
 			float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));

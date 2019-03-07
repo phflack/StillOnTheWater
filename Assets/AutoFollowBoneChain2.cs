@@ -67,8 +67,8 @@ public class AutoFollowBoneChain2 : MonoBehaviour {
 				// bones[i].position = pathPoints[i] + additionalMovement * (pathPoints[i-1] -pathPoints[i]); 
 				// bones [i].gameObject.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			}
-			// bones [i].LookAt( (i+1 >= bones.Count) ? (bones[i-1].position) : (bones[i].position-((bones [i + 1].position)-bones[i].position)), Vector3.up);
-			// bones[i].rotation = Quaternion.AngleAxis(-90f, bones[i].right) * bones[i].rotation;
+			bones [i].LookAt( (i+1 >= bones.Count) ? (bones[i-1].position) : (bones[i].position-((bones [i + 1].position)-bones[i].position)), Vector3.up);
+			bones[i].rotation = Quaternion.AngleAxis(-90f, bones[i].right) * bones[i].rotation;
 		}
 		lastHeadPosition = bones[0].position;
 	}
