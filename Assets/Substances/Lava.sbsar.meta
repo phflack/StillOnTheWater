@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: 0b1729e7ffc524b4c906ca84cfabdbf4
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: Lava/Lava
+    400000: Lava/Lava/Transform
+    2100000: mat.Pahoehoe_Lava
+    2100002: mat.Pahoehoe_Lava_1
+    2300000: Lava/Lava/MeshRenderer
+    2800000: Pahoehoe_Lava_baseColor
+    2800002: Pahoehoe_Lava_normal
+    2800004: Pahoehoe_Lava_metallic
+    2800006: Pahoehoe_Lava_emissive
+    2800008: Pahoehoe_Lava_height
+    2800010: Pahoehoe_Lava_ambientOcclusion
+    2800012: Pahoehoe_Lava_1_baseColor
+    2800014: Pahoehoe_Lava_1_normal
+    2800016: Pahoehoe_Lava_1_metallic
+    2800018: Pahoehoe_Lava_1_emissive
+    2800020: Pahoehoe_Lava_1_height
+    2800022: Pahoehoe_Lava_1_ambientOcclusion
+    3300000: Lava/Lava/MeshFilter
+    11400000: sbsar
+    11400002: graph0
+    11400004: graph1
+    13500000: Lava/Lava/SphereCollider
+    100100000: Lava
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 13
+  mGraphInstanceData:
+  - graphLabel: Pahoehoe_Lava
+    prototypeName: Pahoehoe_Lava
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Pahoehoe_Lava\" label=\"\" >\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: baseColor,normal,metallic,emissive,height,ambientOcclusion
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: emissive
+      alphaSource: emissive
+    - outputName: height
+      alphaSource: height
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    textureParameters:
+    - textureName: Pahoehoe_Lava_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_emissive
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: emissive
+      bLinear: 0
+    - outputName: height
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100000, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    generatedTextures:
+    - {fileID: 2800000, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800002, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800004, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800006, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800008, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800010, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+  - graphLabel: Pahoehoe_Lava_1
+    prototypeName: Pahoehoe_Lava
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Pahoehoe_Lava\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"2996042913\" type=\"8\" value=\"10,10\" />\n
+      \ <presetinput identifier=\"Lava_Blend_Global_Opacity\" uid=\"3251734493\" type=\"0\"
+      value=\"0.014\" />\n  <presetinput identifier=\"Lava_Rimlight_Intensity\" uid=\"3251739843\"
+      type=\"0\" value=\"6.8\" />\n  <presetinput identifier=\"Rock_Disorder\" uid=\"3251742070\"
+      type=\"0\" value=\"4.7\" />\n  <presetinput identifier=\"Rock_Curvature_Map_Intensity\"
+      uid=\"3251744057\" type=\"0\" value=\"10\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: baseColor,normal,metallic,emissive,height,ambientOcclusion
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: emissive
+      alphaSource: emissive
+    - outputName: height
+      alphaSource: height
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    textureParameters:
+    - textureName: Pahoehoe_Lava_1_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_1_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_1_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_1_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_1_emissive
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_1_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Pahoehoe_Lava_1_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: emissive
+      bLinear: 0
+    - outputName: height
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 1024
+      textureHeight: 1024
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100002, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    generatedTextures:
+    - {fileID: 2800012, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800014, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800016, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800018, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800020, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
+    - {fileID: 2800022, guid: 0b1729e7ffc524b4c906ca84cfabdbf4, type: 3}
