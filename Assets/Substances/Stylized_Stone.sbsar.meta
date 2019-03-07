@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: 59b19f8030b162741a470b0356238ca0
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: Stylized_Stone/Stylized_Stone
+    400000: Stylized_Stone/Stylized_Stone/Transform
+    2100000: mat.Stylized Stone Wall
+    2300000: Stylized_Stone/Stylized_Stone/MeshRenderer
+    2800000: Stylized Stone Wall_baseColor
+    2800002: Stylized Stone Wall_normal
+    2800004: Stylized Stone Wall_metallic
+    2800006: Stylized Stone Wall_ambientOcclusion
+    2800008: Stylized Stone Wall_height
+    2800010: Stylized Stone Wall_emissive
+    3300000: Stylized_Stone/Stylized_Stone/MeshFilter
+    11400000: sbsar
+    11400002: graph0
+    13500000: Stylized_Stone/Stylized_Stone/SphereCollider
+    100100000: Stylized_Stone
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 13
+  mGraphInstanceData:
+  - graphLabel: Stylized Stone Wall
+    prototypeName: Stylized Stone Wall
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Procedural_Stone_Wall\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"1623250216\" type=\"8\" value=\"10,10\" />\n
+      \ <presetinput identifier=\"$randomseed\" uid=\"934462330\" type=\"4\" value=\"4836\"
+      />\n  <presetinput identifier=\"Tertiary_Detail_Blur\" uid=\"334727137\" type=\"0\"
+      value=\"15.3\" />\n  <presetinput identifier=\"Secondary_Subtraction_Form_Vector_Warp\"
+      uid=\"334666206\" type=\"0\" value=\"0.4\" />\n  <presetinput identifier=\"Secondary_and_Tertiary_Detail_Warp\"
+      uid=\"335002532\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"Diffuse_Detail_Pattern\"
+      uid=\"334855939\" type=\"4\" value=\"0\" />\n  <presetinput identifier=\"Convexity_Hue_Adjust\"
+      uid=\"334885290\" type=\"0\" value=\"0.76\" />\n  <presetinput identifier=\"Emmissive_Color\"
+      uid=\"334885652\" type=\"3\" value=\"0,0.0270435,0.662745,1\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: baseColor,normal,metallic,ambientOcclusion,height,emissive
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    - outputName: emissive
+      alphaSource: emissive
+    textureParameters:
+    - textureName: Stylized Stone Wall_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stylized Stone Wall_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stylized Stone Wall_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stylized Stone Wall_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stylized Stone Wall_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stylized Stone Wall_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Stylized Stone Wall_emissive
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: emissive
+      bLinear: 0
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 1024
+      textureHeight: 1024
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100000, guid: 59b19f8030b162741a470b0356238ca0, type: 3}
+    generatedTextures:
+    - {fileID: 2800000, guid: 59b19f8030b162741a470b0356238ca0, type: 3}
+    - {fileID: 2800002, guid: 59b19f8030b162741a470b0356238ca0, type: 3}
+    - {fileID: 2800004, guid: 59b19f8030b162741a470b0356238ca0, type: 3}
+    - {fileID: 2800006, guid: 59b19f8030b162741a470b0356238ca0, type: 3}
+    - {fileID: 2800008, guid: 59b19f8030b162741a470b0356238ca0, type: 3}
+    - {fileID: 2800010, guid: 59b19f8030b162741a470b0356238ca0, type: 3}

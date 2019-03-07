@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: 99dd9bd9f9cc6214cbc92eee60f723e0
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: crocodile_skin/crocodile_skin
+    400000: crocodile_skin/crocodile_skin/Transform
+    2100000: mat.Crocodile Skin
+    2100002: mat.Crocodile Skin_1
+    2300000: crocodile_skin/crocodile_skin/MeshRenderer
+    2800000: Crocodile Skin_baseColor
+    2800002: Crocodile Skin_normal
+    2800004: Crocodile Skin_metallic
+    2800006: Crocodile Skin_ambientOcclusion
+    2800008: Crocodile Skin_height
+    2800010: Crocodile Skin_1_baseColor
+    2800012: Crocodile Skin_1_normal
+    2800014: Crocodile Skin_1_metallic
+    2800016: Crocodile Skin_1_ambientOcclusion
+    2800018: Crocodile Skin_1_height
+    3300000: crocodile_skin/crocodile_skin/MeshFilter
+    11400000: sbsar
+    11400002: graph0
+    11400004: graph1
+    13500000: crocodile_skin/crocodile_skin/SphereCollider
+    100100000: crocodile_skin
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 13
+  mGraphInstanceData:
+  - graphLabel: Crocodile Skin
+    prototypeName: Crocodile Skin
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://crocodile_skin\" label=\"\" >\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: baseColor,normal,metallic,ambientOcclusion,height
+    texturePackingList:
+    - outputName: diffuse
+      alphaSource: diffuse
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: specular
+      alphaSource: specular
+    - outputName: glossiness
+      alphaSource: glossiness
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    textureParameters:
+    - textureName: Crocodile Skin_glossiness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_diffuse
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_specular
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: diffuse
+      bLinear: 0
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: specular
+      bLinear: 0
+    - outputName: glossiness
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100000, guid: 99dd9bd9f9cc6214cbc92eee60f723e0, type: 3}
+    generatedTextures:
+    - {fileID: 2800000, guid: 99dd9bd9f9cc6214cbc92eee60f723e0, type: 3}
+    - {fileID: 2800002, guid: 99dd9bd9f9cc6214cbc92eee60f723e0, type: 3}
+    - {fileID: 2800004, guid: 99dd9bd9f9cc6214cbc92eee60f723e0, type: 3}
+    - {fileID: 2800006, guid: 99dd9bd9f9cc6214cbc92eee60f723e0, type: 3}
+    - {fileID: 2800008, guid: 99dd9bd9f9cc6214cbc92eee60f723e0, type: 3}
+  - graphLabel: Crocodile Skin_1
+    prototypeName: Crocodile Skin
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://crocodile_skin\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"2842307602\" type=\"8\" value=\"9,9\" />\n
+      \ <presetinput identifier=\"contrast\" uid=\"3551747211\" type=\"0\" value=\"-0.41\"
+      />\n  <presetinput identifier=\"hue_shift\" uid=\"2889258459\" type=\"0\" value=\"0.24\"
+      />\n  <presetinput identifier=\"saturation\" uid=\"2889258428\" type=\"0\" value=\"0.27\"
+      />\n  <presetinput identifier=\"normal_intensity\" uid=\"2889312968\" type=\"0\"
+      value=\"0.78\" />\n  <presetinput identifier=\"ao_spreading\" uid=\"3574341514\"
+      type=\"0\" value=\"0.11\" />\n  <presetinput identifier=\"height_range\" uid=\"3558303465\"
+      type=\"0\" value=\"0.48\" />\n  <presetinput identifier=\"height_position\"
+      uid=\"3558303384\" type=\"0\" value=\"0.64\" />\n  <presetinput identifier=\"roughness_position\"
+      uid=\"3649266150\" type=\"0\" value=\"0.71\" />\n  <presetinput identifier=\"scales_tile\"
+      uid=\"3649095076\" type=\"4\" value=\"22\" />\n  <presetinput identifier=\"spike_size\"
+      uid=\"3649097382\" type=\"1\" value=\"0.65,0.52\" />\n  <presetinput identifier=\"spike_depth\"
+      uid=\"3649096043\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"shape_scale\"
+      uid=\"3649102837\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"shape_scale_random\"
+      uid=\"3649105739\" type=\"0\" value=\"0.41\" />\n  <presetinput identifier=\"shape_border_blur\"
+      uid=\"3649052594\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"scale_deformation_strengh\"
+      uid=\"3657258317\" type=\"0\" value=\"0.59\" />\n  <presetinput identifier=\"skin_color\"
+      uid=\"3657186487\" type=\"3\" value=\"0.0644803,0.0714419,0.0849057,1\" />\n
+      </sbspreset>\n"
+    shaderName: Standard
+    outputNames: baseColor,normal,metallic,ambientOcclusion,height
+    texturePackingList:
+    - outputName: diffuse
+      alphaSource: diffuse
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: specular
+      alphaSource: specular
+    - outputName: glossiness
+      alphaSource: glossiness
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    textureParameters:
+    - textureName: Crocodile Skin_1_glossiness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_diffuse
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_specular
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Crocodile Skin_1_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: diffuse
+      bLinear: 0
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: specular
+      bLinear: 0
+    - outputName: glossiness
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100002, guid: 99dd9bd9f9cc6214cbc92eee60f723e0, type: 3}
+    generatedTextures: []
