@@ -1,0 +1,484 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114470207862878800}
+  - {fileID: 114107954958232886}
+  EditorEvents:
+  - {fileID: 114986992586391078}
+  MasterBankRef: {fileID: 114107954958232886}
+  StringsBankRef: {fileID: 114470207862878800}
+  stringsBankWriteTime: 636710852272385845
+  cacheVersion: 2
+--- !u!114 &114018813726515946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\nerns\OneDrive\Documents\SOTW\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636779673581385780
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114038780602805454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Users\Erin\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636709663652375687
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 0
+--- !u!114 &114085339437157168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Tiny\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636704053531181896
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114107954958232886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114123662182397196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114155799828033340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114197636603185626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114208000415507682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\nerns\OneDrive\Documents\SOTW\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636779673581385780
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114229189932879864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Users\Erin\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636709663652375687
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114308066482565154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tinys\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636753057132589458
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114321872604141110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tinys\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636753057132589458
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114360054783061024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Users\Erin\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636709663652375687
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114396423252131996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Users\Erin\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636709663652375687
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 0
+--- !u!114 &114403048845771722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114470207862878800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: FMODKayak\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636710852272385845
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 732
+  Exists: 1
+--- !u!114 &114472131998206238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tinys\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636753057132589458
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114514823657354050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Users\Erin\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636709663652375687
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114530480069186696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 0
+--- !u!114 &114588738793356270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tinys\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636753057132589458
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 0
+--- !u!114 &114614593329155772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114706652373363386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tinys\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636753057132589458
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114714421704758866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tinys\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636753057132589458
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114761422524555772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\James\Documents\_UnityProjects\StillOnTheWater\FMODKayak\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636710852272375851
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114824639252672264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\nerns\OneDrive\Documents\SOTW\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636779673581385780
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114986992586391078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Water/SlowRunningRiver
+  guid: 0109cfa51ee0d24ba310339f020c455c
+  Banks:
+  - {fileID: 114107954958232886}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 68889
