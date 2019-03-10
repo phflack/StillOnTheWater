@@ -10,6 +10,9 @@
 		_RippleTex ("_RippleTex", 2D) = "black" {}
         _ReflectionTexLeft ("_ReflectionTexLeft", 2D) = "white" {}
         _ReflectionTexRight ("_ReflectionTexRight", 2D) = "white" {}
+		_DepthMul ("Depth Mul", Float) = 2
+		_CamDistRange ("CamDistRange", Float) = 50
+        [PowerSlider(10)] _FresnelExponent ("Fresnel Exponent", Range(0.01, 10)) = 1
     }
     SubShader
     {
@@ -17,10 +20,11 @@
         Tags { "RenderType"="Opaque" "Queue"="Transparent" }
 		LOD 200
         ZWrite On
+		Blend SrcAlpha OneMinusSrcAlpha
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf WaterLighting alpha:fade
+		#pragma surface surf WaterLighting alpha:premul
 		#pragma debug
 		
 
@@ -35,6 +39,7 @@
 		struct Input {
 			float2 uv_MainTex;
             float3 viewDir;
+			float3 worldNormal;
            	float3 worldPos;
             float4 screenPos;
 		};
@@ -52,50 +57,44 @@
             return c;
 		}
 
-		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-		// #pragma instancing_options assumeuniformscaling
-		UNITY_INSTANCING_BUFFER_START(Props)
-			// put more per-instance properties here
-		UNITY_INSTANCING_BUFFER_END(Props)
+		float _FresnelExponent;
+		float _DepthMul;
+		float _CamDistRange;
 
 		float4x4 _WaterBlurMatrix;
 		sampler2D _WaterBlurTex;
 		sampler2D _BlurTex;
 		sampler2D _RippleTex;
 		void surf (Input IN, inout SurfaceOutput o) {
-			// waterIntersectionRipples
-			// convert to camera space of blur cam
-			half4 clipCoors = mul(_WaterBlurMatrix, float4(IN.worldPos, 1.0));
-			clipCoors = clipCoors / clipCoors.w;// / clipCoors.w;
-			half mask = step(abs(clipCoors.x), 1) * step(abs(clipCoors.y), 1);
-			// sample the blur
-			half2 blurUV = ((clipCoors.xy) + half2 (1,1)) / 2;// + half2(.5, .5));
-			// half blurValue = tex2D (_MainTex, blurUV).r-.01;
-			float3 blurNormal = tex2D (_MainTex, blurUV).rgb;
-			half blurValue = blurNormal.b *.6;
-			// interfere perlin with itself to get foam pattern
-			half rippleSample1 = tex2D(_RippleTex, IN.worldPos.xy *.5 * saturate(blurNormal.xy*.8)).r;
-			half rippleSample2 = tex2D(_RippleTex, IN.worldPos.xy *.5 * saturate(blurNormal.xy*.8) + -half2(_Time.x, _Time.x)*.5).r;
-			// half rippleSample1 = tex2D(_RippleTex, IN.worldPos.xy *.5).r;
-			// half rippleSample2 = tex2D(_RippleTex, IN.worldPos.xy *.5 + -half2(_Time.x, _Time.x)*.5).r;
-			half output = step((rippleSample1 * rippleSample2) *.85, blurValue);
-			float3 intersectionFoam = half3(output, output, output) * _HighlightColor;
-			o.Emission = intersectionFoam * mask;
 			// apply reflection projection
 		    float mainTexR = tex2D(_MainTex, IN.uv_MainTex + float2(sin(_Time.z * .02), sin(_Time.z * .05))).r;
             // float4 _offset =  float4(mainTexR*.11, mainTexR*.011, 0, 0); // probably unecessary,
 			float4 _offset = float4(0,0,0,0);
-	
+
             fixed4 refl;
 		    if (unity_StereoEyeIndex == 0) refl = tex2Dproj(_ReflectionTexLeft, UNITY_PROJ_COORD(IN.screenPos + _offset));
             else refl = tex2Dproj(_ReflectionTexRight, UNITY_PROJ_COORD(IN.screenPos+_offset));
 			refl.a = 1;
-			o.Albedo = refl * _Color + intersectionFoam*mask;// + depth * _HighlightColor;
+			o.Albedo = refl * _Color;// + depth * _HighlightColor;
 			// o.Albedo = 1;
-           	float4 depth = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, IN.screenPos));
-		   	half4 foamLine = 1- saturate(_BlendWidth * (depth - IN.screenPos.w));
-			o.Alpha = saturate((1-foamLine) + .6) + 2*intersectionFoam.r*mask;
+           	float depth = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, IN.screenPos));
+			// depth = saturate(depth);
+		   	half4 foamLine = 1-step(.1, saturate(_BlendWidth * (depth - IN.screenPos.w)));
+			
+			//get the dot product between the normal and the view direction
+            float fresnel = dot(IN.worldNormal, IN.viewDir);
+            //invert the fresnel so the big values are on the outside
+            fresnel = saturate(1 - fresnel);
+            //raise the fresnel value to the exponents power to be able to adjust it
+            fresnel = pow(fresnel, _FresnelExponent);
+            //combine the fresnel value with a color
+            // float3 fresnelColor = fresnel * _FresnelColor;
+			float camDist = distance(IN.worldPos, _WorldSpaceCameraPos);
+            //apply the fresnel value to the emission
+			float finalAlpha = saturate((depth-camDist)/_CamDistRange + (fresnel)); 
+			// o.Albedo = foamLine;
+			o.Alpha = finalAlpha;
+			o.Emission = foamLine * _HighlightColor;
 			// o.Emission = tex2D(_MainTex, blurUV);
 
             // o.Albedo = depth;

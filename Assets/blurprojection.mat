@@ -7,12 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: blurprojection
-  m_Shader: {fileID: 4800000, guid: cf356218df1089842b68293b7ae4088b, type: 3}
+  m_Shader: {fileID: 4800000, guid: 81cfd407411a33148ba75dd73490ac53, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -22,8 +22,40 @@ Material:
         m_Texture: {fileID: 8400000, guid: 83dc2b64b96db6444b9236280f92b61d, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: 83dc2b64b96db6444b9236280f92b61d, type: 2}
+        m_Texture: {fileID: 2800000, guid: 411588d0fd1985740a0858bcc9fe0aa0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectionTexLeft:
@@ -35,13 +67,34 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RippleTex:
-        m_Texture: {fileID: 2800000, guid: 4bf6da6ecbfd71744adde0837efcdadd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4814a24f06ebd1545870032df7d42eec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BlendWidth: 0.1
+    - _BlendWidth: 15.83
+    - _BumpScale: 1
+    - _CamDistRange: 668.3
+    - _Cutoff: 0.5
+    - _DepthMul: 111.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _FresnelExponent: 0.01
+    - _GlossMapScale: 1
     - _Glossiness: 0.5
+    - _GlossyReflections: 1
     - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RefractionScale: 0.018
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TwinklePanningSpeed: 0.02
+    - _UVSec: 0
+    - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5774912, g: 0.6792453, b: 0.55428976, a: 1}
-    - _HighlightColor: {r: 1, g: 1, b: 1, a: 0.48235294}
+    - _Color: {r: 0.503026, g: 0.6301198, b: 0.6792453, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 0.8490566, g: 0.5166429, b: 0.5166429, a: 1}
+    - _HighlightColor: {r: 0.6084906, g: 1, b: 0.99358183, a: 0.48235294}
