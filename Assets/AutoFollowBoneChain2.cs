@@ -79,7 +79,7 @@ public class AutoFollowBoneChain2 : MonoBehaviour {
 		if (bones != null) {
 			foreach(Transform bone in bones) {
 				Gizmos.color = Color.cyan;
-				Gizmos.DrawSphere(bone.position, 2f);
+				Gizmos.DrawSphere(bone.position, .4f);
 				if (lastBone != null) {
 					Gizmos.color = Color.white;
 					Gizmos.DrawLine(lastBone.position, bone.position);
@@ -91,7 +91,7 @@ public class AutoFollowBoneChain2 : MonoBehaviour {
 		if (pathPoints != null) {
 			foreach(Vector3 point in pathPoints) {
 				Gizmos.color = Color.red;
-				Gizmos.DrawCube(point, 1f * Vector3.one);
+				Gizmos.DrawCube(point, .2f * Vector3.one);
 			}
 		}
 	}
