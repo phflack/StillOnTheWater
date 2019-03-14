@@ -22,7 +22,7 @@ public class PlayTimelineOnTriggerEnter : MonoBehaviour {
 			played = true;
 			this.enabled = false;
 		}
-		if (!played && Vector3.Distance(transform.position, triggerer.position) < radius) {
+		if (!played && triggerer != null && Vector3.Distance(transform.position, triggerer.position) < radius) {
 			playableDirector.Play();
 			played = true;
 			this.enabled = false;
