@@ -28,6 +28,7 @@ public class ObjectFly : MonoBehaviour
         {
             for (int i = 0; i < positions.Length; i++)
             {
+                artifacts.artifacts[i].gameObject.transform.parent = null;
                 artifacts.artifacts[i].GetComponent<MatchPositionAndRotationOverTime>().target = positions[i];
                 artifacts.artifacts[i].GetComponent<MatchPositionAndRotationOverTime>().GoNow();
             }
