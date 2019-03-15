@@ -13,7 +13,7 @@
 		_DepthMul ("Depth Mul", Float) = 2
 		_CamDistRange ("CamDistRange", Float) = 50
 		_RefractionScale ("_RefractionScale", Range(0,1)) = .3
-		_TwinklePanningSpeed ("TwinklePanningSpeed", Range(0, .1)) = .02
+		_GlittiesPanningSpeed ("GlittiesPanningSpeed", Range(0, .1)) = .02
         [PowerSlider(10)] _FresnelExponent ("Fresnel Exponent", Range(0.01, 10)) = 1
     }
 
@@ -95,7 +95,7 @@
 				return o;
 			}
 			
-			float _TwinklePanningSpeed;
+			float _GlittiesPanningSpeed;
 			fixed4 frag (v2f i) : SV_Target
 			{
 					// apply reflection projection
@@ -104,8 +104,8 @@
 				// float4 _offset = float4(0,0,0,0);
 				
 				float camDist = distance(i.worldPos, _WorldSpaceCameraPos);
-				float4 normalTex = tex2D(_RippleTex, i.uv *10+float2(sin(_Time.z * _TwinklePanningSpeed), sin(_Time.z * _TwinklePanningSpeed)));
-				float4 normalTex2 = tex2D(_MainTex, i.uv *80+float2(-sin(_Time.z * _TwinklePanningSpeed), -sin(_Time.z * _TwinklePanningSpeed)));
+				float4 normalTex = tex2D(_RippleTex, i.uv *10+float2(sin(_Time.z * _GlittiesPanningSpeed), sin(_Time.z * _GlittiesPanningSpeed)));
+				float4 normalTex2 = tex2D(_MainTex, i.uv *80+float2(-sin(_Time.z * _GlittiesPanningSpeed), -sin(_Time.z * _GlittiesPanningSpeed)));
 				float4 offset = normalTex * _RefractionScale;
 				// offset.y = saturate(offset.y)
 				float unmodifiedDepth = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, i.screenPos));
@@ -141,7 +141,12 @@
 				// o.Emission = foamLine * _HighlightColor;
 				col.a = 1;
 				UNITY_APPLY_FOG(i.fogCoord, col);
-				return col + step(dot(normalTex, normalTex2), .4);
+				float glitties = step(dot(normalTex, normalTex2), .4);
+				float ddG = fwidth(glitties);
+				float smoothglitties = smoothstep(-ddG, ddG, glitties);
+				float ddG2 = fwidth(smoothglitties);
+				float smoothestGlitties = smoothstep(-ddG2, ddG2,smoothglitties);
+				return col + glitties;
 			}
 			ENDCG
 		}

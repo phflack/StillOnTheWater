@@ -49,13 +49,15 @@ public class AutoFollowBoneChain3 : MonoBehaviour {
 		lastHeadPosition = bones[0].position;
 	}
 
+	public bool drawGizmos;
 	private void OnDrawGizmos()
 	{
+		if (!drawGizmos) return;
 		Transform lastBone = null;
 		if (bones != null) {
 			foreach(Transform bone in bones) {
 				Gizmos.color = Color.cyan;
-				Gizmos.DrawSphere(bone.position, 2f);
+				Gizmos.DrawSphere(bone.position, .2f);
 				if (lastBone != null) {
 					Gizmos.color = Color.white;
 					Gizmos.DrawLine(lastBone.position, bone.position);
