@@ -8,6 +8,7 @@ public class Artifact : MonoBehaviour {
     public ArtifactManager parent;
 
     public bool sent = false;
+    public bool pickedUp = false;
 
     public float floatDistance = 5f;
     public float floatTime = 2f;
@@ -29,14 +30,15 @@ public class Artifact : MonoBehaviour {
     public void addThis(object sender, InteractableObjectEventArgs e)
     {
         parent.addArtifact(this);
+        pickedUp = true;
     }
 
     // Update is called once per frame
     void Update () {
-		if(sent)
+		if(sent || !pickedUp)
         {
             //floaty bois
-            if (flyTime > 0)
+            if (flyTime > 0 && sent)
             {
                 flyTime -= Time.deltaTime;
             }
