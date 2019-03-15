@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114663364294299180}
   - component: {fileID: 114791285871758364}
   - component: {fileID: 114107441506698360}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: diploma
   m_TagString: Untagged
   m_Icon: {fileID: 0}

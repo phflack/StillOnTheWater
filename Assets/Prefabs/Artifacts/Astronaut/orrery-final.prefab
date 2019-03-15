@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4440590985653220}
   - component: {fileID: 33387191355087222}
   - component: {fileID: 23407006695543184}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: venus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4251962025171668}
   - component: {fileID: 33715917423241958}
   - component: {fileID: 23915039529655630}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4663007561876372}
   - component: {fileID: 33923079534380156}
   - component: {fileID: 23656759171500140}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4511535582342006}
   - component: {fileID: 33528178090639070}
   - component: {fileID: 23416073530455196}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: jupiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4600593921437814}
   - component: {fileID: 33924355229564562}
   - component: {fileID: 23996552888094910}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: uranus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4045490021869076}
   - component: {fileID: 33978637424925836}
   - component: {fileID: 23505760264514422}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: saturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4069941251772524}
   - component: {fileID: 33634754699309338}
   - component: {fileID: 23396910536046814}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: neptune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4818799227646942}
   - component: {fileID: 33388476413457418}
   - component: {fileID: 23889320058495448}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: mercury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 4262972628754160}
   - component: {fileID: 33889369137764234}
   - component: {fileID: 23569847273813502}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: mars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4243972151648020}
   - component: {fileID: 33243488293563450}
   - component: {fileID: 23518931969411548}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: pluto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 135621462129314240}
   - component: {fileID: 54865144400650068}
   - component: {fileID: 114600284810260712}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: orrery-final
   m_TagString: Untagged
   m_Icon: {fileID: 0}

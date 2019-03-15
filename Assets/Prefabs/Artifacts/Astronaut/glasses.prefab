@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114050119601525030}
   - component: {fileID: 114105199899578406}
   - component: {fileID: 114082558621040352}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4638314039365406}
   - component: {fileID: 33911820393688776}
   - component: {fileID: 23676181455835498}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4959312518632032}
   - component: {fileID: 33075604351547696}
   - component: {fileID: 23953631887938614}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: leftLens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4345520547049794}
   - component: {fileID: 33579651864268604}
   - component: {fileID: 23230872198642374}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: rightEar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4121562348283230}
   - component: {fileID: 33077886687487580}
   - component: {fileID: 23181831314102584}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: rightLens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4409626176298966}
   - component: {fileID: 33356084349431884}
   - component: {fileID: 23774163108798614}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: leftEar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
