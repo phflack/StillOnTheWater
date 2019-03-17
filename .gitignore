@@ -5,7 +5,7 @@
 /[Bb]uilds/
 /Assets/Standard Assets*
 /Assets/AssetStoreTools*
-
+*AUDIO_FILES*
 # Visual Studio 2015 cache directory
 /.vs/
 
