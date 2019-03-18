@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114470207862878800}
-  - {fileID: 114616903723220386}
+  - {fileID: 114715843274080728}
   EditorEvents:
   - {fileID: 114986992586391078}
-  MasterBankRef: {fileID: 114616903723220386}
+  MasterBankRef: {fileID: 114715843274080728}
   StringsBankRef: {fileID: 114470207862878800}
-  stringsBankWriteTime: 636710852272385845
+  stringsBankWriteTime: 636753057132599472
   cacheVersion: 2
 --- !u!114 &114018813726515946
 MonoBehaviour:
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMODKayak\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636710852272385845
+  lastModified: 636753057132599472
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -495,7 +495,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 913120
-  Exists: 1
+  Exists: 0
 --- !u!114 &114691258545270490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +534,24 @@ MonoBehaviour:
     Value: 913120
   Exists: 1
 --- !u!114 &114714421704758866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tinys\Documents\StillOnTheWater\FMODKayak\Build\Desktop\Master Bank.bank
+  lastModified: 636753057132589458
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 913120
+  Exists: 1
+--- !u!114 &114715843274080728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -657,7 +675,7 @@ MonoBehaviour:
   Path: event:/Water/SlowRunningRiver
   guid: 0109cfa51ee0d24ba310339f020c455c
   Banks:
-  - {fileID: 114616903723220386}
+  - {fileID: 114715843274080728}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0

@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 0fbe51965ca4c3343bec27a4c27293d8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CatTop
+    100004: CatTop1
+    100006: CatTop2
+    100008: CatTop3
+    100010: Leaf
+    100012: Leaf1
+    100014: Leaf10
+    100016: Leaf2
+    100018: Leaf3
+    100020: Leaf4
+    100022: Leaf5
+    100024: Leaf6
+    100026: Leaf7
+    100028: Leaf8
+    100030: Leaf9
+    100032: Stalk
+    100034: Stalk1
+    100036: Stalk2
+    100038: Stalk3
+    400000: //RootNode
+    400002: CatTop
+    400004: CatTop1
+    400006: CatTop2
+    400008: CatTop3
+    400010: Leaf
+    400012: Leaf1
+    400014: Leaf10
+    400016: Leaf2
+    400018: Leaf3
+    400020: Leaf4
+    400022: Leaf5
+    400024: Leaf6
+    400026: Leaf7
+    400028: Leaf8
+    400030: Leaf9
+    400032: Stalk
+    400034: Stalk1
+    400036: Stalk2
+    400038: Stalk3
+    2100000: lambert2
+    2100002: lambert3
+    2100004: lambert4
+    2300000: CatTop
+    2300002: CatTop1
+    2300004: CatTop2
+    2300006: CatTop3
+    2300008: Leaf
+    2300010: Leaf1
+    2300012: Leaf10
+    2300014: Leaf2
+    2300016: Leaf3
+    2300018: Leaf4
+    2300020: Leaf5
+    2300022: Leaf6
+    2300024: Leaf7
+    2300026: Leaf8
+    2300028: Leaf9
+    2300030: Stalk
+    2300032: Stalk1
+    2300034: Stalk2
+    2300036: Stalk3
+    3300000: CatTop
+    3300002: CatTop1
+    3300004: CatTop2
+    3300006: CatTop3
+    3300008: Leaf
+    3300010: Leaf1
+    3300012: Leaf10
+    3300014: Leaf2
+    3300016: Leaf3
+    3300018: Leaf4
+    3300020: Leaf5
+    3300022: Leaf6
+    3300024: Leaf7
+    3300026: Leaf8
+    3300028: Leaf9
+    3300030: Stalk
+    3300032: Stalk1
+    3300034: Stalk2
+    3300036: Stalk3
+    4300000: Leaf
+    4300002: Leaf1
+    4300004: Leaf2
+    4300006: Leaf3
+    4300008: Leaf4
+    4300010: Leaf5
+    4300012: Leaf6
+    4300014: Leaf7
+    4300016: Leaf8
+    4300018: Leaf9
+    4300020: Leaf10
+    4300022: Stalk
+    4300024: Stalk1
+    4300026: Stalk2
+    4300028: Stalk3
+    4300030: CatTop
+    4300032: CatTop1
+    4300034: CatTop2
+    4300036: CatTop3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
