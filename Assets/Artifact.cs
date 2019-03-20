@@ -12,21 +12,21 @@ public class Artifact : MonoBehaviour {
 
     public float floatDistance = 5f;
     public float floatTime = 2f;
-
+    public float oscillateSpeed = 1f;
     bool goingUp = true;
     float floatTimeRemaining;
-
+    public float oscillateAmplitude = .02f;
     float distancePerSecond;
 
     public float flyTime = 2f;
 
     public Collider[] itemCollider;
     public Rigidbody itemRigidbody;
-
+    float originalHeight;
 	// Use this for initialization
 	void Start () {
         
-
+        originalHeight = transform.position.y;
         GetComponent<VRTK_InteractableObject>().InteractableObjectUngrabbed += new InteractableObjectEventHandler(addThis);
         distancePerSecond = floatDistance / floatTime;
         floatTimeRemaining = floatTime;
@@ -36,6 +36,7 @@ public class Artifact : MonoBehaviour {
     {
         parent.addArtifact(this);
         pickedUp = true;
+        floatTimeRemaining = 0f;
         foreach(Collider c in itemCollider)
         {
             Destroy(c);
@@ -54,24 +55,29 @@ public class Artifact : MonoBehaviour {
             }
             else
             {
-                floatTimeRemaining -= Time.deltaTime;
+                floatTimeRemaining += Time.deltaTime;
                 float distance = distancePerSecond * Time.deltaTime;
-                if (goingUp)
-                {
-                    transform.position = new Vector3(transform.position.x, transform.position.y + distance, transform.position.z);
-                    
-                }
-                else
-                {
-                    transform.position = new Vector3(transform.position.x, transform.position.y - distance, transform.position.z);
-                }
+                distance = Mathf.Sin(oscillateSpeed * floatTimeRemaining) * oscillateAmplitude;
+                // if (goingUp)
+                // {
+                transform.position = new Vector3(transform.position.x, originalHeight + distance, transform.position.z);
+                // }
+                // else
+                // {
+                //     transform.position = new Vector3(transform.position.x, transform.position.y - distance, transform.position.z);
+                // }
 
-                if(floatTimeRemaining <= 0)
-                {
-                    goingUp = !goingUp;
-                    floatTimeRemaining = floatTime;
-                }
+                // if(floatTimeRemaining <= 0)
+                // {
+                //     goingUp = !goingUp;
+                //     floatTimeRemaining = floatTime;
+                // }
             }
         }
 	}
+
+    // private IEnumerator UpNDown() {
+    //     float curTime = 0f;
+        
+    // }
 }
