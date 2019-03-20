@@ -18,6 +18,9 @@ public class Artifact : MonoBehaviour {
     public float oscillateAmplitude = .02f;
     float distancePerSecond;
 
+    public ParticleSystem starParticles;
+    public ParticleSystem haloParticles;
+
     public float flyTime = 2f;
 
     public Collider[] itemCollider;
@@ -25,7 +28,7 @@ public class Artifact : MonoBehaviour {
     float originalHeight;
 	// Use this for initialization
 	void Start () {
-        
+       
         originalHeight = transform.position.y;
         GetComponent<VRTK_InteractableObject>().InteractableObjectUngrabbed += new InteractableObjectEventHandler(addThis);
         distancePerSecond = floatDistance / floatTime;
@@ -37,6 +40,10 @@ public class Artifact : MonoBehaviour {
         parent.addArtifact(this);
         pickedUp = true;
         floatTimeRemaining = 0f;
+        var em = starParticles.emission;
+        em.enabled = false;
+        var haloEm = haloParticles.emission;
+        haloEm.enabled = false;
         foreach(Collider c in itemCollider)
         {
             Destroy(c);
@@ -52,6 +59,14 @@ public class Artifact : MonoBehaviour {
             if (flyTime > 0 && sent)
             {
                 flyTime -= Time.deltaTime;
+                var em = starParticles.emission;
+                var haloEm = haloParticles.emission;
+                if (!em.enabled)
+                {
+                    em.enabled = true;
+
+                    haloEm.enabled = true;
+                }
             }
             else
             {
