@@ -20,8 +20,13 @@ public class Artifact : MonoBehaviour {
 
     public float flyTime = 2f;
 
+    public Collider[] itemCollider;
+    public Rigidbody itemRigidbody;
+
 	// Use this for initialization
 	void Start () {
+        
+
         GetComponent<VRTK_InteractableObject>().InteractableObjectUngrabbed += new InteractableObjectEventHandler(addThis);
         distancePerSecond = floatDistance / floatTime;
         floatTimeRemaining = floatTime;
@@ -31,6 +36,11 @@ public class Artifact : MonoBehaviour {
     {
         parent.addArtifact(this);
         pickedUp = true;
+        foreach(Collider c in itemCollider)
+        {
+            Destroy(c);
+        }
+        Destroy(itemRigidbody);
     }
 
     // Update is called once per frame
