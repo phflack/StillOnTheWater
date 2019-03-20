@@ -20,6 +20,14 @@ public class HotkeyManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(Input.GetKeyDown(KeyCode.R))//resets the scene
+        {
+            kayakFader.fadeOut();
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            
+        }
+
 		if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
         {
             StartCoroutine(moveKayak(0));
