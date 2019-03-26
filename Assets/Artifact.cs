@@ -21,7 +21,7 @@ public class Artifact : MonoBehaviour {
     public ParticleSystem starParticles;
     public ParticleSystem haloParticles;
 
-    public float flyTime = 2f;
+    public float flyTime = 5f;
 
     public Collider[] itemCollider;
     public Rigidbody itemRigidbody;
@@ -31,14 +31,21 @@ public class Artifact : MonoBehaviour {
        
         originalHeight = transform.position.y;
         GetComponent<VRTK_InteractableObject>().InteractableObjectUngrabbed += new InteractableObjectEventHandler(addThis);
+        
+        GetComponent<VRTK_InteractableObject>().InteractableObjectGrabbed += new InteractableObjectEventHandler(stopFloating);
         distancePerSecond = floatDistance / floatTime;
         floatTimeRemaining = floatTime;
+    }
+
+    public void stopFloating(object sender, InteractableObjectEventArgs e)
+    {
+        
+        pickedUp = true;
     }
 
     public void addThis(object sender, InteractableObjectEventArgs e)
     {
         parent.addArtifact(this);
-        pickedUp = true;
         floatTimeRemaining = 0f;
         var em = starParticles.emission;
         em.enabled = false;
@@ -68,7 +75,7 @@ public class Artifact : MonoBehaviour {
                     haloEm.enabled = true;
                 }
             }
-            else
+            else if (!sent)
             {
                 floatTimeRemaining += Time.deltaTime;
                 float distance = distancePerSecond * Time.deltaTime;

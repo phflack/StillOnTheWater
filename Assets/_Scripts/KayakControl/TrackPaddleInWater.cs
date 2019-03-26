@@ -112,6 +112,7 @@ public class TrackPaddleInWater : MonoBehaviour {
 
 	private void VibrateController() {
 		OVRInput.SetControllerVibration(Mathf.Clamp01(Mathf.Abs(smoothedMotionVector.magnitude / 4f) * .05f), Mathf.Clamp01(Mathf.Abs(smoothedMotionVector.magnitude / 4f)), controllerToVibrate);
+		VRTK.VRTK_ControllerHaptics.TriggerHapticPulse((controllerToVibrate.Equals(OVRInput.Controller.LTouch) ? VRTK.VRTK_DeviceFinder.GetControllerReferenceLeftHand() : VRTK.VRTK_DeviceFinder.GetControllerReferenceRightHand()), Mathf.Clamp01(Mathf.Abs(smoothedMotionVector.magnitude / 4f)));
 	}
 
 	private void OnDrawGizmos()

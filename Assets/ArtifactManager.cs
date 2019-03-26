@@ -16,6 +16,7 @@ public class ArtifactManager : MonoBehaviour {
     public void addArtifact(Artifact artifact)
     {
         artifact.mover.target = bones[index].transform;
+        Debug.Log("Sending " + artifact.name + " to " + bones[index].transform.position);
         artifact.mover.GoNow();
         artifact.transform.parent = bones[index].transform;
         artifacts[index] = artifact.gameObject;

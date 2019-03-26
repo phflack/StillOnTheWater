@@ -1,4 +1,6 @@
-﻿Shader "FX/MirrorWater2"
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+Shader "FX/MirrorWater2"
 {
     Properties
     {
@@ -106,6 +108,7 @@
 				float camDist = distance(i.worldPos, _WorldSpaceCameraPos);
 				float4 normalTex = tex2D(_RippleTex, i.uv *10+float2(sin(_Time.z * _GlittiesPanningSpeed), sin(_Time.z * _GlittiesPanningSpeed)));
 				float4 normalTex2 = tex2D(_MainTex, i.uv *80+float2(-sin(_Time.z * _GlittiesPanningSpeed), -sin(_Time.z * _GlittiesPanningSpeed)));
+				float3 tangent = mul(unity_ObjectToWorld, lerp(normalTex.xyz, normalTex2.xyz, .5));
 				float4 offset = normalTex * _RefractionScale;
 				// offset.y = saturate(offset.y)
 				float unmodifiedDepth = LinearEyeDepth (tex2Dproj(_CameraDepthTexture, i.screenPos));
@@ -122,6 +125,7 @@
 				else refl = tex2Dproj(_ReflectionTexRight, UNITY_PROJ_COORD(i.screenPos)+offset);
 				refl.a = 1;
 				float4 col = refl * _Color;
+				
 				// depth = saturate(depth);
 				half4 foamLine = 1-step(.1, saturate(_BlendWidth * (depth - i.screenPos.w)));
 				
@@ -146,7 +150,8 @@
 				float smoothglitties = smoothstep(-ddG, ddG, glitties);
 				float ddG2 = fwidth(smoothglitties);
 				float smoothestGlitties = smoothstep(-ddG2, ddG2,smoothglitties);
-				return col + glitties;
+				float hilight = saturate(1-abs(dot(tangent, i.viewDir)))*0;
+				return col + glitties + hilight;
 			}
 			ENDCG
 		}

@@ -64,7 +64,7 @@ public class spawnMeshAlongFaces : MonoBehaviour {
 				}
 				// }
 			}
-			UnityEditor.Undo.RegisterCreatedObjectUndo(instiatedObjectGroup, "Spawned some things on a mesh surface");
+			//UnityEditor.Undo.RegisterCreatedObjectUndo(instiatedObjectGroup, "Spawned some things on a mesh surface");
 		}
 	}
 

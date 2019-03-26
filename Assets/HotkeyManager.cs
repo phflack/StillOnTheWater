@@ -13,13 +13,40 @@ public class HotkeyManager : MonoBehaviour {
 
     public float fadePadding = .2f;
 
+    public Artifact[] everythingButTheNametag;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
+
+    public void collectObjects()
+    {
+
+        foreach(Artifact artifact in everythingButTheNametag)
+        {
+            artifact.addThis(null, new VRTK.InteractableObjectEventArgs());
+        }
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            collectObjects();
+        }
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            kayakFader.fadeOut();
+        }
+
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            kayakFader.fadeIn();
+        }
 
         if(Input.GetKeyDown(KeyCode.R))//resets the scene
         {

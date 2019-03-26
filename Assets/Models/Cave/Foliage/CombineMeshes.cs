@@ -11,20 +11,24 @@ public class CombineMeshes : MonoBehaviour
 {
     void Start()
     {
+        // foreach (Transform child in transform)
+        //     child.position += transform.position;
+        // transform.position = Vector3.zero;
+        // transform.rotation = Quaternion.identity;
+
         MeshFilter[] meshFilters = GetComponentsInChildren<MeshFilter>();
-        CombineInstance[] combine = new CombineInstance[meshFilters.Length];
-
-        int i = 0;
-        while (i < meshFilters.Length)
+        CombineInstance[] combine = new CombineInstance[meshFilters.Length-1];
+        int index = 0;
+        for (int i = 0; i < meshFilters.Length; i++)
         {
-            combine[i].mesh = meshFilters[i].sharedMesh;
-            combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
-            meshFilters[i].gameObject.SetActive(false);
-
-            i++;
+            if (meshFilters[i].sharedMesh == null) continue;
+            combine[index].mesh = meshFilters[i].sharedMesh;
+            combine[index++].transform = transform.worldToLocalMatrix * meshFilters[i].transform.localToWorldMatrix;
+            meshFilters[i].GetComponent<Renderer>().enabled = false;
         }
+
         transform.GetComponent<MeshFilter>().mesh = new Mesh();
         transform.GetComponent<MeshFilter>().mesh.CombineMeshes(combine);
-        transform.gameObject.SetActive(true);
+        GetComponent<Renderer>().material = meshFilters[1].GetComponent<Renderer>().sharedMaterial;     
     }
 }

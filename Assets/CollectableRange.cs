@@ -53,13 +53,13 @@ public class CollectableRange : MonoBehaviour {
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = far.color;
-		GizmoCircle.DrawCircle(transform.position, Vector3.up, far.range);
+		//GizmoCircle.DrawCircle(transform.position, Vector3.up, far.range);
 		Gizmos.color = close.color;
-		GizmoCircle.DrawCircle(transform.position, Vector3.up, close.range);
+		//GizmoCircle.DrawCircle(transform.position, Vector3.up, close.range);
 		Gizmos.color = closer.color;
-		GizmoCircle.DrawCircle(transform.position, Vector3.up, closer.range);
+		//GizmoCircle.DrawCircle(transform.position, Vector3.up, closer.range);
 		Gizmos.color = closest.color;
-		GizmoCircle.DrawCircle(transform.position, Vector3.up, closest.range);
+		//GizmoCircle.DrawCircle(transform.position, Vector3.up, closest.range);
 	}
 }
 
